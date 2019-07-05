@@ -1,0 +1,230 @@
+ pre {
+			background-color: #e0e0e0;
+			border: none;
+			margin-bottom: 20px;
+		}
+		pre, .btn, .form-control {
+			border-radius: 0;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+		}
+		
+		em { color: #999; font-size: 12px; }
+		.top-bar {
+			background: #000;
+			padding: 10px 0;
+		}
+		.dark {
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+			border-bottom: 1px solid #ccc;
+		}
+		.timer {
+			background: #f2f3f4;
+			margin-bottom: 10px;
+			font-weight: bold;
+			font-size: 16px;
+			text-shadow: -1px 0 1px #fff;
+			width: 100px;
+		}
+		.action {
+			font-style: italic;
+		}
+		/*!
+		 * "Fork me on GitHub" CSS ribbon v0.1.1 | MIT License
+		 * https://github.com/simonwhitaker/github-fork-ribbon-css
+		*/
+		/* Left will inherit from right (so we don't need to duplicate code) */
+		.github-fork-ribbon {
+			/* The right and left classes determine the side we attach our banner to */
+			position: absolute;
+			/* Add a bit of padding to give some substance outside the "stitching" */
+			padding: 2px 0;
+			/* Set the base colour */
+			background-color: #a00;
+			/* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+			background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+			background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+			background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+			background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+			/* Add a drop shadow */
+			-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+			box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+			/* Set the font */
+			font: 700 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+			z-index: 9999;
+			pointer-events: auto;
+		}
+		.github-fork-ribbon a,
+		.github-fork-ribbon a:hover {
+			/* Set the text properties */
+			color: #fff;
+			text-decoration: none;
+			text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+			text-align: center;
+			/* Set the geometry. If you fiddle with these you'll also need
+			 to tweak the top and right values in.github-fork-ribbon. */
+			width: 200px;
+			line-height: 20px;
+			/* Set the layout properties */
+			display: inline-block;
+			padding: 2px 0;
+			/* Add "stitching" effect */
+			border-width: 1px 0;
+			border-style: dotted;
+			border-color: #fff;
+			border-color: rgba(255, 255, 255, 0.7);
+		}
+		.github-fork-ribbon-wrapper {
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			z-index: 9999;
+			pointer-events: none;
+		}
+		.github-fork-ribbon-wrapper.fixed {
+			position: fixed;
+		}
+		.github-fork-ribbon-wrapper.right {
+			right: 0;
+		}
+		.github-fork-ribbon-wrapper.right .github-fork-ribbon {
+			top: 42px;
+			right: -43px;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+ 
+ .btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #5cb85c;
+	border-color: #4cae4c;
+	width: 40px;
+}
+
+.btn-success:hover,.btn-success:focus,.btn-success:active,.btn-success.active,.open .dropdown-toggle.btn-success
+	{
+	color: #fff;
+	background-color: #47a447;
+	border-color: #398439
+}
+
+.btn-success:active,.btn-success.active,.open .dropdown-toggle.btn-success
+	{
+	background-image: none
+}
+
+.btn-success.disabled,.btn-success[disabled],fieldset[disabled] .btn-success,.btn-success.disabled:hover,.btn-success[disabled]:hover,fieldset[disabled] .btn-success:hover,.btn-success.disabled:focus,.btn-success[disabled]:focus,fieldset[disabled] .btn-success:focus,.btn-success.disabled:active,.btn-success[disabled]:active,fieldset[disabled] .btn-success:active,.btn-success.disabled.active,.btn-success[disabled].active,fieldset[disabled] .btn-success.active
+	{
+	background-color: #5cb85c;
+	border-color: #4cae4c
+}
+
+.btn-success .badge {
+	color: #5cb85c;
+	background-color: #fff
+}
+
+.btn-info {
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+	width: 40px;
+}
+
+.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open .dropdown-toggle.btn-info
+	{
+	color: #fff;
+	background-color: #39b3d7;
+	border-color: #269abc
+}
+
+.btn-info:active,.btn-info.active,.open .dropdown-toggle.btn-info {
+	background-image: none
+}
+
+.btn-info.disabled,.btn-info[disabled],fieldset[disabled] .btn-info,.btn-info.disabled:hover,.btn-info[disabled]:hover,fieldset[disabled] .btn-info:hover,.btn-info.disabled:focus,.btn-info[disabled]:focus,fieldset[disabled] .btn-info:focus,.btn-info.disabled:active,.btn-info[disabled]:active,fieldset[disabled] .btn-info:active,.btn-info.disabled.active,.btn-info[disabled].active,fieldset[disabled] .btn-info.active
+	{
+	background-color: #5bc0de;
+	border-color: #46b8da
+}
+
+.btn-info .badge {
+	color: #5bc0de;
+	background-color: #fff
+}
+
+.btn-warning {
+	color: #fff;
+	background-color: #f0ad4e;
+	border-color: #eea236;
+	width: 40px;
+}
+
+.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open .dropdown-toggle.btn-warning
+	{
+	color: #fff;
+	background-color: #ed9c28;
+	border-color: #d58512
+}
+
+.btn-warning:active,.btn-warning.active,.open .dropdown-toggle.btn-warning
+	{
+	background-image: none
+}
+
+.btn-warning.disabled,.btn-warning[disabled],fieldset[disabled] .btn-warning,.btn-warning.disabled:hover,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning:hover,.btn-warning.disabled:focus,.btn-warning[disabled]:focus,fieldset[disabled] .btn-warning:focus,.btn-warning.disabled:active,.btn-warning[disabled]:active,fieldset[disabled] .btn-warning:active,.btn-warning.disabled.active,.btn-warning[disabled].active,fieldset[disabled] .btn-warning.active
+	{
+	background-color: #f0ad4e;
+	border-color: #eea236
+}
+
+.btn-warning .badge {
+	color: #f0ad4e;
+	background-color: #fff
+}
+
+.btn-danger {
+	color: #fff;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+	width: 100px;
+}
+
+.btn-danger:hover,.btn-danger:focus,.btn-danger:active,.btn-danger.active,.open .dropdown-toggle.btn-danger
+	{
+	color: #fff;
+	background-color: #d2322d;
+	border-color: #ac2925
+}
+
+.btn-danger:active,.btn-danger.active,.open .dropdown-toggle.btn-danger
+	{
+	background-image: none
+}
+
+.btn-danger.disabled,.btn-danger[disabled],fieldset[disabled] .btn-danger,.btn-danger.disabled:hover,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger:hover,.btn-danger.disabled:focus,.btn-danger[disabled]:focus,fieldset[disabled] .btn-danger:focus,.btn-danger.disabled:active,.btn-danger[disabled]:active,fieldset[disabled] .btn-danger:active,.btn-danger.disabled.active,.btn-danger[disabled].active,fieldset[disabled] .btn-danger.active
+	{
+	background-color: #d9534f;
+	border-color: #d43f3a
+}
+
+.btn-danger .badge {
+	color: #d9534f;
+	background-color: #fff;
+	border-color: #d43f3a
+}
