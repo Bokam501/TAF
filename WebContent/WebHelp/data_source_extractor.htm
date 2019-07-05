@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>data.source.extractor</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript" src="./twisty2b.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nDashboard\nSource Data Extractor");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"adding_tabs_dasboard.htm\">Dashboard<\/a> &gt; Source Data Extractor<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<p>&#160;</p>
+
+<h1>Data Extractor</h1>
+<h2 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Overview</h2>
+<p>The <span style="font-weight: bold;"><b>Data extractor</b></span> page is used 
+ to extractor data from various source files such as WATS, TASK, Effort 
+ sheet and so on. The extracted data is used to generate SLA metrics and 
+ charts used for tracking various metric. You can schedule the data execution 
+ periodically or manually trigger the task. </p>
+<p>To access this page, click <span style="font-weight: bold;"><b>Setup</b></span> 
+ &gt; <span style="font-weight: bold;"><b>Data Extractor</b></span>.</p>
+<h2 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Fields</h2>
+<div style="text-align: left;">
+	<table cellspacing="0">
+		<col width="250" />
+		<col width="900" />
+		<tr>
+			<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+				 style="font-weight: bold;">Field</p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+				 style="font-weight: bold;">Description</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Name</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+			 of the data extractor. </p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Customer</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+			 &#160;of the customer account.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Product</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Product 
+			 name for which the data to be mapped.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Competency</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Competency 
+			 of the product.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Type</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+			 one of the following file types:</p>
+			<ol>
+				<li class="Style1">TASK</li>
+				<li class="Style1">WATS</li>
+				<li class="Style1">Query Log</li>
+				<li class="Style1">Effort</li>
+				<li class="Style1">Review Record</li>
+				<li class="Style1">Utilization</li>
+				<li class="Style1">Training Type</li>
+			</ol></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Location</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>File 
+			 location of the source data.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Start 
+			 Date</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Starting 
+			 date of the schedule, from which the data extraction to be 
+			 triggered, periodically.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">End 
+			 Date</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Ending 
+			 date of the schedule, from which the data extraction to be 
+			 stopped. </p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Last 
+			 Executed</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+			 the latest data extraction date.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Next 
+			 Execution</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+			 the next data extraction date, which is scheduled.</p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<h2 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Buttons/Areas</h2>
+<div style="text-align: left;">
+	<table cellspacing="0">
+		<col width="150" />
+		<col width="800" />
+		<tr>
+			<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+				 style="font-weight: bold;">Field</p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+				 style="font-weight: bold;">Description</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Schedule 
+			 <span style="font-weight: normal;">(<img src="editstatus.gif" style="border: none;" alt="editstatus.gif" border="0" />)</span></p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+			 this icon to set up the data extraction schedule using cron 
+			 schedule expressions. <span style="font-family: Verdana; font-size: 13.3333px; 
+										 line-height: normal; orphans: auto; 
+										 widows: 1; -webkit-text-stroke-width: 0px;">The 
+			 Cron expression is a string which triggers the scheduler to 
+			 execute the test run plans. For more details,</span><span 
+			 class="Apple-converted-space">&#160;</span><a href="https://en.wikipedia.org/wiki/Cron#CRON_expression" 
+															 style="color: rgb(60, 150, 155); 
+															 font-family: Verdana; 
+															 font-size: 13.3333px; 
+															 font-style: normal; 
+															 font-variant: normal; 
+															 font-weight: normal; 
+															 letter-spacing: normal; 
+															 line-height: normal; 
+															 orphans: auto; 
+															 text-align: left; 
+															 text-indent: 0px; 
+															 text-transform: none; 
+															 white-space: normal; 
+															 widows: 1; 
+															 word-spacing: 0px; 
+															 -webkit-text-stroke-width: 0px;">Cron 
+			 Expression</a>.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Execute 
+			 <span style="font-weight: normal;">(<img src="executetrp.gif" style="border: none;" alt="executetrp.gif" border="0" />)</span></p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+			 this icon to trigger the data extraction.</p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Resource Fulfilment</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nResource Management\nResource Fulfilment");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"resource_availability_report.htm\">Resource Management<\/a> &gt; Resource Fulfilment<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<p>&#160;</p>
+
+<h1>Resource Fulfilment</h1>
+<h2>Overview</h2>
+<p>The <span style="font-weight: bold;"><b>Resource Fulfilment</b></span> 
+ page allows you to view the resource demand summary for a product, to 
+ book resources from a resource pool for a specific shift of a date, and 
+ to resolve resource reservation conflicts.</p>
+<p>To access this page, login as Resource manager, and click <span style="font-weight: bold;"><b>Resource 
+ Management</b></span> &gt; <span style="font-weight: bold;"><b>Resource Fulfilment</b></span>. 
+ Click tab links below for field level information.</p>
+<ul>
+	<li><h6><a href="#ws1" id="aws1" onclick="javascript:handleTab(this.id)">Resource 
+	 Demand Summary</a></h6></li>
+	<li><h6><a href="#ws2" id="aws2" onclick="javascript:handleTab(this.id)">Available 
+	 Resources</a></h6></li>
+	<li><h6><a href="#ws3" id="aws3" onclick="javascript:handleTab(this.id)">Book 
+	 Resources</a></h6></li>
+	<li><h6><a href="#ws4" id="aws4" onclick="javascript:handleTab(this.id)">Reservation 
+	 Conflicts</a></h6></li>
+</ul>
+<div id="content">
+	<div id="ws1" style="display: block;">
+		<h2>Resource Demand Summary</h2>
+		<p>On the <span style="font-weight: bold;"><b>Resource Pool </b></span>pane, 
+		 select the corresponding test factory, and then select the <span 
+		 style="font-weight: bold;"><b>Resource Demand Summary</b></span> tab.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Demand</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following from the drop-down list:</p>
+					<ul type="disc">
+						<li><p><span style="font-weight: bold;"><b>Demand</b></span> 
+						 - Displays the resource demand in the calendar.</p></li>
+						<li><p><span style="font-weight: bold;"><b>Availability</b></span> 
+						 - Displays total number of available resources 
+						 in the calendar even when the available resources 
+						 are reserved.</p></li>
+						<li><p><span style="font-weight: bold;"><b>Reserved</b></span> 
+						 - Displays the reserved resources for the date 
+						 in the calendar.</p></li>
+						<li><p><span style="font-weight: bold;"><b>Shortage</b></span> 
+						 - Displays difference of the resource demand count 
+						 and resource reserved count.</p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the shift from the drop-down list to filter and displays 
+					 the resource demand, availability, reserved, or shortage 
+					 details in the calendar.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Button</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Previous/Next</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to navigate to the previous/next month 
+					 in the calendar.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws2" style="display: none;">
+		<p>&#160;</p>
+		<h2>Available Resources</h2>
+		<p>On the <span style="font-weight: bold;"><b>Resource Pool</b></span> 
+		 pane, select the corresponding resource pool, and then select 
+		 the <span style="font-weight: bold;"><b>Available</b></span> <span style="font-weight: bold;"><b>Resources 
+		 </b></span>tab. This tab displays available resources in resource 
+		 pools for the selected date and shift. The resource manager confirms 
+		 the resource availability for the selected date and shift.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Pick 
+					 a Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a date to view the list of the resource to be booked 
+					 for the selected date.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift 
+					 drop-down</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a shift from the drop-down list to filter the resources 
+					 based on the selected shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remaining 
+					 Timesheet Hour</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the remaining timesheet hour the resource can be work 
+					 for the selected week.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remaining 
+					 Booked Hour</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the remaining hour the resource can be booked for.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Availability 
+					 - Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 this checkbox to confirm the availability of the resource 
+					 for the selected date and shift.</p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: This 
+					 checkbox is selected if the resource marks their availability 
+					 for the selected date and shift. For more information, 
+					 see <a href="mark_user_availability.htm">Mark user 
+					 availability</a>.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Book 
+					 - Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 this checkbox to book the resource for the selected 
+					 date and shift. </p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Summary</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to display the <span style="font-weight: bold;"><b>Resource 
+					 Available Summary</b></span> page. This page lists the 
+					 resources demand, availability, booked and shortage 
+					 details.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws3" style="display: none;">
+		<p>&#160;</p>
+		<h2>Book Resources</h2>
+		<p>On the <span style="font-weight: bold;"><b>Resource Pool</b></span> 
+		 pane, select the corresponding resource pool, and then select 
+		 the <span style="font-weight: bold;"><b>Book</b></span> <span style="font-weight: bold;"><b>Resources 
+		 </b></span>tab. This tab displays resources available for the selected 
+		 date and shift. The resource manager book them for the selected 
+		 date and shift.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Pick 
+					 a Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a date to view the list of the resource to be booked 
+					 for the selected date.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift 
+					 drop-down</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a shift from the drop-down list to filter the resources 
+					 based on the selected shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remaining 
+					 Timesheet Hour</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the remaining timesheet hour the resource can be work 
+					 for the selected week.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remaining 
+					 Booked Hour</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the remaining hour the resource can be booked for.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Book 
+					 - Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 this checkbox to book the resource for the selected 
+					 date and shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Summary</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to display the <span style="font-weight: bold;"><b>Resource 
+					 Available Summary</b></span> page. This page lists the 
+					 resources demand, availability, booked and shortage 
+					 details.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws4" style="display: none;">
+		<p>&#160;</p>
+		<h2>Resource Conflicts</h2>
+		<p>On the <span style="font-weight: bold;"><b>Resource Pool</b></span> 
+		 pane, select a resource pool, and then select the <span style="font-weight: bold;"><b>Reservation 
+		 Conflicts</b></span> tab. This tab displays list of resource reservation 
+		 conflicts. You can select a date range to view the resource reservation 
+		 conflicts. </p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Calendar</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to select the from and to date, and click 
+					 the Apply button to list the resource reservation 
+					 conflicts.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Conflicting 
+					 Reserved Resource</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this link to view the List of Conflicting Reserved 
+					 Resources page. Select the resource checkbox, and 
+					 click the Confirm Reservation(s) button to confirm 
+					 the reservation of the resource for the shift.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" language="JavaScript1.2">function handleTab(argm){
+var id = argm.replace("a","");
+var length = document.getElementById("content").children.length;
+for(var i=1; i<=length; i++){
+document.getElementById("ws" + i).style.display ="none";
+}
+
+switch(id){
+	case "ws1" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws2" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws3" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws4" :
+		document.getElementById(id).style.display = "block";
+		break;
+}
+}</script>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Related Topics</h3>
+<p><a href="book_user_availability.htm">Book available users for a shift</a></p>
+<p><a href="reserve_resources_for_the_shift.htm">Reserve resources for 
+ the shift</a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

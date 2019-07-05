@@ -1,0 +1,236 @@
+﻿/*Created with Adobe RoboHelp 9.*/
+/* HEADING STYLES */
+H1 {
+	color: rgb(232, 234, 239);
+	font-size: 17pt;
+	font-weight: bold;
+	margin-left: -0.5pt;
+	margin-top: 0pt;
+	margin-bottom: 10pt;
+	font-family: Verdana, sans-serif;
+	background-color: #333333;
+}
+h2 {
+	color: #333333;
+	font-size: 14pt;
+	font-weight: bold;
+	margin-left: -0.5pt;
+	margin-top: 0pt;
+	margin-bottom: 10pt;
+	font-family: Verdana, sans-serif;
+	background-color: rgb(213, 211, 211);
+}
+h3 {
+	color: rgb(232, 234, 239);
+	font-size: 13pt;
+	margin-left: -0.5pt;
+	margin-top: 0pt;
+	margin-bottom: 5pt;
+	font-family: Verdana, sans-serif;
+	background-color: #333333;
+	font-weight: normal;
+}
+H4 {
+	color: #333333;
+	font-size: 11pt;
+	font-weight: bold;
+	margin-top: 0pt;
+	margin-bottom: 5pt;
+	background-color: rgb(213, 211, 211);
+	font-family: Verdana;
+	x-next-class: ;
+	x-next-type: P;
+}
+H5 {
+	font-size: 11pt;
+	font-weight: bold;
+	margin-left: -0.25pt;
+	margin-top: 20pt;
+	margin-bottom: 10pt;
+	font-family: Verdana, sans-serif;
+	text-indent: 1pt;
+	background-color: #808080;
+	x-next-class: ;
+	x-next-type: P;
+	color: #ffffff;
+}
+H6 {
+	font-size: 10pt;
+	font-weight: bold;
+	margin-left: -0.5pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: Verdana, sans-serif;
+	x-next-class: ;
+	x-next-type: P;
+	color: #000000;
+}
+/* PARAGRAPH STYLES */
+P {
+	font-size: 10pt;
+	margin-top: 0pt;
+	margin-bottom: 6pt;
+	font-family: Verdana, sans-serif;
+	color: #000000;
+	font-weight: normal;
+}
+P.Normal-Indent {
+	font-size: 10pt;
+	margin-left: 20pt;
+	margin-top: 0pt;
+	margin-bottom: 6pt;
+	font-family: Verdana, sans-serif;
+	color: #000000;
+}
+P.Normal-Single {
+	font-size: 10pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: Verdana, sans-serif;
+	color: #000000;
+}
+P.TableHeading {
+	font-size: 10pt;
+	margin-top: 0pt;
+	margin-bottom: 5pt;
+	font-family: Verdana, sans-serif;
+	color: rgb(60, 150, 155);
+	font-weight: bold;
+	padding-bottom: 2pt;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	padding-top: 2pt;
+}
+P.TableText {
+	font-size: 10pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: Verdana, sans-serif;
+	color: #000000;
+}
+P.Caption {
+	color: #708090;
+	font-size: 8pt;
+	margin-top: 0pt;
+	margin-bottom: 5pt;
+	font-family: "Comic Sans MS", serif;
+}
+P.EmphasisTeal {
+	color: rgb(60, 150, 155);
+	font-size: 10pt;
+	margin-left: -0.5pt;
+	margin-top: 0pt;
+	margin-bottom: 10pt;
+	padding: 3pt;
+	font-family: Verdana, sans-serif;
+	background-color: rgb(210, 240, 240);
+	font-weight: bold;
+}
+/* font-size: 10pt; */
+/* font-family: Verdana, sans-serif; */
+UL UL {
+	list-style: square;
+}
+/* font-size: 10pt;
+	margin-left: 0.25in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	padding-left: 0.0in;
+	font-family: Verdana, sans-serif; */
+UL UL UL {
+	list-style: circle;
+}
+/* font-size: 10pt;
+	margin-left: 0.25in;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	padding-left: 0.0in;
+	font-family: Verdana, sans-serif; */
+/* HYPERLINK STYLES */
+A {
+	color: rgb(60, 150, 155);
+}
+A:HOVER {
+	background-color: rgb(160, 215, 220);
+}
+rh-list.rl-H6-AutoNumberImages {
+	x-level-count: 1;
+	x-lvl-1-format: "Image <x>.";
+	x-lvl-1-type: decimal;
+}
+P.UnresolvedIssue {
+	font-size: 10pt;
+	margin-left: -0.5pt;
+	margin-top: 0pt;
+	margin-bottom: 10pt;
+	padding: 3pt;
+	font-family: Verdana, sans-serif;
+	background-color: rgb(210, 240, 240);
+	font-weight: bold;
+	color: #0000ff;
+}
+table.TopRow {
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	x-border-spacing: 0px;
+	x-1st-col: 1;
+	x-1st-col-name: t1st;
+	font-family: Verdana;
+}
+table.TopRow tr.t1st td {
+	font-size: 10pt;
+	background-color: #c0c0c0;
+	font-weight: bold;
+	text-align: Center;
+	color: #333333;
+	font-family: Verdana;
+}
+table.TopRow tr.t1Row td {
+	font-size: 10pt;
+	font-family: Verdana;
+}
+table.TopRow tr.t2Row td {
+	font-size: 10pt;
+	font-family: Verdana;
+}
+table.TopRow td.t1st {
+	font-family: Verdana;
+}
+table.TopRow tr.t1Row td.t1st {
+	background-color: #ffffff;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Verdana;
+}
+table.TopRow tr.t2Row td.t1st {
+	background-color: #ffffff;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Verdana;
+}
+table.TopRow td.t1st {
+	background-color: #ffffff;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Verdana;
+}
+p.Clarification {
+	color: #ff0000;
+}
+p {
+	padding-left: 15px;
+}
+A.dropspot {
+	color: #333333;
+	x-open-image: url(arrowdown.gif);
+	x-close-image: url(arrowright.gif);
+}
+li.Style1 {
+	font-family: Verdana;
+	font-size: 10pt;
+}

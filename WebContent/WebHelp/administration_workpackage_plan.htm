@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Configure Work Package</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nTest Management\nConfigure Work Package");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"administration_workpackage.htm\">Test Management<\/a> &gt; Configure Work Package<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<p>&#160;</p>
+
+<h1>Configure Work Package</h1>
+<h2>Overview</h2>
+<p>This page is used to configure the work package with test suites/case, 
+ testing environments, and devices, and allocate the test case to resources 
+ to execute them on a shift of a specific date. Also, you can view the 
+ results of the test case execution, and defects reports registered by 
+ the resources.</p>
+<ol class="page-breadcrumb breadcrumb" style="box-sizing: border-box; margin: 0px; 
+		 padding: 0px; list-style: none; border-radius: 4px; color: rgb(197, 204, 213); 
+		 font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 18.5714282989502px; 
+		 orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; background-color: #ffffff;">
+	<li class="active" id="currSelSubMenu" style="box-sizing: border-box; 
+		 display: inline-block; color: rgb(158, 172, 180);">&#160;</li>
+</ol>
+<p>To access this page, login as test manager/test lead, and click <span 
+	 style="font-weight: bold;"><b>Plan</b></span> &gt; <span style="font-weight: bold;"><b>Configure 
+ Work Package</b></span>. Click the following tab page for more information:</p>
+<ul>
+	<li><h6><a href="#ws1" id="aws1" onclick="javascript:handleTab(this.id)">Work 
+	 Package Summary</a></h6></li>
+	<li><h6><a href="#ws2" id="aws2" onclick="javascript:handleTab(this.id)">Plan</a></h6></li>
+	<li><h6><a href="#ws3" id="aws3" onclick="javascript:handleTab(this.id)">Allocate 
+	 Test Cases</a></h6></li>
+	<li><h6><a href="#ws4" id="aws4" onclick="javascript:handleTab(this.id)">Raise 
+	 Resource Demand*</a></h6></li>
+	<li><h6><a href="#ws5" id="aws5" onclick="javascript:handleTab(this.id)">Reserve 
+	 Resources*</a></h6></li>
+	<li><h6><a href="#ws6" id="aws6" onclick="javascript:handleTab(this.id)">Results</a></h6></li>
+	<li><h6><a href="#ws7" id="aws7" onclick="javascript:handleTab(this.id)">Defects</a></h6></li>
+</ul>
+<div id="content">
+	<div id="ws1" style="display: block;">
+		<h2>Work Package Summary</h2>
+		<p>The <span style="font-weight: bold;"><b>Work Package Summary</b></span> 
+		 tab displays the <span style="font-weight: bold;"><b>Work package 
+		 Details</b></span> and <span style="font-weight: bold;"><b>Test Case 
+		 Execution Status</b></span> panes. </p>
+		<p>&#160;</p>
+		<h4>Work Package Details pane</h4>
+		<p>The <span style="font-weight: bold;"><b>Work Package Details</b></span> 
+		 pane displays the product name, build, planned/actual start date 
+		 and end date for completing the work package, and overall status 
+		 of the work package.</p>
+		<p>&#160;</p>
+		<h4>Test Case Execution Status pane</h4>
+		<p>The <span style="font-weight: bold;"><b>Test Case Execution Status</b></span> 
+		 pane displays the test case executed date, shift, count of test 
+		 cases completed, defects raised for the test cases, and number 
+		 of test cases approved and reviewed.</p>
+		<p>&#160;</p>
+	</div>
+	<div id="ws2" style="display: active;">
+		<p>&#160;</p>
+		<h2>Plan</h2>
+		<p>The <span style="font-weight: bold;"><b>Plan</b></span> tab displays 
+		 the list of available test suites and test cases for this product. 
+		 You can select the test case, and map it to testing environments 
+		 and devices. Based on the test case and testing environment combination, 
+		 the test cases in the Allocate Test Cases tab will be generated.</p>
+		<h2>Tabs</h2>
+		<p>In this tab, you can map Features, Test suites or Test cases 
+		 to the work package. For example, a feature can be mapped to a 
+		 work package to execute the test cases available for the feature. 
+		 Also, you can add similar test cases or test suites which are 
+		 not available for the feature.</p>
+		<p>&#160;</p>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the list of available features for the product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Suite</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the list of available test suites for the product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the list of available test cases for the product.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Fields - Test Cases</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the feature ID.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Suite ID</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the test suite ID.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case ID</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the unique identifier of the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the name of the test cases.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Decoupling 
+					 Category</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the name of the decoupling category that the test 
+					 case belongs to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Features</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the feature name of the product.</p></td>
+				</tr>
+				
+					
+					
+				
+				
+					
+					
+				
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Selected</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 this checkbox to map the test case with the environment 
+					 combination and to add this test case with the work&#160;package.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Select 
+					 Run Configuration</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to view/map the testing device and testing 
+					 environment with the test cases.</p>
+					<div style="text-align: left;">
+						<table cellspacing="0">
+							<col width="226" />
+							<col width="624" />
+							<tr>
+								<td style="border: Solid 1px #000000;" 
+									 bgcolor="#C0C0C0"><p style="font-weight: bold;">Field</p></td>
+								<td style="border-top: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;" 
+									 bgcolor="#C0C0C0"><p style="font-weight: bold;">Description</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">View Mapped 
+								 Device(s) (<img src="mapped_devices.gif" alt="mapped_devices.gif" style="border: none;" border="0" />)</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Click 
+								 this icon to view the list of mapped devices.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Map Target 
+								 Devices (<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />)</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Click 
+								 this icon to view and map the devices. 
+								 Drag and drop devices from the <span style="font-weight: bold;"><b>Available 
+								 Devices</b></span> list to the <span style="font-weight: bold;"><b>Mapped 
+								 Devices</b></span> list to map the selected 
+								 devices to the testing environment.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Selected</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Select 
+								 this checkbox to map the selected testing 
+								 environment and device with the test case.</p></td>
+							</tr>
+						</table>
+					</div>
+					<p>&#160;</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Save 
+					 All Selected</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to save all the test cases.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws3" style="display: active;">
+		<p>&#160;</p>
+		<h2>Allocate Test Cases</h2>
+		<p>The <span style="font-weight: bold;"><b>Allocate Test Cases</b></span> 
+		 tab displays the list of test cases and its testing environment 
+		 combination. You can allocate these test cases to resources to 
+		 execute them on a specific shift of a date. This tab also displays 
+		 the completion status of the test cases. To perform bulk allocation, 
+		 select corresponding features, test suites, or test cases, and 
+		 select the planned execution date, shift, tester name, test lead 
+		 name, and then click <span style="font-weight: bold;"><b>Save</b></span>.</p>
+		<p>&#160;</p>
+		
+		
+		
+		
+		<div style="text-align: left;">
+			
+		</div>
+	</div>
+	<div id="ws4" style="display: active;">
+		<p>&#160;</p>
+		<h2>Raise Resource Demand</h2>
+		<p>The <span style="font-weight: bold;"><b>Raise Resource Demand</b></span> 
+		 tab allows to raise resource demand for a shift on a specific 
+		 date. You can click the shift that corresponds to a date, and 
+		 add the type of resource and number of resource required.</p>
+		<p>&#160;</p>
+		
+		
+		
+		
+		<div style="text-align: left;">
+			
+		</div>
+	</div>
+	<div id="ws5" style="display: active;">
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<h2>Reserve Resources</h2>
+		<p>In the <span style="font-weight: bold;"><b>Reserve Resource</b></span> 
+		 tab, you can reserve the resource available for reservation, view 
+		 the resource demand raised, and gap to be filled. This tab is available only for the standard engagement mode.</p>
+		<p>&#160;</p>
+		
+		
+		
+		
+		<div style="text-align: left;">
+			
+		</div>
+	</div>
+	<div id="ws6" style="display: active;">
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<h2>Results</h2>
+		<p>In the <span style="font-weight: bold;"><b>Results</b></span> tab, 
+		 you can view the test case results.</p>
+		
+		
+		
+		
+		<div style="text-align: left;">
+			
+		</div>
+	</div>
+	<div id="ws7" style="display: active;">
+		<p>&#160;</p>
+		<p>&#160;</p>
+		<h2>Defects</h2>
+		<p>In the <span style="font-weight: bold;"><b>Defects</b></span> tab, 
+		 you can view defects raised by resources for the test cases.</p>
+		<p>&#160;</p>
+		
+		
+		
+		
+		<div style="text-align: left;">
+			
+		</div>
+	</div>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Related Topics</h3>
+<p><a href="raise_resource_demand.htm">Raise resource demand</a></p>
+<p><a href="define_the_work_package.htm">Define parameters of the work 
+ package</a></p>
+<script type="text/javascript" language="JavaScript1.2">function handleTab(argm){
+var id = argm.replace("a","");
+var length = document.getElementById("content").children.length;
+for(var i=1; i<=length; i++){
+document.getElementById("ws" + i).style.display ="none";
+}
+
+switch(id){
+	case "ws1" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws2" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws3" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws4" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws5" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws6" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws7" :
+		document.getElementById(id).style.display = "block";
+		break;
+}
+}</script>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

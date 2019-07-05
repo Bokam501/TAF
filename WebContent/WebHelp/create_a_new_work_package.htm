@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Create a new work package</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript" src="./twisty2b.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Process Flow\nSetup Activities\nTest Operations\nWork Package Management\nCreate a work package");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"create_or_manage_vendors.htm\">Process Flow<\/a> &gt; <a href=\"create_or_manage_vendors.htm\">Setup Activities<\/a> &gt; <a href=\"set_up_actual_work_shift.htm\">Test Operations<\/a> &gt; <a href=\"create_a_new_work_package.htm\">Work Package Management<\/a> &gt; Create a work package<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+
+<p style="text-align: right;">&#160;</p>
+
+<p style="text-align: right;"><img src="btnshowall.gif" name="ShowAll(this)" alt="btnshowall.gif" onclick="ShowAll(this)" style="border: none;" border="0" /></p>
+<h1>Create a New Work Package</h1>
+<p>Work package for a product can be created manually, automatically, or 
+ by cloning the existing work package. The test manager or the test lead 
+ of the product can manually create a work package, and plan the completion 
+ date of the work package. The test manager can create test run plans in 
+ the product management page to automatically create the work package, 
+ which can be executed automatically or manually. Also, the test manager 
+ can clone specific parameters of the existing work packages to create 
+ a new work package based on the selected parameters.</p>
+<p>&#160;</p>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a1"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Workflow 
+ diagram</a></h2>
+<div class="droptext" id="POPUP416512542_1" style="display: none;">
+	<p>The following illustration shows how to create and execute test 
+	 run plan.</p>
+	<p><img src="work_package-workflows.jpg" style="border: none;" alt="work_package-workflows.jpg" border="0" /></p>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a3"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Create 
+ a work package</a></h2>
+<div class="droptext" id="POPUP416512542" style="display: none;">
+	<p>To create a work package for a product, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Plan</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Test</b></span> &gt; <span style="font-weight: bold;"><b>Create</b></span> 
+		 <span style="font-weight: bold;"><b>New Work Package</b></span>. In the 
+		 <span style="font-weight: bold;"><b>Create Work Package</b></span> page, 
+		 on the <span style="font-weight: bold;"><b>Work Packages</b></span> pane, 
+		 expand the Product &gt; &#160;Version &gt; Build.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Create 
+		 Work Package</b></span> pane, enter the details such as work package 
+		 name, description for the work package, and start date and end 
+		 date for completing the work package.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Advanced</b></span> 
+		 field, select the <span style="font-weight: bold;"><b>Create</b></span> 
+		 <span style="font-weight: bold;"><b>New</b></span> option to create a 
+		 new work package.</li>
+		<li class="Style1">Select either <span style="font-weight: bold;"><b>Manual</b></span> 
+		 or <span style="font-weight: bold;"><b>Automated</b></span> option from 
+		 the <span style="font-weight: bold;"><b>Work Package Type</b></span> 
+		 drop-down list.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Create</b></span> 
+		 button to create a work package.<br />
+		<span style="font-weight: bold;"><b>Note</b></span>: You will be navigate 
+		 to the <span style="font-weight: bold;"><b>Work Package Execution</b></span> 
+		 page.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a2"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Create 
+ a work package using cloning</a></h2>
+<div class="droptext" id="POPUP488430457" style="display: none;">
+	<p>To create a work package for a product, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Plan</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Test</b></span> &gt; <span style="font-weight: bold;"><b>Create</b></span> 
+		 <span style="font-weight: bold;"><b>New Work Package</b></span>. In the 
+		 <span style="font-weight: bold;"><b>Create Work Package</b></span> page, 
+		 on the <span style="font-weight: bold;"><b>Work Packages</b></span> pane, 
+		 expand the Product &gt; &#160;Version &gt; Build.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Create 
+		 Work Package</b></span> pane, enter the details such as work package 
+		 name, description for the work package, and start date and end 
+		 date for completing the work package.</li>
+		<li class="Style1">Select either <span style="font-weight: bold;"><b>Manual</b></span> 
+		 or <span style="font-weight: bold;"><b>Automated</b></span> option from 
+		 the <span style="font-weight: bold;"><b>Work Package Type</b></span> 
+		 drop-down list.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Advanced</b></span> 
+		 field, select the <span style="font-weight: bold;"><b>Copy Existing</b></span> 
+		 option to copy parameters such as Environments, Planned Execution 
+		 Date, Shift, Resource Demand, Test Lead, and Tester, from the 
+		 existing work package.</li>
+		<li class="Style1">Select the existing work package from the <span 
+		 style="font-weight: bold;"><b>Work Packages</b></span> drop-down list.</li>
+		<li class="Style1">Select the <span style="font-weight: bold;"><b>Environments</b></span>, 
+		 <span style="font-weight: bold;"><b>Execution Date</b></span>, <span 
+		 style="font-weight: bold;"><b>Shift</b></span>, <span style="font-weight: bold;"><b>Resource</b></span> 
+		 <span style="font-weight: bold;"><b>Demand</b></span>, <span style="font-weight: bold;"><b>Test</b></span> 
+		 <span style="font-weight: bold;"><b>Lead</b></span>, and <span style="font-weight: bold;"><b>Tester</b></span> 
+		 check boxes. The <span style="font-weight: bold;"><b>Features</b></span>, 
+		 <span style="font-weight: bold;"><b>Test Suites</b></span>, and <span 
+		 style="font-weight: bold;"><b>Test Cases</b></span> check boxes are selected 
+		 by default.<br />
+		<span style="font-weight: bold;"><b>Note</b></span>: These are available 
+		 only when the <span style="font-weight: bold;"><b>Copy Existing</b></span> 
+		 option is selected.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Create</b></span> 
+		 button to create a work package.<br />
+		<span style="font-weight: bold;"><b>Note</b></span>: The Create Work Package 
+		 will be navigate to the <span style="font-weight: bold;"><b>Work 
+		 Package Execution</b></span> page.</li>
+	</ol>
+</div>
+<p>&#160;</p>
+<h3 style="font-weight: normal;">Related Topic</h3>
+<p style="font-weight: normal;"><a href="define_the_work_package.htm">Define 
+ the work package</a></p>
+<p style="font-weight: normal;"><a href="create_a_test_run_plan.htm">Create 
+ a test run plan</a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP416680831');
+	TextPopupInit('a21','POPUP416488242');
+	TextPopupInit('a31','POPUP4165125421');
+	TextPopupInit('a4','POPUP416526178');
+	TextPopupInit('a1','POPUP416512542_1');
+	TextPopupInit('a3','POPUP416512542');
+	TextPopupInit('a2','POPUP488430457');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

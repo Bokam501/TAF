@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Create a test run plan</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript" src="./twisty2b.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Process Flow\nSetup Activities\nProduct Management\nCreate a test run plan");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"create_or_manage_vendors.htm\">Process Flow<\/a> &gt; <a href=\"create_or_manage_vendors.htm\">Setup Activities<\/a> &gt; <a href=\"products.htm\">Product Management<\/a> &gt; Create a test run plan<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+
+<p style="text-align: right;">&#160;</p>
+
+<p style="text-align: right;"><img src="btnshowall.gif" name="ShowAll(this)" alt="btnshowall.gif" onclick="ShowAll(this)" style="border: none;" border="0" /></p>
+<h1>Create a Test Run Plan</h1>
+<p>A test manager can define a test run plan, and configure devices, environment 
+ combinations, and test suites to create a work package. The work package 
+ can be executed either manually or automatically.</p>
+<p>&#160;</p>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a1"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Workflow 
+ diagram</a></h2>
+<div class="droptext" id="POPUP416680831" style="display: none;">
+	<p>The following illustration shows how to create and execute test 
+	 run plan.</p>
+	<p>&#160;</p>
+	<p><img src="test_run_plan.jpg" alt="test_run_plan.jpg" style="border: none;" border="0" /></p>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a2"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Prerequisites</a></h2>
+<div class="droptext" id="POPUP416488242" style="display: none;">
+	<ol>
+		<li class="Style1">The terminal from the which the web application 
+		 to be tested, is active.</li>
+		<li class="Style1">The URL of the web application to be tested, 
+		 must be included in the <span style="font-weight: bold;"><b>Web Application 
+		 URL</b></span> field of the product version. For more information, 
+		 see <a href="manage_product_attributes.htm">Manage Product Attributes</a>.</li>
+		<li class="Style1">The file location of the testing script must 
+		 be included in the <span style="font-weight: bold;"><b>Script File 
+		 Location</b></span> field of the Test Suite, which is mapped with 
+		 the test run plan.<br />
+		<span style="font-weight: bold;"><b>Note</b></span>: The file location 
+		 of the testing script must be in the following format: (file:///d:/TestScripts/file_name.zip)</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a3"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Create 
+ a test run plan</a></h2>
+<div class="droptext" id="POPUP416512542" style="display: none;">
+	<p>To create a test run plan, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span><span>.</span></li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product &gt; Version, and click 
+		 the <span style="font-weight: bold;"><b>Test Run Plan</b></span> tab.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Add 
+		 New Test Run Plan</b></span> button, and on the <span style="font-weight: bold;"><b>Create 
+		 Test Run Plan</b></span> page, select the <span style="font-weight: bold;"><b>Execution 
+		 Type</b></span>, <span style="font-weight: bold;"><b>Test Run Schedule</b></span>, 
+		 and <span style="font-weight: bold;"><b>Test Tool Master</b></span>.</li>
+		<li class="Style1"><span style="mso-list: l0 level1 lfo1;">Enter 
+		 the Cron expression to schedule and auto execute the test run 
+		 plans. Also, you can set up the cron scheduler after creating 
+		 the test run plan.</span></li>
+		<ol>
+			<li class="Style1"><p style="mso-add-space: auto; mso-list: l0 level2 lfo1;"><span>Click 
+			 the Test Run Plan Schedule icon, and select Minutes, Hours, 
+			 Daily, Weekly, Monthly, or Yearly tabs.</span></p></li>
+			<li class="Style1"><p style="mso-add-space: auto; mso-list: l0 level2 lfo1;"><span 
+			 style="mso-add-space: auto; mso-list: l0 level2 lfo1;">Set 
+			 the corresponding schedule parameters, and click <b style="mso-bidi-font-weight: normal; 
+			 mso-add-space: auto; mso-list: l0 level2 lfo1;">Save</b> to 
+			 create the cron expression and auto execute the test run plan 
+			 in the schedule.</span></p></li>
+		</ol>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Submit</b></span> 
+		 button to create a test run plan, and then click the <span style="font-weight: bold;"><b>Continue</b></span> 
+		 button.</li>
+		<li class="Style1"><span style="mso-list: l0 level1 lfo1;">In the 
+		 </span><span style="mso-list: l0 level1 lfo1; font-weight: bold;"><b>Select 
+		 Test Script</b></span><span style="mso-list: l0 level1 lfo1;"> page, 
+		 select the features, test cases, or test suites, and click </span><span 
+		 style="mso-list: l0 level1 lfo1; font-weight: bold;"><b>Continue</b></span><span 
+		 style="mso-list: l0 level1 lfo1;">.</span></li>
+		<li class="Style1"><span style="mso-list: l0 level1 lfo1;">On the 
+		 </span><span style="mso-list: l0 level1 lfo1; font-weight: bold;"><b>Select 
+		 Test Beds</b></span><span style="mso-list: l0 level1 lfo1;"> page, 
+		 map the target devices corresponding to the test environment combination, 
+		 and then click </span><span style="mso-list: l0 level1 lfo1; font-weight: bold;"><b>Continue</b></span><span 
+		 style="mso-list: l0 level1 lfo1;">. The test suites and test cases 
+		 are listed in the </span><span style="mso-list: l0 level1 lfo1; 
+										 font-weight: bold;"><b>Test Beds 
+		 Distribution</b></span><span style="mso-list: l0 level1 lfo1;"> page.</span></li>
+		<li class="Style1"><span style="mso-list: l0 level1 lfo1;">Click 
+		 </span><span style="mso-list: l0 level1 lfo1; font-weight: bold;"><b>Continue</b></span><span 
+		 style="mso-list: l0 level1 lfo1;">, and on the </span><span style="mso-list: l0 level1 lfo1; 
+		 font-weight: bold;"><b>Execute</b></span><span style="mso-list: l0 level1 lfo1;"> 
+		 page, select the Product Build, and then click </span><span style="mso-list: l0 level1 lfo1; 
+		 font-weight: bold;"><b>Execute</b></span><span style="mso-list: l0 level1 lfo1;">.<br />
+		<b style="mso-bidi-font-weight: normal; mso-list: l0 level1 lfo1;">Note</b>: 
+		 Make sure that the iLCM Terminal is launched and the connection 
+		 is established between the server and the terminal.</span></li>
+		<li class="Style1"><span style="mso-list: l0 level1 lfo1;">The 
+		 work package with test cases and test bed details are generated 
+		 along with the execution results. TAF can create screenshots and 
+		 evidence for the executed test run plan.</span></li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a4"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Execute 
+ an automated test run plan</a></h2>
+<div class="droptext" id="POPUP416526178" style="display: none;">
+	<p>To execute an automated test run plan, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span><span>.</span></li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product &gt; Version, and click 
+		 the <span style="font-weight: bold;"><b>Test Run Plan</b></span> tab.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Test 
+		 Run Plan(s)</b></span> page, click the <span style="font-weight: bold;"><b>Execute 
+		 Test Run Plan</b></span> (<img src="executetrp.gif" alt="executetrp.gif" style="border: none;" border="0" />) icon. As a result, 
+		 the work package for the corresponding Test Run Plan will be created.</li>
+		<li class="Style1">If the Test Run Plan is created for automated 
+		 test case execution, then the test cases will be executed after 
+		 the work package is created successfully.</li>
+	</ol>
+</div>
+<p>&#160;</p>
+<h3 style="font-weight: normal;">Related Topics</h3>
+<p style="font-weight: normal;"><a href="product_management_plan.htm">Product 
+ Management</a></p>
+<p style="font-weight: normal;"><a href="test_automation_framework_configuration.htm">Test 
+ Automation Framework Configuration</a></p>
+<p style="font-weight: normal;"><a href="test_automation_framework.htm">Test 
+ Automation Framework</a></p>
+<p style="font-weight: normal;">&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP4166808311');
+	TextPopupInit('a21','POPUP4164882421');
+	TextPopupInit('a31','POPUP4165125421');
+	TextPopupInit('a41','POPUP4165261781');
+	TextPopupInit('a1','POPUP416680831');
+	TextPopupInit('a2','POPUP416488242');
+	TextPopupInit('a3','POPUP416512542');
+	TextPopupInit('a4','POPUP416526178');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

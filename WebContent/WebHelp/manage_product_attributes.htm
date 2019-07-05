@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Manage Product Attributes</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript" src="./twisty2b.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Process Flow\nSetup Activities\nProduct Management\nManage product attributes");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"create_or_manage_vendors.htm\">Process Flow<\/a> &gt; <a href=\"create_or_manage_vendors.htm\">Setup Activities<\/a> &gt; <a href=\"products.htm\">Product Management<\/a> &gt; Manage product attributes<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+
+<p style="text-align: right;">&#160;</p>
+
+<p style="text-align: right;"><img src="btnshowall.gif" name="ShowAll(this)" alt="btnshowall.gif" onclick="ShowAll(this)" style="border: none;" border="0" /></p>
+<h1>Manage Product Attributes</h1>
+<p>Product include test cases, test suites, features, decoupling category 
+ to categories test cases, testing environments and devices, change requests, 
+ risk, and automation scripts. The test cases are mapped to multiple features 
+ to ensure that common functionality in the features can be tested. Decoupling 
+ category is used to categories the test cases based on a user type. Test 
+ cases status can be tracked based on the feature, decoupling category, 
+ and version.</p>
+<p>&#160;</p>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a3"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Test Cases</a></h2>
+<div class="droptext" id="POPUP416512542" style="display: none;">
+	<p>Test cases for testing the product can be added to the products 
+	 along with the test steps. You can add the test cases to a product 
+	 in the following ways:</p>
+	<ul type="disc">
+		<li class="Style1">Manually add the test cases along with test 
+		 steps</li>
+		<li class="Style1">Import test cases from an excel sheet</li>
+		<li class="Style1">Import test cases from test management system 
+		 like HPQC</li>
+		<li class="Style1">Automated test cases generation after executing 
+		 the test scripts in test suites</li>
+	</ul>
+	<p>To manually add the test cases, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>. 
+		 As a result, the <span style="font-weight: bold;"><b>Manage Products</b></span> 
+		 page is displayed.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select the <span style="font-weight: bold;"><b>Engagement</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product</b></span>, and then 
+		 on the <span style="font-weight: bold;"><b>Test Cases</b></span> tab, 
+		 click <span style="font-weight: bold;"><b>Add</b></span>.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Add</b></span> 
+		 page, enter the test case code, test case name, and description 
+		 about the test case.</li>
+		<li class="Style1">Select either manual or automated execution 
+		 type.</li>
+		<li class="Style1">For automated test case execution, enter the 
+		 script location and script name.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Priority</b></span> 
+		 drop-down list, select the level of priority for the test case. 
+		 Also, in the <span style="font-weight: bold;"><b>Test Case Type</b></span> 
+		 drop-down list, select the type of the test case.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Feature</b></span> 
+		 drop-down list, select a feature to map the test case with the 
+		 feature to ensure that the test case is available for that feature. 
+		 You can create a feature and map the test cases with it in the 
+		 <span style="font-weight: bold;"><b>Features</b></span> tab.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Decoupling 
+		 Categories</b></span> drop-down list, select a decoupling category 
+		 to map the test case. You can create and map a decoupling category 
+		 with the test cases in the <span style="font-weight: bold;"><b>Decoupling 
+		 Categories</b></span> tab.</li>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Save 
+		 </b></span>to create the test case.</li>
+	</ol>
+	<p>To add test steps for the test case, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click the Test Step List (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" /> 
+		 ) icon, which is before the Test Case ID field, and on the Test 
+		 Steps pane, click <span style="font-weight: bold;"><b>Add</b></span>. 
+		 </li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Add</b></span> 
+		 page, enter the test step name, description for the test step, 
+		 test step input and expected output, test step code for the test 
+		 case.</li>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Save</b></span> 
+		 to include the test step for the test case.</li>
+	</ol>
+	<p>&#160;</p>
+	<p>To import test cases from an excel sheet, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>. 
+		 As a result, the <span style="font-weight: bold;"><b>Manage Products</b></span> 
+		 page is displayed.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select the <span style="font-weight: bold;"><b>Engagement</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product</b></span>, and then 
+		 on the <span style="font-weight: bold;"><b>Test Cases</b></span> tab, 
+		 click the <span style="font-weight: bold;"><b>TESTCASE TEMPLATE</b></span> 
+		 link to download the template.</li>
+		<li class="Style1">Update the template with the test cases, test 
+		 steps, and feature details.</li>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>TestCases</b></span> 
+		 or <span style="font-weight: bold;"><b>TestSteps</b></span> to upload 
+		 the test cases and test steps.</li>
+	</ol>
+	<p>To import test cases from test management system like HPQC, follow 
+	 these steps:</p>
+	<ol start="1" style="margin-top: 0in;">
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">Click&#160;<b>Setup</b>&#160;&gt;&#160;<b>Product</b>&#160;<b>Management</b>. 
+		 On the&#160;<b>Products</b>&#160;pane, select the Engagement &gt; 
+		 Product1.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">On 
+		 the&#160;<b>Manage Products</b>&#160;page, click the&#160;<b>Tool 
+		 Integration</b>&#160;tab.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">On 
+		 the&#160;<b>Test Management System</b>&#160;tab, click the Add 
+		 button. As a result, the&#160;<b>Add</b>&#160;page is displayed.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">In 
+		 the&#160;<b>Title</b>&#160;field, enter the test management system 
+		 name i.e.&#160;<i>HPQC</i>, and description, and enter the cron 
+		 expression. The Cron expression is a string which triggers the 
+		 scheduler to execute the test run plans. For more details, <a 
+		 href="https://en.wikipedia.org/wiki/Cron#CRON_expression">Cron 
+		 Expression</a>.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">In 
+		 the&#160;<b>Test System</b>&#160;drop-down list, select the test 
+		 management system as&#160;<i>HPQC</i>, and in the <b style="mso-bidi-font-weight: normal;">System 
+		 Type</b> drop-down list, select the either 32-bit or 64-bit OS.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">Select 
+		 the <b style="mso-bidi-font-weight: normal;">Is Primary</b> check 
+		 box to set the configured management system as primary system 
+		 for test cases import.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">In 
+		 the&#160;<b>Version</b>&#160;field, enter the test management 
+		 system version number, and in the&#160;<b>Connection Uri</b>&#160;field, 
+		 enter the url of the test management system say “<i>http://10.108.57.17:8080/qcbin</i>”.</li>
+		<li class="Style1" style="mso-list: l0 level1 lfo1; tab-stops: list .5in;">Enter 
+		 the username, password, and domain, which is the domain name of 
+		 the management system, and then click the&#160;<b>Save</b>&#160;button. 
+		 TestSetFolder Filter (ID), TestSetFolder Filter(NAME), TestCase 
+		 Filter(ID), and Resource filter (ID) are place holder fields for 
+		 future reference.</li>
+	</ol>
+	<p>Before performing the uploading or downloading operation, you must 
+	 establish the connection between the HPQC and iLCM. For example, the 
+	 HPQC has a domain i.e. default, and a project i.e. product1. Add the 
+	 entity details to import the test cases from the HPQC. To add the 
+	 entity details, follow these steps:</p>
+	<ol start="1" style="margin-top: 0in;">
+		<li class="Style1" style="mso-list: l1 level1 lfo2; tab-stops: list .5in;">On 
+		 the&#160;<b>Test Management System</b>&#160;tab, click the Test 
+		 Management System Mapping (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon, and then 
+		 on the&#160;<b>Test Management System Mapping</b>&#160;pane, click 
+		 the&#160;<b>Add</b>&#160;button.</li>
+		<li class="Style1" style="mso-list: l1 level1 lfo2; tab-stops: list .5in;">In 
+		 the&#160;<b>Mapping Entity</b>&#160;drop-down list, select one 
+		 of the following options: 
+		<ul style="margin-top: 0in;" type="disc">
+			<li class="MsoNormal" style="mso-list: l1 level2 lfo2; tab-stops: list 1.0in;">Product 
+			 (Select this option to view the list of products available 
+			 in the HPQC)</li>
+			<li class="MsoNormal" style="mso-list: l1 level2 lfo2; tab-stops: list 1.0in;">Product 
+			 Version</li>
+			<li class="MsoNormal" style="mso-list: l1 level2 lfo2; tab-stops: list 1.0in;">Test 
+			 Suite</li>
+		</ul></li>
+		<li class="Style1" style="mso-list: l1 level1 lfo2; tab-stops: list .5in;">In 
+		 the&#160;<b>Entity Name</b>&#160;drop-down list, select the entity 
+		 name i.e.&#160;<i>Product 1</i>. The test case for the selected 
+		 product name will be imported from the test management system.</li>
+		<li class="Style1" style="mso-list: l1 level1 lfo2; tab-stops: list .5in;">In 
+		 the&#160;<b>Mapping Value</b>&#160;field, enter the mapping value 
+		 for the product name i.e.&#160;<i>Product</i>.&#160;Here the Mapping 
+		 value indicates the project name in&#160;HPQC system.</li>
+	</ol>
+	<p>&#160;</p>
+	<p>&#160;</p>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a4"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Test Suites</a></h2>
+<div class="droptext" id="POPUP416526178" style="display: none;">
+	<p>Test suites are available only for a product version. Before mapping 
+	 the test cases to a test suite, you must map the available test cases 
+	 to a product version in the <span style="font-weight: bold;"><b>Product 
+	 Version Test Case Mapping</b></span> page.</p>
+	<p>&#160;</p>
+	<p>To map a test case to a product version, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Version Test Case 
+		 Mapping</b></span><span>.</span></li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product. As a result, the <span 
+		 style="font-weight: bold;"><b>Product Version Test Case Mapping</b></span> 
+		 tab displays list of available test cases and product versions 
+		 check boxes.</li>
+		<li class="Style1">Select the product version check box that corresponds 
+		 to a required test case to be mapped.</li>
+	</ol>
+	<p>To create a test suite and map the test cases to it, follow these 
+	 steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product &gt; Version, and on the 
+		 <span style="font-weight: bold;"><b>Test Suites</b></span> tab, click 
+		 the Add button.</li>
+		<li class="Style1">Enter the test suite name and execution type.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>View 
+		 Test Cases</b></span> (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon to view the list of 
+		 mapped test cases and test suites with the test suite.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Test 
+		 Case Mapping</b></span> (<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />) icon, and drag and 
+		 drop the test cases and test suites from the Available Test Cases/Test 
+		 Suites list to the Mapped Test Cases/Test Suites list.</li>
+	</ol>
+	<p>-OR-</p>
+	<p>&#160;</p>
+	<p>To create a test suite for automated testing (Test Run Plan), follow 
+	 these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product &gt; Version, and on the 
+		 <span style="font-weight: bold;"><b>Test Suites</b></span> tab, click 
+		 the <span style="font-weight: bold;"><b>Add</b></span> button.</li>
+		<li class="Style1">Enter the test suite name, and select the Script 
+		 Type.</li>
+		<li class="Style1">Enter the script file location, select the Execution 
+		 Type as either <span style="font-weight: bold;"><b>Automated</b></span> 
+		 or <span style="font-weight: bold;"><b>Manual</b></span><span>, and then 
+		 click the</span><span style="font-weight: bold;"><b> Save</b></span><span> 
+		 button.</span></li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a2"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Features</a></h2>
+<div class="droptext" id="POPUP488617027" style="display: none;">
+	<p>To map a test case to a product feature, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product, and on the <span style="font-weight: bold;"><b>Features 
+		 </b></span>tab, click the <span style="font-weight: bold;"><b>Add</b></span> 
+		 button.</li>
+		<li class="Style1">Enter the feature name and code, and then select 
+		 the parent feature.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Save</b></span> 
+		 button to create a product feature.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Feature</b></span> 
+		 pane, click the <span style="font-weight: bold;"><b>Mapped Test Cases</b></span> 
+		 (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) 
+		 icon to view the list of mapped test cases.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Test 
+		 Case Mapping</b></span> (<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />) icon, and drag and 
+		 drop the test cases from the <span style="font-weight: bold;"><b>Available 
+		 Test Cases</b></span> list to the <span style="font-weight: bold;"><b>Mapped 
+		 Test Cases</b></span> list.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a5"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Decoupling Category</a></h2>
+<div class="droptext" id="POPUP458522654" style="display: none;">
+	<p>To map a test case to a decoupling category, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product, and on the <span style="font-weight: bold;"><b>Decoupling 
+		 Category</b></span> tab, click the <span style="font-weight: bold;"><b>Add</b></span> 
+		 button.</li>
+		<li class="Style1">Enter the decoupling category name, and then 
+		 select the parent category and user type. If the newly added decoupling 
+		 category is the parent category, then select the <span style="font-weight: bold;"><b>null</b></span> 
+		 option in the <span style="font-weight: bold;"><b>Parent Category</b></span> 
+		 drop-down list.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Save</b></span> 
+		 button to create a product decoupling category.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Decoupling 
+		 Category </b></span>pane, click the <span style="font-weight: bold;"><b>Mapped 
+		 Test Cases List</b></span> (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon to view the 
+		 list of mapped test cases.</li>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Test 
+		 Case Mapping</b></span> (<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />) icon, and drag and 
+		 drop the test cases from the <span style="font-weight: bold;"><b>Available 
+		 Test Cases</b></span> list to the <span style="font-weight: bold;"><b>Mapped 
+		 Test Cases</b></span> list.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a6"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Environments</a></h2>
+<div class="droptext" id="POPUP459215237" style="display: none;">
+	<p>The Environment Group page allows to create testing environments 
+	 and testing environment groups. The testing environment group is collection 
+	 of testing environments. You can define the testing environment in 
+	 which the product is to be tested. Note: Environment Group is available 
+	 only for the Admin.</p>
+	<p>To create an environment group, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Admin</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Environment Group</b></span>, 
+		 and click <span style="font-weight: bold;"><b>Add</b></span>.</li>
+		<li class="Style1">Enter the group name such browser, description, 
+		 and display name, and then click <span style="font-weight: bold;"><b>Save</b></span>.</li>
+		<li class="Style1">Expand the Environment Category icon, and click 
+		 <span style="font-weight: bold;"><b>Add</b></span>.</li>
+		<li class="Style1">Enter the category name such Firefox, description, 
+		 display name and parent category.</li>
+	</ol>
+	<p>After creating the environment group and category, the same will 
+	 be displayed in the product management page to create environment 
+	 and its combination.</p>
+	<p>To create testing environment combination, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product, and on the <span style="font-weight: bold;"><b>Environment</b></span> 
+		 tab, click the <span style="font-weight: bold;"><b>Add</b></span> button.</li>
+		<li class="Style1">Enter the testing environment name, and then 
+		 select the environment group and category.<br />
+		Note: Environment Group name is defined in the Admin &gt; Environment 
+		 Group.</li>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Save</b></span> 
+		 to create a testing environment.</li>
+		<li class="Style1">Based on the added environments and environment 
+		 category, the environment combination is created.<br />
+		For example, if <span style="font-style: italic;"><i>Google Chrome</i></span> 
+		 is added under the Browser environment category, and the <span 
+		 style="font-style: italic;"><i>Smart phone</i></span> and <span style="font-style: italic;"><i>Tablet</i></span> 
+		 are added under the device environment category, then the possible 
+		 environment combination are <span style="font-style: italic;"><i>Google 
+		 Chrome</i></span> - <span style="font-style: italic;"><i>Smart phone</i></span>, 
+		 and <span style="font-style: italic;"><i>Google Chrome</i></span> - <span 
+		 style="font-style: italic;"><i>Tablet</i></span>.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a7"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Device</a></h2>
+<div class="droptext" id="POPUP459731657" style="display: none;">
+	<p style="tab-stops: 150.0pt;">The generic devices can be added automatically 
+	 when connected to the terminal, or you can manually add the devices 
+	 to the server. To add the devices to the devices list, follow these 
+	 steps:</p>
+	<ol>
+		<li class="Style1">Click the <span style="font-weight: bold;"><b>Devices</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Device List</b></span>, and 
+		 click <b style="mso-bidi-font-weight: normal;">Mobile</b> or <b 
+		 style="mso-bidi-font-weight: normal;">Server</b>.</li>
+		<li class="Style1">Click <b style="mso-bidi-font-weight: normal;">Add 
+		 New Generic Devices</b>, and in the <span style="font-weight: bold;"><b>Add 
+		 Device</b></span> page, enter the device name and description.</li>
+		<li class="Style1">Select the device status as <b style="mso-bidi-font-weight: normal;">Yes</b> 
+		 or <b style="mso-bidi-font-weight: normal;">No</b>, and then the 
+		 platform type.</li>
+		<li class="Style1">Select the device model master, and device type. 
+		 Based on the selected device type, the Mobile or Server Device 
+		 Details information will be displayed.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Version</b></span> 
+		 field, enter the mobile device version number.</li>
+		<li class="Style1">Fill the device details. For server type devices, 
+		 enter the host name, IP address, system type, and processor. For 
+		 mobile type devices, enter the kernel number, build number, and 
+		 device make master name.</li>
+		<li class="Style1">Click <b style="mso-bidi-font-weight: normal;">Create</b> 
+		 to create the device.</li>
+	</ol>
+	<p>After creating the devices in the device list, you can map the device 
+	 to the product for testing. To map the device to the product, follow 
+	 these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <b style="mso-bidi-font-weight: normal;">Products</b> 
+		 pane, select an Engagement &gt; Product, and on the <b style="mso-bidi-font-weight: normal;">Devices</b> 
+		 tab, click either <b style="mso-bidi-font-weight: normal;">Map</b> 
+		 <b style="mso-bidi-font-weight: normal;">Mobile</b> or <b style="mso-bidi-font-weight: normal;">Map</b> 
+		 <b style="mso-bidi-font-weight: normal;">Server</b>.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Map 
+		 Target Mobiles</b></span> or <span style="font-weight: bold;"><b>Map 
+		 Target Server</b></span> window, drag and drop the mobile devices 
+		 or servers available in the <b style="mso-bidi-font-weight: normal;">Mobile 
+		 device</b> or <b style="mso-bidi-font-weight: normal;">Server</b> 
+		 list to the <b style="mso-bidi-font-weight: normal;">Mapped Mobile 
+		 Device</b> or <b style="mso-bidi-font-weight: normal;">Mapped 
+		 Server</b> list.</li>
+		<li class="Style1">Click <b style="mso-bidi-font-weight: normal;">Mobile</b> 
+		 or <b style="mso-bidi-font-weight: normal;">Server</b> in the 
+		 type field to view the list of active or inactive devices.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a1"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Manage 
+ Change Request</a></h2>
+<div class="droptext" id="POPUP459731657_1" style="display: none;">
+	<p>To map change requests received for the product, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select an Engagement &gt; Product, and on the <span style="font-weight: bold;"><b>Change 
+		 Request</b></span> tab, click <span style="font-weight: bold;"><b>Add</b></span>.</li>
+		<li class="Style1">On the Add page, enter the change request name 
+		 and description.</li>
+		<li class="Style1">Select the owner name and execution priority 
+		 for the change request.</li>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Save</b></span> 
+		 to create and map the change request for the product.</li>
+	</ol>
+	<p>You can also upload the change request using the change request 
+	 template. To upload the change request, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product Management</b></span>. 
+		 As a result, the <span style="font-weight: bold;"><b>Manage Products</b></span> 
+		 page is displayed.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Products</b></span> 
+		 pane, select the <span style="font-weight: bold;"><b>Engagement</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product</b></span>, and then 
+		 on the <span style="font-weight: bold;"><b>Change Request</b></span> 
+		 tab, click the <span style="font-weight: bold;"><b>Change Request 
+		 TEMPLATE</b></span> link to download the template.</li>
+		<li class="Style1">Update the template with the change request 
+		 details.</li>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Change 
+		 Requests</b></span> to upload the change request.</li>
+	</ol>
+	<p>&#160;</p>
+	<p>&#160;</p>
+</div>
+
+<p>&#160;</p>
+<h3 style="font-weight: normal;">Related Topics</h3>
+<p><a href="create_a_new_work_package.htm">Create a new work package </a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a11','POPUP416680831');
+	TextPopupInit('a21','POPUP416488242');
+	TextPopupInit('a31','POPUP4165125421');
+	TextPopupInit('a41','POPUP4165261781');
+	TextPopupInit('a3','POPUP416512542');
+	TextPopupInit('a4','POPUP416526178');
+	TextPopupInit('a2','POPUP488617027');
+	TextPopupInit('a5','POPUP458522654');
+	TextPopupInit('a6','POPUP459215237');
+	TextPopupInit('a7','POPUP459731657');
+	TextPopupInit('a1','POPUP459731657_1');
+	TextPopupInit('a8','POPUP459731657_2');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

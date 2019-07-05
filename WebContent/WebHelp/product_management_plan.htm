@@ -1,0 +1,1736 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Product Management</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nProduct Management\nProduct Management");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"product_management_plan.htm\">Product Management<\/a> &gt; Product Management<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<h1>Products</h1>
+<p>A product is an application to be tested for bugs and accuracy of business 
+ needs in a test factory. Development stage of the product is marked by 
+ its version and build number. The version numbers are package with new 
+ features and bug fixes. The build numbers are packages with a minimal 
+ fixes for the bugs and defects. You can assign the test suites, test cases, 
+ de-coupling category, testing devices, features, and testing environment 
+ to the product. You can also define or set test suites, and test run plans 
+ to product versions.</p>
+<p>Click the following tabs for field level information:</p>
+<ul>
+	<li><h6><a href="#ws1" id="aws1" onclick="javascript:handleTab(this.id)">Products</a></h6></li>
+	<li><h6><a href="#ws7" id="aws7" onclick="javascript:handleTab(this.id)">Product 
+	 Summary</a></h6></li>
+	<li><h6><a href="#ws13" id="aws13" onclick="javascript:handleTab(this.id)">Tool 
+	 Integration</a></h6></li>
+	<li><h6><a href="#ws4" id="aws4" onclick="javascript:handleTab(this.id)">Features</a></h6></li>
+	<li><h6><a href="#ws2" id="aws2" onclick="javascript:handleTab(this.id)">Test 
+	 Cases</a></h6></li>
+	<li><h6><a href="#ws3" id="aws3" onclick="javascript:handleTab(this.id)">Test 
+	 Suites</a></h6></li>
+	<li><h6><a href="#ws5" id="aws5" onclick="javascript:handleTab(this.id)">Traceability 
+	 View</a></h6></li>
+	<li><h6><a href="#ws6" id="aws6" onclick="javascript:handleTab(this.id)">Decoupling</a></h6></li>
+	<li><h6><a href="#ws8" id="aws8" onclick="javascript:handleTab(this.id)">Environments</a></h6></li>
+	<li><h6><a href="#ws9" id="aws9" onclick="javascript:handleTab(this.id)">Devices</a></h6></li>
+	<li><h6><a href="#ws10" id="aws10" onclick="javascript:handleTab(this.id)">Test 
+	 Run Plan</a></h6></li>
+	<li><h6><a href="#ws11" id="aws11" onclick="javascript:handleTab(this.id)">Testing 
+	 Team</a></h6></li>
+	<li><h6><a href="#ws12" id="aws12" onclick="javascript:handleTab(this.id)">Flex 
+	 Testing Team</a></h6></li>
+	<li><h6><a href="#ws14" id="aws14" onclick="javascript:handleTab(this.id)">Change 
+	 Request</a></h6></li>
+</ul>
+<div id="content">
+	<div id="ws1" style="display: block;">
+		<h2>Products</h2>
+		<p>In this tab, you can define product and its hierarchy such as 
+		 version, and build. Also, you can define a user role for this 
+		 product. For example, a user can be Test Manager for a test factory, 
+		 but he can act as Test Lead or Tester for a specific product. 
+		 You can set the user role of the test manager as a test lead or 
+		 tester, such that the user can act as Test Lead or Tester only 
+		 for this product.</p>
+		<p>&#160;</p>
+		<h2>Fields - Products Pane</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Factory</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the Test Factory, where the product is tested.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Customer</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Customer 
+					 name who owns the product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Product</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Product 
+					 name to be tested.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Description 
+					 of the product. </p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Project 
+					 Code</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Unique 
+					 identifier of the project.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Project</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Project 
+					 name to which the product belongs to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the product type from the following: </p>
+					<ul type="disc">
+						<li><p>Device - e.g. Tablet, IPad</p></li>
+						<li><p>Web - e.g. web based application</p></li>
+						<li><p>Embedded - e.g. embedded system</p></li>
+						<li><p>Desktop - e.g. desktop application</p></li>
+						<li><p>Mobile - e.g. mobile application</p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mode</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the mode from the following: </p>
+					<ul type="disc">
+						<li><p>Test Factory mode</p></li>
+						<li><p>Project</p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the product is active or inactive state.</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+		</div>
+		<h2>Fields - Product Version Pane</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Product 
+					 Version</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Product 
+					 version.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Detailed 
+					 description of the product version.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Release 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Release 
+					 date of the version.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the product version is active or inactive 
+					 state.</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+		</div>
+		<h2>Fields - Product Build Pane</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Build 
+					 No</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Build 
+					 number of the product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Build 
+					 name.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Description 
+					 of the product build.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Build 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Date 
+					 in which the build was deployed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Clone 
+					 Build</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="clonebuild.gif" alt="clonebuild.gif" style="border: none;" border="0" />) icon to clone the selected 
+					 build for the next build date along with the work 
+					 package.</p>
+					<p>For example, if the current/select Build is say 
+					 Build1.1, and Build Date is Current date, then the 
+					 newly created build &#160;is Build1.12 and the Build 
+					 date is next date of the current date.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the product build is in active or inactive 
+					 state.</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+		</div>
+		<h2>Fields - Product Specific Role</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">User 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>User 
+					 name of the resource.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Role</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>User 
+					 role for the product. </p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: Product 
+					 based role is different from Test Factory based role. 
+					 For example, John is set with the test lead role in 
+					 the test factory level, and the test manager role 
+					 in the product level. Then John will act as test manager 
+					 for this product, and if he is assigned to other products, 
+					 he will be the test lead for them.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the user role is in active or inactive state.</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+		</div>
+		<h2>Fields - Product Core Resource</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">User</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>User 
+					 name of the core resource.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Role</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Test 
+					 factory based user role of the core resource.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">From 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Date 
+					 from which the user is working as core resource for 
+					 this product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">To 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Date 
+					 to which the user will be working as core resource 
+					 for this product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>If 
+					 any.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the core resource is in active or inactive 
+					 state.</p></td>
+				</tr>
+			</table>
+			<p>&#160;</p>
+		</div>
+		<h2>Buttons - Products tab</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Create 
+					 a product with its detail.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add/Edit 
+					 Product Version(s)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Create 
+					 a product version.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">User 
+					 Role by Product</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Assign 
+					 users with a product specific role.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Product 
+					 Core Resources</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Assign 
+					 core resources for the product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add/Edit 
+					 Product Build(s)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Create 
+					 a product build.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000; "><p style="font-weight: bold;">Add/Edit 
+					 Competencies</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+						 "><p>Drag and drop the competency from the available 
+					 list to the mapped list. To create competency, see 
+					 <a href="manage_dimensions.htm">Manage Dimensions</a>.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000; "><p style="font-weight: bold;">Add/Edit 
+					 Workflow Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+						 "><p>Drag and drop the status category from the 
+					 available list to the mapped list. To create the status 
+					 category, see <a href="manage_dimensions.htm">Manage 
+					 Dimensions</a>.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws2" style="display: none;">
+		<p>&#160;</p>
+		<h2>Test Cases</h2>
+		<p>In this tab, you can upload the test cases using an excel sheet 
+		 or manually add the test cases. You can also map the test cases 
+		 with corresponding features. The excel sheet contains test cases, 
+		 test steps, and features. The sample templates are available here: 
+		 <a href="template/feature_template.xlsx">Feature</a>, <a href="template/testcase_template.xlsx">Test 
+		 Case</a>, <a href="template/teststeps_template.xlsx">Test Steps</a>.</p>
+		<p><span style="font-weight: bold;"><b>Note</b></span>: Please upload 
+		 the Features template, followed by Test Case template and Test 
+		 steps template.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case ID</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 unique identifier of the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 unique name of the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Detailed 
+					 description about the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case Code</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Code 
+					 assigned to the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Script 
+					 Package Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Script 
+					 package location.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Script 
+					 File Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the automated testing script file.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Execution 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following options:</p>
+					<ul type="disc">
+						<li class="Style1"><p>Manual - To execute manual 
+						 testing of the product</p></li>
+						<li class="Style1"><p>Automated - To execute the 
+						 test cases automatically</p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Priority</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following options to set the level of priority 
+					 of the test case:</p>
+					<ul type="disc">
+						<li class="Style1"><p>Trivial</p></li>
+						<li class="Style1"><p>Medium </p></li>
+						<li class="Style1"><p>High </p></li>
+						<li class="Style1"><p>Critical </p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following options to set the test case 
+					 type:</p>
+					<ul type="disc">
+						<li class="Style1">Functional Testing</li>
+						<li class="Style1">Regression Testing</li>
+						<li class="Style1">Change Based Testing</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Decoupling 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the decoupling type from the list.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Step List</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon to add the test steps 
+					 for the test case.</p>
+					<p>&#160;</p>
+					<div style="text-align: left;">
+						<table cellspacing="0">
+							<col width="200" />
+							<col width="700" />
+							<tr>
+								<td style="border: Solid 1px #000000;" 
+									 bgcolor="#C0C0C0"><p style="font-weight: bold;">Field</p></td>
+								<td style="border-top: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;" 
+									 bgcolor="#C0C0C0"><p style="font-weight: bold;">Description</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Test Step 
+								 Name</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Enter 
+								 the test step name.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Test Step 
+								 Description</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Description 
+								 of the test step.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Test Step 
+								 Input</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Enter 
+								 the valid input for the test case execution.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Test Step</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Enter 
+								 the expected output for the entered input.</p></td>
+							</tr>
+						</table>
+					</div></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapped 
+					 Product Features <span style="font-weight: normal;">(Before 
+					 Feature Mapping)</span></p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon to view the features 
+					 mapped for the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature 
+					 Mapping</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />) icon to map the features 
+					 for the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Scripts</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="scripts.gif" alt="scripts.gif" style="border: none;" border="0" />) icon to download the automated 
+					 script for this test cases based on the selected script 
+					 type and engine. By default, the test script consists 
+					 of a template with predefined scripts for the test 
+					 automation. The scripts can be updated with the user 
+					 defined script. Currently, iLCM supports the script 
+					 download option for JUNIT and TESTNG script types, 
+					 and SEETEST and SELENIUM Test Engines.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">View 
+					 Scripts</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="viewscript.gif" alt="viewscript.gif" style="border: none;" border="0" />) icon to view the sample 
+					 automated script for the test case based on the script 
+					 type and engine selected in the <span style="font-weight: bold;"><b>Scripts</b></span> 
+					 field.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws3" style="display: none;">
+		<p>&#160;</p>
+		<h2>Test Suites</h2>
+		<p>Test suite includes a collection of test cases to validate a 
+		 specific feature or functionality.&#160;This tab displays the 
+		 list of the available test suites for the product's version. On 
+		 the <span style="font-weight: bold;"><b>Products</b></span> pane, select 
+		 a version to add test suites with test cases to the version. For 
+		 more information about mapping the test cases to the product version, 
+		 <a href="product_version_testcase_plan.htm">Product Version Test 
+		 Case Mapping</a>.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Suite Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the test suite for grouping the test cases available 
+					 for the product version.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Script 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Script 
+					 type of the test suite.</p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: This 
+					 field is included for automated test suite execution 
+					 (Test Run &#160;Plan).</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Script 
+					 Source</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Script 
+					 source of the test suite.</p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: This 
+					 field is included for automated test suite execution 
+					 (Test Run &#160;Plan).</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Script 
+					 File Location</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 the location of the script file for the test suite.</p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: This 
+					 field is included for automated test suite execution 
+					 (Test Run &#160;Plan).</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Suite 
+					 Code</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Suite 
+					 code for the test suite.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Execution 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the execution type from the following options:</p>
+					<ul type="disc">
+						<li><p>Mixed - Test case are executed by automated 
+						 and manual method</p></li>
+						<li><p>Manual - Test case can be executed manually</p></li>
+						<li><p>Hybrid - Test case can be executed either 
+						 automatically or manually</p></li>
+						<li><p>Automated - Test case can be executed automatically 
+						 based on the scripts</p></li>
+					</ul></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">View 
+					 Test Case(s)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to view the mapped test cases, which are 
+					 available for the product version, with the test suite.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapping 
+					 <span style="font-weight: normal;">(<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />)</span></p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to map the test cases available for the 
+					 product version. Drag and drop the test cases from 
+					 the <span style="font-weight: bold;"><b>Testcases/TestSuites</b></span> 
+					 list to the <span style="font-weight: bold;"><b>Mapped 
+					 Testcases/TestSuites</b></span> list.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws4" style="display: none;">
+		<p>&#160;</p>
+		<h2>Features</h2>
+		<p>In this tab, you can define the features and its hierarchy, 
+		 and &#160;upload or manually add features that are planned for 
+		 the product. The sample template for uploading features is available 
+		 <a href="template/feature_template.xlsx">here</a>. You can map 
+		 the test cases that are available for the products, with the features. 
+		 Alternatively, you can map the features to a test case , or bulk 
+		 upload the Test Cases with Features&#160;in the <span style="font-weight: bold;"><b>Test 
+		 Case</b></span> tab.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the feature.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Display 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Display 
+					 name of the feature to identify with other features.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature 
+					 Code</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Unique 
+					 identification code for the feature.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Parent 
+					 Feature</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the parent feature.</p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: To 
+					 create a parent feature, select the null value in 
+					 the <span style="font-weight: bold;"><b>Parent Feature</b></span> 
+					 drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the active status of the feature.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapped 
+					 Test Case List</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to view the mapped test cases, which are 
+					 available for the feature.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapping 
+					 <span style="font-weight: normal;">(<img src="target_device.gif" alt="target_device.gif" style="border: none;" border="0" />)</span></p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to map the test cases available for the 
+					 product. Drag and drop the test cases from the <span 
+					 style="font-weight: bold;"><b>Testcases </b></span>list to 
+					 the <span style="font-weight: bold;"><b>Mapped Testcases 
+					 </b></span>list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Tree 
+					 View (<img src="treeview.gif" alt="treeview.gif" style="border: none;" border="0" />)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to view the mapped test cases.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws5" style="display: none;">
+		<p>&#160;</p>
+		<h2>Traceability View</h2>
+		<p>In this tab, you can view the defect status of the test cases 
+		 mapped to the feature. The defect status are open, closed, referred 
+		 back, reviewed, and approved.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature 
+					 ID</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Unique 
+					 identifier of the feature.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Feature 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the features.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case ID</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Unique 
+					 identifier of the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Case Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the test case mapped to the feature.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Executions Results</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this link to view the summary of test case execution 
+					 results.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Defects</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this link to view the summary of defects for the executed 
+					 test cases.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to add the environments.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Tree 
+					 View (<img src="treeview.gif" alt="treeview.gif" style="border: none;" border="0" />)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this icon to view the tree structure of the Features 
+					 and feature mapped test cases.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+	</div>
+	<div id="ws6" style="display: none;">
+		<p>&#160;</p>
+		<h2>Decoupling Categories</h2>
+		<p>Decoupling category can be used to categories available test 
+		 cases into multiple test packages based on the skill and resource 
+		 type.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name/display 
+					 name of the decoupling category.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Patent 
+					 Category</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the parent category of the decoupling category.</p>
+					<p><span style="font-weight: bold;"><b>Note</b></span>: To 
+					 create a parent decoupling category, select null in 
+					 the <span style="font-weight: bold;"><b>Parent Category</b></span> 
+					 drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the resource type by whom test cases are executed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the active status of the decoupling category.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+	</div>
+	<div id="ws7" style="display: none;">
+		<h2>Product Summary</h2>
+		<p>This tab displays the overall summary of the selected product. 
+		 This tab includes three sections as Product summary, Operational 
+		 summary, and Resource Summary. In the product summary section, 
+		 the name, customer name, product mode, engagement to which the 
+		 product belongs to, number of product versions, product builds, 
+		 workpackage, features, test cases, test suites, and environments 
+		 are displayed. In the operational summary section, it displays 
+		 number of active work packages, and unmapped test cases. In the 
+		 Resource summary section, it displays number of available test 
+		 manager, test leads, testers, and mapped resource pools for the 
+		 product.</p>
+	</div>
+	<div id="ws8" style="display: none;">
+		<p>&#160;</p>
+		<h2>Environments</h2>
+		<p>In this tab, you can add the testing environment to create testing 
+		 environment combination based on the environment category. For 
+		 example, if Google Chrome is added under the Browser environment 
+		 category, and the Smart phone and Tablet are added under the environment 
+		 category, then the possible environment combination are Google 
+		 Chrome - Smart phone, and Google Chrome - Tablet.</p>
+		<p>&#160;</p>
+		<h2>Fields - Select Environments Tab</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the testing environment.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Environment 
+					 Group Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the testing environment group, which is a collection 
+					 of testing environment category. For example, Browser, 
+					 which includes Google Chrome, IE, Opera, and others.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Environment 
+					 Category Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the testing environment category. For example, 
+					 IE, which includes different versions of Google Chrome.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the status of the testing environment.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Test Beds Tab</h2>
+		<p>This tab will list the environment combination generated based 
+		 on the environment category.</p>
+	</div>
+	<div id="ws9" style="display: none;">
+		<p>&#160;</p>
+		<h2>Devices</h2>
+		<p>In this tab, you can add the testing devices for the product.</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Device 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the testing device.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Device 
+					 Lab</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Lab 
+					 name in which the testing is performed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Available 
+					 Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the availability status of the testing device.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Platform</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a testing platform in which the product is tested.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">UDID</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 the unique device identifier.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Model</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the testing device model.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Device 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the type of the testing device.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+	</div>
+	<div id="ws10" style="display: none;">
+		<p>&#160;</p>
+		<h2>Test Run Plan</h2>
+		<p>Test run plan is a template, where you can create work packages 
+		 along with the test suites, device, and environment combinations. 
+		 These work packages can be executed either manually or automatically. 
+		 You can create test run plans to execute the test cases available 
+		 in the test suites in a target device. Before you create and execute 
+		 the test run plan, make sure the test automation framework and 
+		 other corresponding parameters are set.</p>
+		<p>In this tab, you can set up test suites, target device, execution 
+		 type, and schedule date to execute the test cases. To create and 
+		 execute the test run plan, follow the steps:</p>
+		<ol>
+			<li class="Style1"><p>On the <span style="font-weight: bold;"><b>Test 
+			 Run Plan</b></span> tab, click the <span style="font-weight: bold;"><b>Add 
+			 Test Run Plan</b></span> button, enter the name and description, 
+			 and select the execution type either <span style="font-weight: bold;"><b>Manual</b></span> 
+			 or <span style="font-weight: bold;"><b>Automated</b></span> option, 
+			 schedule date and Test Tool Master.</p></li>
+			<li class="Style1"><p>Click the <span style="font-weight: bold;"><b>Submit</b></span> 
+			 button to create a test run plan, and then click the <span 
+			 style="font-weight: bold;"><b>Continue</b></span> button.</p></li>
+			<li class="Style1"><p>On the <span style="font-weight: bold;"><b>Test 
+			 Suites</b></span> tab, click the <span style="font-weight: bold;"><b>TestSuite</b></span> 
+			 tab, and select &#160;test suites for execution.<br />
+			<span style="font-weight: bold;"><b>Note</b></span>: Currently, iLCM 
+			 supports &#160;TestSuite only.</p></li>
+			<li class="Style1"><p>Click the <span style="font-weight: bold;"><b>Continue</b></span> 
+			 button, and on the <span style="font-weight: bold;"><b>Test Beds</b></span> 
+			 tab, map the target devices for the environment combination. 
+			 </p></li>
+			<li class="Style1"><p>Select the test beds, and click the <span 
+			 style="font-weight: bold;"><b>Continue</b></span> button.</p></li>
+			<li class="Style1"><p>On the <span style="font-weight: bold;"><b>Test 
+			 Beds Distribution</b></span> tab, the list of test cases and test 
+			 bed combination is displayed, and click the <span style="font-weight: bold;"><b>Continue</b></span> 
+			 button.</p></li>
+			<li class="Style1"><p>On the <span style="font-weight: bold;"><b>Execute</b></span> 
+			 tab, in the <span style="font-weight: bold;"><b>Product Builds</b></span> 
+			 field, select the build number, and then click the <span style="font-weight: bold;"><b>Execute</b></span> 
+			 button.</p></li>
+			<li class="Style1"><p>Click the <span style="font-weight: bold;"><b>Execute</b></span> 
+			 button to execute the test cases in the test suite on the 
+			 target device.</p></li>
+		</ol>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 the name of the test run plan.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Execution 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following execution type from the following 
+					 options:</p>
+					<ul type="disc">
+						<li><p>Mixed - Test suites can be executed in manual 
+						 and automated methods</p></li>
+						<li><p>Manual - Test suites are executed in manually.</p></li>
+						<li><p>Hybrid - Test suites can be executed either 
+						 in manual or automated methods.</p></li>
+						<li><p>Automated - Test suites are executed in 
+						 automatically.</p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Cron 
+					 Schedule</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>&#160;</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Run Schedule</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the date range on which the test suite is executed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Notify 
+					 By Mail</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 an email address to send the notification messages 
+					 on completion of the test suite execution.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Tool Master</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the test automation framework from the drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Product 
+					 Build</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a product build from the drop-down list.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons/Areas</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr style="height: 20px;">
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr style="height: 19px;">
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Submit</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to create a new test run plan.</p></td>
+				</tr>
+				<tr style="height: 19px;">
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Edit</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to edit the parameters of the test run 
+					 plan.</p></td>
+				</tr>
+				<tr style="height: 19px;">
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Continue</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to save the changes made and navigate 
+					 to the next tab.</p></td>
+				</tr>
+				<tr style="height: 17px;">
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Back</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to navigate to the previous tab.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws11" style="display: none;">
+		<p>&#160;</p>
+		<h2>Testing Team</h2>
+		<p>In this tab, you can add core resources for a specific period. 
+		 During this period, these resources can't be available for other 
+		 product. <span style="font-weight: bold;"><b>Note</b></span>: The customer 
+		 user list available for this product is based on the customer 
+		 of the product.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">User</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 a user name of the core resource.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Role</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Set 
+					 a default user role on which the user will perform 
+					 the tasks.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">From/To 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 user is available for this product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 if any.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 this checkbox to active the user role for this product.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws12" style="display: none;">
+		<p>&#160;</p>
+		<h2>Flex Testing Team</h2>
+		<p>In this tab, you can add resources for available in a resource 
+		 pool for a specific period with the product. During this period, 
+		 these resources can't be available for other products.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">User</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>User 
+					 name of the resource.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Role</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Default 
+					 user role for this product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">From/To 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Within 
+					 the specified from and to date the user is available 
+					 for this product.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 if any.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 this checkbox to active the user role for this product.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+	</div>
+	<div id="ws13" style="display: none;">
+		<p>&#160;</p>
+		<h2>Tool Integration</h2>
+		<p>In this tab, you can configure the external Test and Defect 
+		 Management Systems to download or upload the test cases and test 
+		 results. Select either Test Management System or Defect Management 
+		 System tab, and click the Add button to configure the management 
+		 systems.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Title</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the test/defect management system.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Detailed 
+					 description of the integrated management system.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 System</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the available test or defect management system from 
+					 the drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Version</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Version 
+					 number of the management system.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Connection 
+					 Uri</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Uri 
+					 of the management system to be connected with.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Username</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Username 
+					 to access the management system.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Password</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Password 
+					 corresponding to the username.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Connection</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<img src="testconnection.gif" alt="testconnection.gif" style="border: none;" border="0" />) button to test whether 
+					 the connection to the management system can be made 
+					 or not.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapping 
+					 (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this (<span style="font-weight: bold;"><b><img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" /></b></span>) 
+					 button to expand the mapping list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapping 
+					 Entity</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the mapping entity such as Product, Product Version, 
+					 and Test Suite, from the drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Entity 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the corresponding entity name from the drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Mapping 
+					 Value</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 the mapping value.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws14" style="display: none;">
+		<p>&#160;</p>
+		<h2>Change Request</h2>
+		<p>In this tab, you can add or upload the change request received 
+		 for the current activities. Later, the CR can be associated with 
+		 the activities and tasks.</p>
+		<p>&#160;</p>
+		<h2>Fields</h2>
+		<div>
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Change 
+					 Request</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 or Identifier of the change request.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Detailed 
+					 description about the change request.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Owner</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Owner 
+					 responsible for tracking and closing the CR.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Priority</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Priority 
+					 for executing the CR.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Execution 
+					 status of the CR, such as Open or Review or Closed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Active</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Active 
+					 or in active status of the CR.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+	</div>
+	<p>&#160;</p>
+	<p>&#160;</p>
+	<h3 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Related Topics</h3>
+	<p><a href="create_a_product.htm">Create a product</a></p>
+	<p><a href="Manage product attributes">Manage product attributes</a></p>
+	<p><a href="manage_dimensions.htm">Manage Dimensions</a></p>
+	<script type="text/javascript" language="JavaScript1.2">function handleTab(argm){
+var id = argm.replace("a","");
+var length = document.getElementById("content").children.length;
+for(var i=1; i<=length; i++){
+document.getElementById("ws" + i).style.display ="none";
+}
+
+switch(id){
+	case "ws1" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws2" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws3" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws4" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws5" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws6" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws7" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws8" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws9" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws10" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws11" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws12" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws13" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws14" :
+		document.getElementById(id).style.display = "block";
+		break;
+}
+}</script>
+	<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
