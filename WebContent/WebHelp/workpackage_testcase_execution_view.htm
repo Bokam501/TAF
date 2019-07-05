@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Test Case Execution</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="./whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="./whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="./whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="./whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="./whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="./whtopic.js"></script>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nTest Management\nTest Case Execution");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"administration_workpackage.htm\">Test Management<\/a> &gt; Test Case Execution<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nTest Operation\nWork Package Management\nTest Case Execution");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"customer_management_plan.htm\">Screen Level<\/a> &gt; <a href=\"administration_userskills_approve.htm\">Test Operation<\/a> &gt; <a href=\"process_activityworkpackage.htm\">Work Package Management<\/a> &gt; Test Case Execution<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<p>&#160;</p>
+
+<h1>Test Case Execution</h1>
+<h2>Overview</h2>
+<p>This page allows you to execute the test cases allocate to you on the 
+ selected date. You can select a date and work package, such that the test 
+ cases allocated are displayed in the <span style="font-weight: bold;"><b><b>Test 
+ Cases</b></b></span> pane. You can execute the test case, and record the results 
+ in the <span style="font-weight: bold;"><b><b>Results</b></b></span> tab, and defects 
+ in the <span style="font-weight: bold;"><b><b>Defect</b></b></span> tab.</p>
+<p>&#160;</p>
+<h2>Filters</h2>
+<div style="text-align: left;">
+	<table cellspacing="0">
+		<col width="250" />
+		<col width="900" />
+		<tr>
+			<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+				 style="font-weight: bold;">Field</p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+				 style="font-weight: bold;">Description</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Planned 
+			 Execution Date</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+			 a date to list allocated work packages.</p></td>
+		</tr>
+		<tr>
+			<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Work 
+			 Package</p></td>
+			<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+			 a work package to list the allocated test cases for the selected 
+			 date.</p></td>
+		</tr>
+	</table>
+</div>
+<p>&#160;</p>
+<p>To access this page, click <span style="font-weight: bold;"><b><b>My Tasks 
+ </b></b></span>&gt; <span style="font-weight: bold;"><b><b>Allocations</b></b></span>.</p>
+<ul>
+	<li><h6><a href="#ws1" id="aws1" onclick="javascript:handleTab(this.id)">Test 
+	 Case</a></h6></li>
+	<li><h6><a href="#ws2" id="aws2" onclick="javascript:handleTab(this.id)">Test 
+	 Steps</a></h6></li>
+	<li><h6><a href="#ws3" id="aws3" onclick="javascript:handleTab(this.id)">Result</a></h6></li>
+	<li><h6><a href="#ws4" id="aws4" onclick="javascript:handleTab(this.id)">Defect</a></h6></li>
+</ul>
+<div id="content">
+	<div id="ws1" style="display: block;">
+		<h2>Test Case</h2>
+		<p>This tab displays details of the test case for execution such 
+		 as test case ID and name, description, priority, execution type, 
+		 testing environments and status.</p>
+	</div>
+	<div id="ws2" style="display: active;">
+		<p>&#160;</p>
+		<h2>Test Steps</h2>
+		<p>This tab displays name of the test case, test step input, expected 
+		 output of the test case, observed output for the test case, and 
+		 result of the test case either it is passed or failed.</p>
+	</div>
+	<div id="ws3" style="display: active;">
+		<p>&#160;</p>
+		<h2>Result</h2>
+		<p>This tab allows you to enter the test case result based on the 
+		 execution.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Preconditions</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the preconditions required to perform the test case.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Input</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the input to be entered in the test case execution.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Expected 
+					 output</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the expected output from the test case execution.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Observed 
+					 Output</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 the observed output of the test case execution.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Comments</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 comments if any to the reviewer.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Actual 
+					 Execution Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the actual test case execution date.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Result</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following options:</p>
+					<ul type="disc">
+						<li>Pass</li>
+						<li>Fail</li>
+						<li>No Run</li>
+						<li>Blocked</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Executed</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 <span style="font-weight: bold;"><b><b>Yes</b></b></span> or <span 
+					 style="font-weight: bold;"><b><b>No</b></b></span> to mark whether 
+					 the test case is executed or not.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Actual 
+					 Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the actual shift from the drop-down list.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Upload 
+					 Evidence</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 the <span style="font-weight: bold;"><b><b>Upload</b></b></span> 
+					 button or drag and drop the evidence into this field.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Evidence 
+					 Uploaded</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the evidence is uploaded or not.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+	</div>
+	<div id="ws4" style="display: active;">
+		<p>&#160;</p>
+		<h2>Defect</h2>
+		<p>This tab allows you to enter the defect details.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Bug 
+					 Title</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 title of the bug.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Brief 
+					 description of the bug.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Severity</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following options:</p>
+					<ul type="disc">
+						<li>Blocker</li>
+						<li>Normal</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Filing 
+					 Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following options:</p>
+					<ul type="disc">
+						<li>New</li>
+						<li>ReferBack</li>
+						<li>Reviewed</li>
+						<li>Approved</li>
+						<li>Closed</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Enter 
+					 remarks if any.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Creation 
+					 Time</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the date on which the bug is created. </p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Button</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to create a test factory.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Pause</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to pause the timer.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Restart</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to restart the timer.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Resume</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to resume the timer. </p>
+					<p><span style="font-weight: bold;"><b><b>Note</b></b></span>: This 
+					 button is displayed only when you click the <span 
+					 style="font-weight: bold;"><b><b>Pause</b></b></span> button.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<p>&#160;</p>
+<h3 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Related Topic</h3>
+<p><a href="execute_test_cases.htm">Execute test cases</a></p>
+<script type="text/javascript" language="JavaScript1.2">function handleTab(argm){
+var id = argm.replace("a","");
+var length = document.getElementById("content").children.length;
+for(var i=1; i<=length; i++){
+document.getElementById("ws" + i).style.display ="none";
+}
+
+switch(id){
+	case "ws1" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws2" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws3" :
+		document.getElementById(id).style.display = "block";
+		break;
+case "ws4" :
+		document.getElementById(id).style.display = "block";
+		break;
+}
+}</script>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
