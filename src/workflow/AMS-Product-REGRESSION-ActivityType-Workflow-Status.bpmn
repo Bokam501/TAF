@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_primaryStatus" />
+  <itemDefinition id="null" />
+  <process processType="Private" isExecutable="true" id="AMS-Product-REGRESSION-ActivityType-Workflow-Status" name="AMS-Product-REGRESSION-ActivityType-Workflow-Status" tns:packageName="workflow" >
+
+    <extensionElements>
+     <tns:import name="java.util.ArrayList" />
+     <tns:import name="java.util.List" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="primaryStatus" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="_1"  isInterrupting="true">
+    </startEvent>
+    <scriptTask id="_jbpm-unique-0" name="Workflow Status Initiation" scriptFormat="http://www.java.com/java" >
+      <script>System.out.println("JBPM Workflow Success!"+primaryStatus);</script>
+    </scriptTask>
+    <inclusiveGateway id="_jbpm-unique-1" name="Gateway" gatewayDirection="Diverging" >
+    </inclusiveGateway>
+    <scriptTask id="_jbpm-unique-2" name="Open" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Open")){
+	statusList.add("Exec - Inprogress/Debug");
+	statusList.add("Review - Inprogress");
+	statusList.add("Rework - Customer Comments");
+	statusList.add("Review - Inprogress");
+	statusList.add("Delivery - Ready for Delivery");
+}
+kcontext.setVariable("statusList",statusList);</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-3_Script-Inprogress" name="ReWork Stages" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Review - Inprogress")){
+	statusList.add("Review - Reverification");
+	statusList.add("Review - Ready for PQA Review");
+	statusList.add("Review - PQA Review Inprogress");
+	statusList.add("Review - PQA Rework Inprogress");
+	statusList.add("Review - PQA Reverification");
+	statusList.add("Delivery - Ready for Delivery");
+}
+
+if(primaryStatus.equals("Review - Reverification")){
+	statusList.add("Review - Ready for PQA Review");
+	statusList.add("Review - PQA Review Inprogress");
+	statusList.add("Review - PQA Rework Inprogress");
+	statusList.add("Review - PQA Reverification");
+}
+
+if(primaryStatus.equals("Review - Ready for PQA Review")){
+	statusList.add("Review - PQA Review Inprogress");
+	statusList.add("Review - PQA Rework Inprogress");
+	statusList.add("Review - PQA Reverification");
+}
+
+if(primaryStatus.equals("Review - Ready for PQA Review")){
+	statusList.add("Review - PQA Rework Inprogress");
+	statusList.add("Review - PQA Reverification");
+}
+
+if(primaryStatus.equals("Review - PQA Rework Inprogress")){
+	statusList.add("Review - PQA Reverification");
+	statusList.add("Rework - Customer Comments");
+	statusList.add("Delivery - Ready for Delivery");
+}
+kcontext.setVariable("statusList",statusList);
+</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-4" name="Delivered Stages" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Delivery - Ready for Delivery")){
+	statusList.add("Delivery - Redelivered");
+	statusList.add("Delivery - Delivered");
+}
+
+if(primaryStatus.equals("Delivery - Redelivered")){
+		statusList.add("Delivery - Delivered");
+}
+
+if(primaryStatus.equals("Delivery - Delivered")){
+		statusList.add("Delivery - Delivered");
+}
+kcontext.setVariable("statusList",statusList);
+</script>
+    </scriptTask>
+    <exclusiveGateway id="_jbpm-unique-6" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_jbpm-unique-7" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_jbpm-unique-0_Debug-Inprogress" name="Execution Stages" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Exec - Inprogress/Debug")){
+	statusList.add("Exec - Comp");
+	statusList.add("Exec - Comp Next Build");
+	statusList.add("Exec - Comp Individual");
+	statusList.add("Exec - Run for Credit");
+	statusList.add("Delivery - Ready for Delivery");
+}
+
+if(primaryStatus.equals("Exec - Comp")){
+	statusList.add("Exec - Comp Next Build");
+	statusList.add("Exec - Comp Individual");
+	statusList.add("Exec - Run for Credit");	
+}
+if(primaryStatus.equals("Exec - Comp Next Build")){
+	statusList.add("Exec - Comp Individual");
+	statusList.add("Exec - Run for Credit");	
+}
+if(primaryStatus.equals("Exec - Comp Individual")){
+	statusList.add("Exec - Run for Credit");
+	statusList.add("Review - Rework Inprogress");
+	statusList.add("Delivery - Ready for Delivery");
+}
+
+if(primaryStatus.equals("Exec - Run for Credit")){
+	statusList.add("Review - Rework Inprogress");
+	statusList.add("Delivery - Ready for Delivery");
+}
+kcontext.setVariable("statusList",statusList);
+</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_jbpm-unique-0" sourceRef="_1" targetRef="_jbpm-unique-0" />
+    <sequenceFlow id="_jbpm-unique-0-_jbpm-unique-1" sourceRef="_jbpm-unique-0" targetRef="_jbpm-unique-1" />
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-2" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-2" name="Open constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals("Open")){
+return true;
+}else {
+return false;
+}
+</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-3_Script-Inprogress" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-3_Script-Inprogress" name="Rework Stages constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-4" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-4" name="Delivered Stages constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-2-_jbpm-unique-6" sourceRef="_jbpm-unique-2" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-3_Script-Inprogress-_jbpm-unique-6" sourceRef="_jbpm-unique-3_Script-Inprogress" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-4-_jbpm-unique-6" sourceRef="_jbpm-unique-4" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-0_Debug-Inprogress-_jbpm-unique-6" sourceRef="_jbpm-unique-0_Debug-Inprogress" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-6-_jbpm-unique-7" sourceRef="_jbpm-unique-6" targetRef="_jbpm-unique-7" />
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-0_Debug-Inprogress" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-0_Debug-Inprogress" name="Execution Stages constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="AMS-Product-REGRESSION-ActivityType-Workflow-Status" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="8" y="135" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0" >
+        <dc:Bounds x="156" y="134" width="166" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1" >
+        <dc:Bounds x="400" y="131" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-2" >
+        <dc:Bounds x="558" y="11" width="217" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-3_Script-Inprogress" >
+        <dc:Bounds x="595" y="208" width="204" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-4" >
+        <dc:Bounds x="586" y="298" width="204" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="956" y="157" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="1059" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0_Debug-Inprogress" >
+        <dc:Bounds x="573" y="110" width="220" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-0" >
+        <di:waypoint x="32" y="159" />
+        <di:waypoint x="239" y="158" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0-_jbpm-unique-1" >
+        <di:waypoint x="239" y="158" />
+        <di:waypoint x="424" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-2" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="666" y="35" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-3_Script-Inprogress" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="424" y="228" />
+        <di:waypoint x="697" y="232" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-4" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="424" y="326" />
+        <di:waypoint x="688" y="322" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-2-_jbpm-unique-6" >
+        <di:waypoint x="666" y="35" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-3_Script-Inprogress-_jbpm-unique-6" >
+        <di:waypoint x="697" y="232" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-4-_jbpm-unique-6" >
+        <di:waypoint x="688" y="322" />
+        <di:waypoint x="979" y="321" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0_Debug-Inprogress-_jbpm-unique-6" >
+        <di:waypoint x="683" y="134" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-7" >
+        <di:waypoint x="980" y="181" />
+        <di:waypoint x="1083" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-0_Debug-Inprogress" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="683" y="134" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

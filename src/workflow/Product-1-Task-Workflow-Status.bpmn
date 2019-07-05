@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_primaryStatus" />
+  <itemDefinition id="null" />
+  <process processType="Private" isExecutable="true" id="Product-1-Task-Workflow-Status" name="Product-1-Task-Workflow-Status" tns:packageName="workflow" >
+
+    <extensionElements>
+     <tns:import name="java.util.ArrayList" />
+     <tns:import name="java.util.List" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="primaryStatus" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="_1"  isInterrupting="true">
+    </startEvent>
+    <scriptTask id="_jbpm-unique-0" name="Primary Status Initiation" scriptFormat="http://www.java.com/java" >
+      <script>System.out.println("JBPM Workflow Success!"+primaryStatus);</script>
+    </scriptTask>
+    <inclusiveGateway id="_jbpm-unique-1" name="Gateway" gatewayDirection="Diverging" >
+    </inclusiveGateway>
+    <scriptTask id="_jbpm-unique-2" name="Open" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Open")){
+	statusList.add("OnHold");
+	statusList.add("InProgress");
+}
+kcontext.setVariable("statusList",statusList);</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-3" name="InProgress" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("InProgress")){
+	statusList.add("OnHold");
+	statusList.add("Review");
+}
+kcontext.setVariable("statusList",statusList);
+</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-4" name="Review" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Review")){
+	statusList.add("OnHold");
+	statusList.add("Rework");
+	statusList.add("PQA_Review");
+	statusList.add("Completed");
+}
+kcontext.setVariable("statusList",statusList);
+</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-5" name="Rework" scriptFormat="http://www.java.com/java" >
+      <script>
+List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Rework")){
+		statusList.add("InProgress");
+		statusList.add("Review");
+		statusList.add("OnHold");
+}
+kcontext.setVariable("statusList",statusList);</script>
+    </scriptTask>
+    <exclusiveGateway id="_jbpm-unique-6" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_jbpm-unique-7" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_jbpm-unique-0_OnHold" name="OnHold" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("OnHold")){
+	statusList.add("InProgress");
+	statusList.add("Review");
+}
+kcontext.setVariable("statusList",statusList);</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-1_Completed" name="Completed" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Completed")){
+	statusList.add("Delivered");
+	statusList.add("Rework");
+}
+kcontext.setVariable("statusList",statusList);</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-1_Delivered" name="Delivered" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; statusList=new ArrayList&lt;String&gt;();
+List&lt;String&gt; processList=new ArrayList&lt;String&gt;();
+if(primaryStatus.equals("Delivered")){
+	statusList.add("Aborted");
+	statusList.add("Rework");
+	
+}
+kcontext.setVariable("statusList",statusList);</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_jbpm-unique-0" sourceRef="_1" targetRef="_jbpm-unique-0" />
+    <sequenceFlow id="_jbpm-unique-0-_jbpm-unique-1" sourceRef="_jbpm-unique-0" targetRef="_jbpm-unique-1" />
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-2" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-2" name="Open constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals("Open")){
+return true;
+}else {
+return false;
+}
+</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-3" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-3" name="Inprogress constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals( "InProgress")){
+return true;
+}else {
+return false;
+}
+</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-4" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-4" name="Review constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals("Review")){
+return true;
+}else {
+return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-5" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-5" name="Rework constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals("Rework")){
+return true;
+}else {
+return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-2-_jbpm-unique-6" sourceRef="_jbpm-unique-2" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-3-_jbpm-unique-6" sourceRef="_jbpm-unique-3" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-4-_jbpm-unique-6" sourceRef="_jbpm-unique-4" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-6" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-0_OnHold-_jbpm-unique-6" sourceRef="_jbpm-unique-0_OnHold" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-1_Completed-_jbpm-unique-6" sourceRef="_jbpm-unique-1_Completed" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-1_Delivered-_jbpm-unique-6" sourceRef="_jbpm-unique-1_Delivered" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-6-_jbpm-unique-7" sourceRef="_jbpm-unique-6" targetRef="_jbpm-unique-7" />
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-0_OnHold" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-0_OnHold" name="OnHold constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals("OnHold")){
+return true;
+}else {
+return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-1_Completed" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-1_Completed" name="Completed constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(primaryStatus.equals("Completed")){
+return true;
+}else {
+return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-1_Delivered" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-1_Delivered" name="Delivered constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >if(primaryStatus.equals("Delivered")){
+return true;
+}else {
+return false;
+}</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="Product-1-Task-Workflow-Status" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="8" y="135" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0" >
+        <dc:Bounds x="156" y="134" width="166" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1" >
+        <dc:Bounds x="400" y="131" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-2" >
+        <dc:Bounds x="595" y="10" width="217" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-3" >
+        <dc:Bounds x="603" y="125" width="204" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-4" >
+        <dc:Bounds x="609" y="224" width="136" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="601" y="324" width="157" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="956" y="157" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="1059" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0_OnHold" >
+        <dc:Bounds x="571" y="443" width="220" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1_Completed" >
+        <dc:Bounds x="554" y="543" width="246" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1_Delivered" >
+        <dc:Bounds x="567" y="621" width="213" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-0" >
+        <di:waypoint x="32" y="159" />
+        <di:waypoint x="239" y="158" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0-_jbpm-unique-1" >
+        <di:waypoint x="239" y="158" />
+        <di:waypoint x="424" y="155" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-2" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="703" y="34" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-3" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="705" y="149" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-4" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="677" y="248" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-5" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="524" y="358" />
+        <di:waypoint x="679" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-2-_jbpm-unique-6" >
+        <di:waypoint x="703" y="34" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-3-_jbpm-unique-6" >
+        <di:waypoint x="705" y="149" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-4-_jbpm-unique-6" >
+        <di:waypoint x="677" y="248" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-6" >
+        <di:waypoint x="679" y="348" />
+        <di:waypoint x="854" y="358" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0_OnHold-_jbpm-unique-6" >
+        <di:waypoint x="681" y="467" />
+        <di:waypoint x="949" y="482" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1_Completed-_jbpm-unique-6" >
+        <di:waypoint x="677" y="567" />
+        <di:waypoint x="971" y="578" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1_Delivered-_jbpm-unique-6" >
+        <di:waypoint x="673" y="645" />
+        <di:waypoint x="1056" y="641" />
+        <di:waypoint x="980" y="181" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-7" >
+        <di:waypoint x="980" y="181" />
+        <di:waypoint x="1083" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-0_OnHold" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="480" y="480" />
+        <di:waypoint x="681" y="467" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-1_Completed" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="412" y="572" />
+        <di:waypoint x="677" y="567" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-1_Delivered" >
+        <di:waypoint x="424" y="155" />
+        <di:waypoint x="303" y="646" />
+        <di:waypoint x="673" y="645" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

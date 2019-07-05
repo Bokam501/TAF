@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_userRole" />
+  <itemDefinition id="null" />
+  <itemDefinition id="_status" />
+  <process processType="Private" isExecutable="true" id="Product-1-Task-Workflow-Role-Actions" name="Product-1-Task-Workflow-Role-Actions" tns:packageName="workflow" >
+
+    <extensionElements>
+     <tns:import name="com.hcl.atf.taf.constants.IDPAConstants" />
+     <tns:import name="java.util.ArrayList" />
+     <tns:import name="java.util.List" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="userRole" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="_1"  isInterrupting="true">
+    </startEvent>
+    <exclusiveGateway id="_jbpm-unique-20" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_jbpm-unique-21" name="Developer" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; assigneeStatusList=new ArrayList&lt;String&gt;();
+assigneeStatusList.add("Open");
+assigneeStatusList.add("InProgress");
+assigneeStatusList.add("Rework");
+kcontext.setVariable("assigneeStatusList",assigneeStatusList);
+</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-22" name="Lead" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; leadStatusList=new ArrayList&lt;String&gt;();
+leadStatusList.add("Review");
+kcontext.setVariable("leadStatusList",leadStatusList);
+List&lt;String&gt; assigneeStatusList=new ArrayList&lt;String&gt;();
+assigneeStatusList.add("Open");
+assigneeStatusList.add("InProgress");
+assigneeStatusList.add("Rework");
+kcontext.setVariable("assigneeStatusList",assigneeStatusList);</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-23" name="PQA" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; assigneeStatusList=new ArrayList&lt;String&gt;();
+assigneeStatusList.add("Open");
+assigneeStatusList.add("InProgress");
+kcontext.setVariable("assigneeStatusList",assigneeStatusList);
+
+List&lt;String&gt; roleStatusList=new ArrayList&lt;String&gt;();
+roleStatusList.add("Completed");
+roleStatusList.add("Delivered");
+kcontext.setVariable("roleStatusList",roleStatusList);</script>
+    </scriptTask>
+    <parallelGateway id="_jbpm-unique-24" name="Gateway" gatewayDirection="Converging" >
+    </parallelGateway>
+    <scriptTask id="_jbpm-unique-25" name="Serial Flow Completed" scriptFormat="http://www.java.com/java" >
+      <script>System.out.println("Serial Flow Completed:");</script>
+    </scriptTask>
+    <endEvent id="_jbpm-unique-26" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_jbpm-unique-0" name="Serial Process Initilation" scriptFormat="http://www.java.com/java" >
+      <script>System.out.println("UserRoleID:"+userRole);</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-0_ProgramMgr" name="Admin" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; assigneeStatusList=new ArrayList&lt;String&gt;();
+assigneeStatusList.add("Open");
+assigneeStatusList.add("InProgress");
+assigneeStatusList.add("Rework");
+kcontext.setVariable("assigneeStatusList",assigneeStatusList);
+
+List&lt;String&gt; leadStatusList=new ArrayList&lt;String&gt;();
+leadStatusList.add("Review");
+kcontext.setVariable("leadStatusList",leadStatusList);
+
+List&lt;String&gt; roleStatusList=new ArrayList&lt;String&gt;();
+roleStatusList.add("Completed");
+roleStatusList.add("Delivered");
+kcontext.setVariable("roleStatusList",roleStatusList);
+</script>
+    </scriptTask>
+    <scriptTask id="_jbpm-unique-4_TestManager" name=" Test Manager" scriptFormat="http://www.java.com/java" >
+      <script>List&lt;String&gt; leadStatusList=new ArrayList&lt;String&gt;();
+leadStatusList.add("Review");
+kcontext.setVariable("leadStatusList",leadStatusList);
+List&lt;String&gt; assigneeStatusList=new ArrayList&lt;String&gt;();
+assigneeStatusList.add("Open");
+assigneeStatusList.add("InProgress");
+assigneeStatusList.add("Rework");
+kcontext.setVariable("assigneeStatusList",assigneeStatusList);</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_jbpm-unique-0-_jbpm-unique-20" sourceRef="_jbpm-unique-0" targetRef="_jbpm-unique-20" />
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-21" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-21" name="Developer constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(userRole.equals(String.valueOf(IDPAConstants.ROLE_ID_TESTER))) {
+ return true;
+}else {
+return false;
+}
+</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-22" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-22" name="Lead constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(userRole.equals(String.valueOf(IDPAConstants.ROLE_ID_TEST_LEAD))){
+  	return true;
+}else {
+	return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-23" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-23" name="PQA constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(userRole.equals(String.valueOf(IDPAConstants.ROLE_ID_PQA_REVIEWER))){
+  	return true;
+}else {
+	return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-21-_jbpm-unique-24" sourceRef="_jbpm-unique-21" targetRef="_jbpm-unique-24" />
+    <sequenceFlow id="_jbpm-unique-22-_jbpm-unique-24" sourceRef="_jbpm-unique-22" targetRef="_jbpm-unique-24" />
+    <sequenceFlow id="_jbpm-unique-23-_jbpm-unique-24" sourceRef="_jbpm-unique-23" targetRef="_jbpm-unique-24" />
+    <sequenceFlow id="_jbpm-unique-0_ProgramMgr-_jbpm-unique-24" sourceRef="_jbpm-unique-0_ProgramMgr" targetRef="_jbpm-unique-24" />
+    <sequenceFlow id="_jbpm-unique-4_TestManager-_jbpm-unique-24" sourceRef="_jbpm-unique-4_TestManager" targetRef="_jbpm-unique-24" />
+    <sequenceFlow id="_jbpm-unique-24-_jbpm-unique-25" sourceRef="_jbpm-unique-24" targetRef="_jbpm-unique-25" />
+    <sequenceFlow id="_jbpm-unique-25-_jbpm-unique-26" sourceRef="_jbpm-unique-25" targetRef="_jbpm-unique-26" />
+    <sequenceFlow id="_1-_jbpm-unique-0" sourceRef="_1" targetRef="_jbpm-unique-0" />
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-0_ProgramMgr" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-0_ProgramMgr" name="Admin constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(userRole.equals(String.valueOf(IDPAConstants.ROLE_ID_ADMIN))){
+  	return true;
+}else {
+	return false;
+}</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-4_TestManager" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-4_TestManager" name="Manager constraint" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >if(userRole.equals(String.valueOf(IDPAConstants.ROLE_ID_TEST_MANAGER))){
+  	return true;
+}else {
+	return false;
+}</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="Product-1-Task-Workflow-Role-Actions" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="17" y="161" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-20" >
+        <dc:Bounds x="330" y="170" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-21" >
+        <dc:Bounds x="535" y="40" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-22" >
+        <dc:Bounds x="565" y="164" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-23" >
+        <dc:Bounds x="571" y="287" width="80" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-24" >
+        <dc:Bounds x="796" y="163" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-25" >
+        <dc:Bounds x="917" y="162" width="124" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-26" >
+        <dc:Bounds x="1105" y="166" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0" >
+        <dc:Bounds x="112" y="163" width="166" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0_ProgramMgr" >
+        <dc:Bounds x="534" y="406" width="143" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-4_TestManager" >
+        <dc:Bounds x="534" y="514" width="140" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0-_jbpm-unique-20" >
+        <di:waypoint x="195" y="187" />
+        <di:waypoint x="354" y="194" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-21" >
+        <di:waypoint x="354" y="194" />
+        <di:waypoint x="607" y="64" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-22" >
+        <di:waypoint x="354" y="194" />
+        <di:waypoint x="605" y="188" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-23" >
+        <di:waypoint x="354" y="194" />
+        <di:waypoint x="611" y="311" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-21-_jbpm-unique-24" >
+        <di:waypoint x="607" y="64" />
+        <di:waypoint x="820" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-22-_jbpm-unique-24" >
+        <di:waypoint x="605" y="188" />
+        <di:waypoint x="820" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-23-_jbpm-unique-24" >
+        <di:waypoint x="611" y="311" />
+        <di:waypoint x="820" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0_ProgramMgr-_jbpm-unique-24" >
+        <di:waypoint x="605" y="430" />
+        <di:waypoint x="820" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-4_TestManager-_jbpm-unique-24" >
+        <di:waypoint x="604" y="538" />
+        <di:waypoint x="833" y="537" />
+        <di:waypoint x="820" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-24-_jbpm-unique-25" >
+        <di:waypoint x="820" y="187" />
+        <di:waypoint x="979" y="186" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-25-_jbpm-unique-26" >
+        <di:waypoint x="979" y="186" />
+        <di:waypoint x="1129" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-0" >
+        <di:waypoint x="41" y="185" />
+        <di:waypoint x="195" y="187" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-0_ProgramMgr" >
+        <di:waypoint x="354" y="194" />
+        <di:waypoint x="605" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-4_TestManager" >
+        <di:waypoint x="354" y="194" />
+        <di:waypoint x="356" y="534" />
+        <di:waypoint x="604" y="538" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>
