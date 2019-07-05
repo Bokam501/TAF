@@ -1,0 +1,51 @@
+body {
+    background-color: #eeeeee;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 0.8em;
+}
+
+div#fieldChooser {
+    width: 540px;
+    height: 270px;
+}
+
+.fc-field {
+    width: 120px;
+    height: 10px;
+    margin: 3px;
+    margin-bottom: 1px;
+    padding: 6px;
+    background: #383933 url(images/bg.gif) repeat 0 0;
+    /*box-shadow: 1px 1px 10px 1px rgba(222, 222, 222, 1.0);*/
+    box-shadow: none;
+}
+
+.fc-field:hover {
+    outline: #cacaca solid 1px;
+}
+
+.fc-selected {
+    background-color: #ffe284;
+}
+
+.fc-selected:hover {
+    background-color: #ffd448;
+}
+
+.fc-field-list {
+    width: 200px;
+    height: 270px;
+    margin: 0px;
+    padding: 3px;
+    overflow: auto;
+    border:1px solid yellow;
+}
+
+.fc-source-fields {
+    float: left;
+}
+
+.fc-destination-fields {
+    float: right;
+}
