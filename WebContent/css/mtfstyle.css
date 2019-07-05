@@ -1,0 +1,222 @@
+#header {
+	background: url(../img/header.jpg);
+	background-repeat: repeat-x;
+	height: 100px;
+	text-align: center;
+}
+
+#subheader {
+	background: url(../img/header.jpg);
+	background-repeat: repeat-x;
+	height: 25px;
+	text-align: left;
+}
+
+#image {
+	background: url(../img/loginscreenv4.png);
+	background-repeat: no-repeat;
+	height: 260px;
+	margin-left: 50%;
+}
+
+#loginform {
+	margin-left: 47%;
+	padding-top: 80px;
+}
+
+td.menubutton {
+	background-color: #999;
+	width: 50px;
+	height: 30px;
+}
+
+td.menubutton li {
+	display: inline;
+	margin-right: 5px;
+}
+
+td.menubutton li a {
+	color: #FFF;
+	text-decoration: none;
+	border-bottom: none;
+	padding: 10px 14px;
+}
+
+td.menubutton li a:hover {
+	color: #000;
+}
+
+input.textbox {
+	
+}
+
+#sub {
+	height: 130px;
+}
+
+/*cat.html*/ /*enviornment.html*/ /*host.html*/ /*Module.html*/
+	/*projectmaster.html*/ /*submodule.html*/ /*testcase.html*/
+	/*user.html*/
+font.heading {
+	font-size: 15px;
+	font-family: 'georgia';
+}
+
+font.heading1 {
+	font-size: 13px;
+	font-family: 'georgia';
+}
+
+input.submitbutton {
+	border-style: ridge;
+	color: #CCC;
+	background: url(../img/header.jpg);
+}
+
+/*header.html*/
+td.menubutton {
+	background-color: #999;
+	width: 120px;
+	height: 100%;
+}
+
+td.menubutton li {
+	display: inline;
+	margin-right: 5px;
+}
+
+td.menubutton li a {
+	color: #FFF;
+	text-decoration: none;
+	border-bottom: none;
+	padding: 10px 14px;
+}
+
+td.menubutton li a:hover {
+	color: #000;
+}
+
+/*links.html*/
+#pageslist {
+	margin-left: 0px auto;
+	font-size: 17px;
+	font-family: 'Georgia';
+	color: white;
+	text-align: left;
+}
+
+#inner {
+	font-size: 14px;
+	font-family: 'Century';
+	color: white;
+}
+
+/*menu.html*/
+td.menubutton {
+	background-color: #999;
+	font-size: 13px;
+	font-align: "center";
+	width: 80px;
+	height: 25px;
+}
+
+td.menubutton li {
+	display: inline;
+	margin-right: 5px;
+}
+
+td.menubutton li a {
+	color: #FFF;
+	text-decoration: none;
+	border-bottom: none;
+	padding: 10px 14px;
+}
+
+/*Reportspage.html*/
+#header {
+	background: url(../img/header.jpg);
+	background-repeat: repeat-x;
+	height: 20%;
+	text-align: center;
+}
+
+#footer {
+	background: url(../img/header.jpg);
+	background-repeat: repeat-x;
+	height: 10%;
+	top: 30px;
+	position: relative;
+}
+
+font.heading {
+	font-size: 36px;
+	font-family: 'Comic Sans MS';
+}
+
+font.head {
+	font-size: 25px;
+	font-family: 'Comic Sans MS';
+	text-align: center;
+}
+
+font.subject {
+	font-size: 15px;
+	font-family: 'Georgia';
+	text-align: justify;
+}
+
+font.options {
+	font-size: 18px;
+	font-family: 'Georgia';
+}
+
+#subheader {
+	background: url(../img/header.jpg);
+	background-repeat: repeat-x;
+	height: 5%;
+	text-align: left;
+}
+
+td.menubutton {
+	background-color: #999;
+	font-size: 13px;
+	font-align: "center";
+	width: 80px;
+	height: 25px;
+}
+
+td.menubutton li {
+	display: inline;
+	margin-right: 5px;
+}
+
+td.menubutton li a {
+	color: #FFF;
+	text-decoration: none;
+	border-bottom: none;
+	padding: 10px 14px;
+}
+
+/*Reportstable.html*/ /*Testcasesummary.html*/
+	/*Testcategorysummary.html*/ /*Testplatform.html*/
+	/*TestRunvsTestcase.html*/
+font.heading {
+	font-size: 20px;
+	font-family: 'Georgia';
+}
+
+font.datetext {
+	color: #006B8F;
+	font-family: 'Verdana';
+}
+
+.mytable th {
+	background: url(../img/header.jpg);
+	text-align: left;
+}
+
+.dldtemptxt {
+	color: 006B8F;
+	font-family: Verdana;
+	padding-top: 12px;
+}

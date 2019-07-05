@@ -1,0 +1,19 @@
+/*
+ * Table styles
+ */
+ 
+table.dataTable thead th, table.dataTable tfoot th{
+	font-weight : bold;
+}
+
+.table.dataTable thead th, table.dataTable thead td{
+	  padding: 0px 5px;
+}
+table.dataTable thead  th{
+	text-align:center !important;
+}
+table.dataTable .text_filter{
+	height:20px;
+	font-size:12px;
+	padding:6px 8px;
+} 
