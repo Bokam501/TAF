@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Manage Test Factory</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nAdministration\nTest Factory Setup");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"administration_testfactorylabs.htm\">Administration<\/a> &gt; Test Factory Setup<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<h1>Test Factory Setup</h1>
+<h2>Overview</h2>
+<p>This page allows the user to create a test factory, and configure work 
+ shift timing for the test factory. The test factory manager can create 
+ test factories for a test factory center, and define work shifts for the 
+ test factories. Also, the test factory manager can view resource pools 
+ assigned to the test factory, where the resource manager assigns the resource 
+ pools to the test factory. For more information about assigning resource 
+ pools to a test factory, see <a href="resource_pool_management.htm">Manage 
+ resource pool</a>.</p>
+<p>To access this page, login as test factory manager, and click <span 
+	 style="font-weight: bold;"><b>Setup</b></span> &gt; <span style="font-weight: bold;"><b>Test 
+ Factory Management</b></span>. Click tab links below for field level information.</p>
+<ul>
+	<li><h6><a href="#ws1" id="aws1" onclick="javascript:handleTab(this.id)">Work 
+	 Shifts</a></h6></li>
+	<li><h6><a href="#ws2" id="aws2" onclick="javascript:handleTab(this.id)">Resource 
+	 Pools</a></h6></li>
+	<li><h6><a href="#ws3" id="aws3" onclick="javascript:handleTab(this.id)">Test 
+	 Factories</a></h6></li>
+</ul>
+<div id="content">
+	<div id="ws1" style="display: block;">
+		<h2>Work Shifts</h2>
+		<p>On the <span style="font-weight: bold;"><b>Test Factory</b></span> 
+		 pane, select the corresponding test factory, and then select the 
+		 <span style="font-weight: bold;"><b>Work Shifts</b></span> tab.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the work shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Display 
+					 Label</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Display 
+					 name of the work shift. This name will be displayed 
+					 in the shift check-in, work package allocations, and 
+					 so on.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Description</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Detailed 
+					 description of the work shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 one of the following work shift type:</p>
+					<ul type="disc">
+						<li>Morning</li>
+						<li>Night</li>
+						<li>Graveyard</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Start 
+					 Time</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 Hours and Minutes for start time of the work shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">End 
+					 Time</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 Hours and Minutes for end time of the work shift.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Button</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to create a new work shift for the test 
+					 factory.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws2" style="display: none;">
+		<p>&#160;</p>
+		<h2>Resource Pools</h2>
+		<p>On the <span style="font-weight: bold;"><b>Test Factory</b></span> 
+		 pane, select the corresponding test factory, and then select the 
+		 <span style="font-weight: bold;"><b>Resource Pools</b></span> tab. This 
+		 tab displays available resource pools for the selected test factory. 
+		 </p>
+		<p><span style="font-weight: bold;"><b>Note</b></span>: For <span style="font-weight: bold;"><b>Test 
+		 Engagement</b></span>, the <span style="font-weight: bold;"><b>Resource 
+		 Pools</b></span> tab is disabled.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Resource 
+					 Pool Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 resource pool name assigned to the test factory.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Display 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 display name of the resource pool name.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">City</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 city where resources belongs to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">State</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 state where resources belongs to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Country</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 country where resources belongs to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Factory Lab</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 test factory center to which resource pools are mapped 
+					 to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the active or inactive status of the resource pool.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws3" style="display: none;">
+		<p>&#160;</p>
+		<h2>Test Factories</h2>
+		<p>On the <span style="font-weight: bold;"><b>Test Factory</b></span> 
+		 pane, select the test factory center, and then select the <span 
+		 style="font-weight: bold;"><b>Test Factories</b></span> tab. This tab 
+		 displays list of available test factories.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Factory Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>&#160;Name 
+					 of the test factory.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Display 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 display name of the test factory name.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">City</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 city where test factory is installed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">State</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 state where test factory is located.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Country</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>The 
+					 country where test factory is situated.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the checkbox to change the test factory to active 
+					 status.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Button</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to create a test factory.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Related Topics</h3>
+<p><a href="create_a_test_factory.htm">Create a test factory</a></p>
+<p><a href="set_up_test_factory_work_shifts.htm">Set up test factory work 
+ shifts</a></p>
+<script type="text/javascript" language="JavaScript1.2">function handleTab(argm){
+var id = argm.replace("a","");
+var length = document.getElementById("content").children.length;
+for(var i=1; i<=length; i++){
+document.getElementById("ws" + i).style.display ="none";
+}
+
+switch(id){
+	case "ws1" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws2" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws3" :
+		document.getElementById(id).style.display = "block";
+		break;
+}
+}</script>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2015 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

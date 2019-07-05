@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>User Time Management</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Screen Level\nResource Management\nUser Time Management");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"administration_testfactorylabs.htm\">Screen Level<\/a> &gt; <a href=\"resource_availability_report.htm\">Resource Management<\/a> &gt; User Time Management<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<p>&#160;</p>
+
+<h1>User Time Management</h1>
+<h2>Overview</h2>
+<p>The <span style="font-weight: bold;"><b>User Time Management</b></span> 
+ screen allows you to record multiple shift check-ins and check-outs, daily 
+ aestivates in timesheet, and to mark user availability for a shift on 
+ a specific day. You can register multiple shift check-in and check-outs 
+ for a day based on the allocated work packages. To register a second shift 
+ check-in for a day, you must register the shift check-out for the previous 
+ or first shift check-in. </p>
+<p>To access this page, login as resource, and click <span style="font-weight: bold;"><b>My 
+ Tasks</b></span> &gt; <span style="font-weight: bold;"><b>Time Management</b></span>. 
+ Click tab links for level information:</p>
+<ul>
+	<li><h6><a href="#ws1" id="aws1" onclick="javascript:handleTab(this.id)">My 
+	 Shift Check-Ins and Time Bookings</a></h6></li>
+	<li><h6><a href="#ws2" id="aws2" onclick="javascript:handleTab(this.id)">My 
+	 Availability</a></h6></li>
+</ul>
+<div id="content">
+	<div id="ws1" style="display: block;">
+		<h2 style="margin-right: 0px;">My Shift Check-Ins and Time Bookings</h2>
+		<p>This tab allows you to register the check-in and check-out time, 
+		 and also to fill activities for the day&#160;in the timesheet.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Monthly 
+					 Calendar</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the current month. Based on the entered shift check-in 
+					 hours and timesheet hours of a day, dates in the calendar 
+					 are highlighted in different colors. For example, 
+					 the resource registers the shift check-in for a day 
+					 as 8 hours (Check-In: 08:00, Check-Out: 16:00) on 
+					 29. Then the 29th day in the calendar is highlight 
+					 in green (<img src="timesheet-l1.gif" alt="timesheet-l1.gif" style="border: none;" border="0" />).</p>
+					<ul type="disc">
+						<li class="Style1"><img src="timesheet-l1.gif" alt="timesheet-l1.gif" style="border: none;" border="0" /> Entered 
+						 timesheet hour and check-in hour are equal</li>
+						<li class="Style1"><img src="timesheet-l2.gif" alt="timesheet-l2.gif" style="border: none;" border="0" /> Entered 
+						 timesheet hour is not equal to check-in hour</li>
+						<li class="Style1"><img src="timesheet-l3.gif" alt="timesheet-l3.gif" style="border: none;" border="0" /> Shift check-in 
+						 is not registered</li>
+						<li class="Style1"><img src="timesheet-l4.gif" alt="timesheet-l4.gif" style="border: none;" border="0" /> No activity 
+						 is performed</li>
+					</ul>
+					<p>&#160;</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;"><span 
+					 style="font-weight: bold;"><b>Current/Selected Date</b></span></p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the current date or the date selected from the calendar.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2 style="margin-right: 0px;">My Shift Check-In Pane</h2>
+		<p>This pane display list of shift check-in register for the selected 
+		 date in the calendar. You can register the shift check-in and 
+		 check-out time for the selected date.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Test 
+					 Factory</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the test factory, the resource belongs to.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Product</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the product for which the shift check-in/check-out 
+					 is performed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Start 
+					 Time</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Starting 
+					 time of the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">End 
+					 Time</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Ending 
+					 time of the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Created 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Date 
+					 on which the shift check-in is registered.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Check-In</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Check-In 
+					 time of the resource for the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Check-In 
+					 Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Remarks 
+					 for the check-in to intimate the test manager or test 
+					 lead.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Check-Out</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Check-Out 
+					 time of the resource for the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Check-Out 
+					 Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Remarks 
+					 for the check-in to intimate the test manager or test 
+					 lead.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Check-In 
+					 Duration</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Total 
+					 check-in and check-out time duration registered for 
+					 the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Timesheet 
+					 Duration</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Total 
+					 time duration registered in the timesheet for the 
+					 actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Approved</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the check-in/check-out time for the actual 
+					 shift is approved or not.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Approver</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 the name of the approver who approved the check-in/check-out 
+					 time for the actual shift.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Approval 
+					 Remarks</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Remarks 
+					 entered by the approver.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Add 
+					 (<img src="add.gif" alt="add.gif" style="border: none;" border="0" />)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to add the Check-in and check-out time 
+					 for the shift.</p>
+					<div style="text-align: left;">
+						<table cellspacing="0">
+							<col width="250" />
+							<col width="700" />
+							<tr>
+								<td style="border: Solid 1px #000000;" 
+									 bgcolor="#C0C0C0"><p style="font-weight: bold;">Field</p></td>
+								<td style="border-top: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;" 
+									 bgcolor="#C0C0C0"><p style="font-weight: bold;">Description</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Actual 
+								 Shift</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Select 
+								 the actual shift from the drop-down list.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Allocated 
+								 Product</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Select 
+								 the allocated product for which the check-in/check-out 
+								 is registered.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Check-In 
+								 Time</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Enter 
+								 the check-in time for the shift.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Check-Out 
+								 Time</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Enter 
+								 the check-out time for the shift.</p></td>
+							</tr>
+							<tr>
+								<td style="border-left: Solid 1px #000000; 
+									 border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p 
+									 style="font-weight: bold;">Remarks</p></td>
+								<td style="border-right: Solid 1px #000000; 
+									 border-bottom: Solid 1px #000000;"><p>Enter 
+								 remarks for check-in/check-out.</p></td>
+							</tr>
+						</table>
+					</div>
+					<p>&#160;</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">View/Add 
+					 Timesheet Entries</p>
+					<p style="font-weight: bold;">(<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>View 
+					 the list of timesheet entry for the shift in the <span 
+					 style="font-weight: bold;"><b>Fill Timesheet</b></span> pane.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Delete 
+					 (<img src="delete.gif" alt="delete.gif" style="border: none;" border="0" />)</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to delete the shift check-in and check-out 
+					 entry.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Fill Timesheet</h2>
+		<p>This pane allows you to enter the activities performed during 
+		 the shift in the timesheet.</p>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Work 
+					 Package</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the work package for which the activity is filled 
+					 in the timesheet.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Shift</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Shift 
+					 for which the activity is filled in the timesheet.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Hours</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Number 
+					 of hours spent for the activity.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Minutes</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Number 
+					 of minutes spent for the activity.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Role</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Role 
+					 in which the activities are performed.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Status</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the activity is approved or not.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Activity 
+					 Type</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 an option from the following activity types:</p>
+					<ul type="disc">
+						<li><p>Lunch</p></li>
+						<li><p>Testing</p></li>
+						<li><p>Other Breaks</p></li>
+						<li><p>System Setup</p></li>
+						<li><p>Test Setup</p></li>
+						<li><p>Test Case Creation</p></li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Comments</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Comments 
+					 regarding the activity.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Approved</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Displays 
+					 whether the activity is approved or not.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Approver 
+					 Name</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Name 
+					 of the person who approved the timesheet activity.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Approved 
+					 Date</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Date 
+					 on which the activity is approved.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="ws2" style="display: none;">
+		<p>&#160;</p>
+		<h2>My Availability</h2>
+		<p>This tab allows the resource to enter the availability for a 
+		 specific shift of the day. Based on the resource availability, 
+		 the test manager books and reserves the resources for the day. 
+		 The <span style="font-weight: bold;"><b>My Booking(s) and Reservation(s)</b></span> 
+		 pane displays the booking and reservation details of the resource. 
+		 In the <span style="font-weight: bold;"><b>My Booking(s) and Reservation(s)</b></span> 
+		 pane, <span style="font-weight: bold;"><b>B</b></span> denotes the resource 
+		 is booked, and <span style="font-weight: bold;"><b>R</b></span> denotes 
+		 the resource is reserved for that shift of the day.</p>
+		<h2>Fields</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;">Date 
+					 Checkbox</p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Select 
+					 the checkbox to mark your availability of the specific 
+					 shift of the day.</p></td>
+				</tr>
+			</table>
+		</div>
+		<p>&#160;</p>
+		<h2>Buttons/Areas</h2>
+		<div style="text-align: left;">
+			<table cellspacing="0">
+				<col width="250" />
+				<col width="900" />
+				<tr>
+					<td style="border: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Field</p></td>
+					<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;" bgcolor="#C0C0C0"><p 
+						 style="font-weight: bold;">Description</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p style="font-weight: bold;"><img src="forward.gif" alt="forward.gif" style="border: none;" border="0" /></p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to navigate to the previous week.</p></td>
+				</tr>
+				<tr>
+					<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+						 border-bottom: Solid 1px #000000;"><p><img src="backward.gif" alt="backward.gif" style="border: none;" border="0" /></p></td>
+					<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><p>Click 
+					 this button to navigate to the next week.</p></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<h3 style="
+border-bottom:Solid 1px #000000;
+border-width:4px;">Related Topic</h3>
+<p><a href="mark_user_availability.htm">Mark user availability</a></p>
+<script type="text/javascript" language="JavaScript1.2">function handleTab(argm){
+var id = argm.replace("a","");
+var length = document.getElementById("content").children.length;
+for(var i=1; i<=length; i++){
+document.getElementById("ws" + i).style.display ="none";
+}
+
+switch(id){
+	case "ws1" :
+		document.getElementById(id).style.display = "block";
+		break;
+	case "ws2" :
+		document.getElementById(id).style.display = "block";
+		break;
+	}
+}</script>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

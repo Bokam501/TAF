@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 9" />
+<title>Tool Integration</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript" src="./twisty2b.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Configure Supporting Tools\nTool Integration");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "overview.htm");
+document.write("<a href=\"tool_integration.htm\">Configure Supporting Tools<\/a> &gt; Tool Integration<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("index.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+//-->
+//]]></script>
+<script src="./ehlpdhtm.js" type="text/javascript" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<p>&#160;</p>
+</div>
+
+
+<p style="text-align: right;">&#160;</p>
+
+<p style="text-align: right;"><img src="btnshowall.gif" name="ShowAll(this)" alt="btnshowall.gif" onclick="ShowAll(this)" style="border: none;" border="0" /></p>
+<h1>Tool Integration</h1>
+<p>This feature facilitates the integration of external Test and Defect 
+ Management Systems with iLCM. It records the mapping details necessary 
+ for the integration. It allows mapping each product available in the iLCM 
+ with multiple instances of Test and Defect Management Systems. </p>
+<p>&#160;</p>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a2"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Prerequisites</a></h2>
+<div class="droptext" id="POPUP416488242" style="display: none;">
+	<p>Make sure the following things are in place:</p>
+	<ol>
+		<li class="Style1">Valid user credentials for the Test and Defect 
+		 Management Systems.</li>
+		<li class="Style1">Entity value is available in the Test and Defect 
+		 Management Systems.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a3"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Test 
+ Management System</a></h2>
+<div class="droptext" id="POPUP416512542" style="display: none;">
+	<p>To configure a Test Management System, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product</b></span> <span style="font-weight: bold;"><b>Management</b></span>. 
+		 On the <span style="font-weight: bold;"><b>Products</b></span> pane, 
+		 select the Engagement &gt; Product.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Manage 
+		 Products</b></span> page, click the <span style="font-weight: bold;"><b>Tool 
+		 Integration</b></span> tab. </li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Test 
+		 Management System</b></span> tab, click the Add button. As a result, 
+		 the <span style="font-weight: bold;"><b>Add</b></span> page is displayed.</li>
+		<li class="Style1">In the&#160;<b>Title</b>&#160;field, enter the 
+		 test management system name i.e.&#160;<i>HPQC</i>, and description, 
+		 and enter the cron expression. The Cron expression is a string 
+		 which triggers the scheduler to execute the test run plans. For 
+		 more details, <a href="https://en.wikipedia.org/wiki/Cron#CRON_expression">Cron 
+		 Expression</a>.</li>
+		<li class="Style1">In the&#160;<b>Test System</b>&#160;drop-down 
+		 list, select the test management system as&#160;<i>HPQC</i>, and 
+		 in the <b style="mso-bidi-font-weight: normal;">System Type</b> 
+		 drop-down list, select the either 32-bit or 64-bit OS. </li>
+		<li class="Style1">Is Primary check box to set the configured management 
+		 system as primary system for test cases import. </li>
+		<li class="Style1">In the&#160;<b>Version</b>&#160;field, enter 
+		 the test management system version number, and in the&#160;<b>Connection 
+		 Uri</b>&#160;field, enter the url of the test management system 
+		 say “<i>http://10.108.57.17:8080/qcbin</i>”. </li>
+		<li class="Style1">Enter the username, password, and domain, which 
+		 is the domain name of the management system, and then click the&#160;<b>Save</b>&#160;button. 
+		 TestSetFolder Filter (ID), TestSetFolder Filter(NAME), TestCase 
+		 Filter(ID), and Resource filter (ID) are place holder fields for 
+		 future reference. </li>
+	</ol>
+	<p>Before performing the uploading or downloading operation, you must 
+	 establish the connection between the HPQC and iLCM. For example, the 
+	 HPQC has a domain i.e. default, and a project i.e. product1. Add the 
+	 entity details to import the test cases from the HPQC. To add the 
+	 entity details, follow these steps:</p>
+	<ol>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Test 
+		 Management System</b></span> tab, click the Test Management System 
+		 Mapping (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon, and then on the <span style="font-weight: bold;"><b>Test 
+		 Management System Mapping</b></span> pane, click the <span style="font-weight: bold;"><b>Add</b></span> 
+		 button.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Mapping 
+		 Entity</b></span> drop-down list, select one of the following options:</li>
+		<ul type="disc">
+			<li class="Style1">Product (Select this option to view the 
+			 list of products available in the HPQC)</li>
+			<li class="Style1">Product Version</li>
+			<li class="Style1">Test Suite</li>
+		</ul>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Entity 
+		 Name</b></span> drop-down list, select the entity name i.e. <span 
+		 style="font-style: italic;"><i>Product1</i></span>. The test case for 
+		 the selected product name will be imported from the test management 
+		 system.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Mapping 
+		 Value</b></span> field, enter the mapping value for the product name 
+		 i.e. <span style="font-style: italic;"><i>Product</i></span>. Here the 
+		 Mapping value indicates the project name in&#160;HPQC system.</li>
+	</ol>
+</div>
+<h2><a class="dropspot" href="javascript:TextPopup(this)" id="a4"><img class="TwistyImage" alt="arrowdown.gif" style="border: none; display: none;" src="arrowdown.gif" /><img class="TwistyImage" alt="arrowright.gif" style="border: none;" src="arrowright.gif" />Defect 
+ Management System</a></h2>
+<div class="droptext" id="POPUP416526178" style="display: none;">
+	<p>To configure a Defect Management System, follow these steps:</p>
+	<ol>
+		<li class="Style1">Click <span style="font-weight: bold;"><b>Setup</b></span> 
+		 &gt; <span style="font-weight: bold;"><b>Product</b></span> <span style="font-weight: bold;"><b>Management</b></span>. 
+		 On the <span style="font-weight: bold;"><b>Products</b></span> pane, 
+		 select the Engagement &gt; Product.</li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Manage 
+		 Products</b></span> page, click the <span style="font-weight: bold;"><b>Tool 
+		 Integration</b></span> tab. </li>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Defect 
+		 Management System</b></span> tab, click the Add button. As a result, 
+		 the <span style="font-weight: bold;"><b>Add</b></span> page is displayed.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Title</b></span><span> 
+		 field</span>, enter the defect management system name, and in 
+		 the <span style="font-weight: bold;"><b>Description</b></span> field, 
+		 enter the description for the defect management system.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Test 
+		 System</b></span> drop-down list, select the defect management system 
+		 like Jira.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Version</b></span> 
+		 field, enter the defect management system version number, and 
+		 in the Connection Uri field, enter the url of the defect management 
+		 system.</li>
+		<li class="Style1">Enter the username and password, and then click 
+		 the <span style="font-weight: bold;"><b>Save</b></span> button.</li>
+	</ol>
+	<p>To add the entity, follow these steps:</p>
+	<ol>
+		<li class="Style1">On the <span style="font-weight: bold;"><b>Defect 
+		 Management System</b></span> tab, click the Defect Management System 
+		 Mapping (<img src="add_edit.gif" alt="add_edit.gif" style="border: none;" border="0" />) icon, and then on the <span style="font-weight: bold;"><b>Defect 
+		 Management System Mapping</b></span> pane, click the <span style="font-weight: bold;"><b>Add</b></span> 
+		 button.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Mapping 
+		 Entity</b></span> drop-down list, select one of the following options:</li>
+		<ul type="disc">
+			<li class="Style1">Product</li>
+			<li class="Style1">Product Version</li>
+		</ul>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Entity 
+		 Name</b></span> drop-down list, select the product name. The defect 
+		 results of the selected product will be imported to the defect 
+		 management system.</li>
+		<li class="Style1">In the <span style="font-weight: bold;"><b>Mapping 
+		 Value</b></span> field, enter the mapping value for the product name.</li>
+	</ol>
+</div>
+<p>&#160;</p>
+<h3 style="font-weight: normal;">Related Topics</h3>
+<p><a href="product_management_plan.htm">Product Management</a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p><span style="color: rgb(42, 42, 42); font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+			 font-size: 11.9209995269775px; widows: 1; -webkit-text-stroke-width: 0px;">© 
+	 Copyright 2014 - 2016 <a href="http://www.hcl.com">HCL Technologies 
+	 Ltd.</a></span></p>
+</div>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP416680831');
+	TextPopupInit('a21','POPUP4164882421');
+	TextPopupInit('a31','POPUP4165125421');
+	TextPopupInit('a41','POPUP4165261781');
+	TextPopupInit('a2','POPUP416488242');
+	TextPopupInit('a3','POPUP416512542');
+	TextPopupInit('a4','POPUP416526178');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
