@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestRunReport_TestCasesubreport" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3ce15cd2-cc9c-4717-a0fe-d446121c4c54">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="ptestRunNo" class="java.lang.Integer"/>
+	<parameter name="pdeviceId" class="java.lang.String"/>
+	<parameter name="ptestRunConfigurationChildId" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     test_run_reports_device_details_view.`testCaseName` AS  `Test Case`,
+     test_run_reports_device_details_view.`testStep` AS `Test Step` ,
+     test_run_reports_device_details_view.`testStepInput` AS `Input`,
+     test_run_reports_device_details_view.`testStepExpectedOutput` AS `Expec. Output`,
+     test_run_reports_device_details_view.`testStepObservedOutput` AS `Observ. Output`,
+     test_run_reports_device_details_view.`testResultStatus` AS `Result Status`,
+     test_run_reports_device_details_view.`testRunFailureMessage`  AS `Failure Message`
+FROM
+     `test_run_reports_device_details_view` test_run_reports_device_details_view
+where testRunNo=$P{ptestRunNo}  and deviceId=$P{pdeviceId} and testRunConfigurationChildId=$P{ptestRunConfigurationChildId}]]>
+	</queryString>
+	<field name="Test Case" class="java.lang.String"/>
+	<field name="Test Step" class="java.lang.String"/>
+	<field name="Input" class="java.lang.String"/>
+	<field name="Expec. Output" class="java.lang.String"/>
+	<field name="Observ. Output" class="java.lang.String"/>
+	<field name="Result Status" class="java.lang.String"/>
+	<field name="Failure Message" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="3" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="db0a61be-57be-48b2-8cbc-4718f96413d7" style="Column header" mode="Opaque" x="0" y="0" width="114" height="15" forecolor="#000000" backcolor="#999999"/>
+				<textElement/>
+				<text><![CDATA[Test Case]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e36a8602-9efc-4eea-aa86-c1fce1091e76" style="Column header" mode="Opaque" x="114" y="0" width="114" height="15" forecolor="#000000" backcolor="#999999"/>
+				<textElement/>
+				<text><![CDATA[Test Step]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0220a79a-70a7-4083-89c8-6c6714a19d7a" style="Column header" mode="Opaque" x="228" y="0" width="116" height="15" forecolor="#000000" backcolor="#999999"/>
+				<textElement/>
+				<text><![CDATA[Input]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6977379-236d-4860-b4da-9f09d49cdc67" style="Column header" mode="Opaque" x="344" y="0" width="146" height="15" forecolor="#000000" backcolor="#999999"/>
+				<textElement/>
+				<text><![CDATA[Expec. Output]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0c53fda1-92db-4260-8d02-730b78a0c16d" style="Column header" mode="Opaque" x="490" y="0" width="169" height="15" forecolor="#000000" backcolor="#999999"/>
+				<textElement/>
+				<text><![CDATA[Observ. Output]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9edd6352-a7a7-449b-8105-ef987cf2d88c" style="Column header" mode="Opaque" x="659" y="0" width="114" height="15" forecolor="#000000" backcolor="#999999"/>
+				<textElement/>
+				<text><![CDATA[Result Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement uuid="13780f5c-0b6a-4951-9952-01675538ce10" style="Row" stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="773" height="22" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+					<reportElement uuid="b85ced6f-d5d7-47db-9ad8-c3b4211b2eb1" style="Detail" stretchType="RelativeToTallestObject" x="0" y="1" width="114" height="21" isPrintWhenDetailOverflows="true"/>
+					<textElement rotation="None">
+						<font isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Test Case}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="6f962bb3-bf4c-4994-b3fb-89eb3437f66f" style="Detail" stretchType="RelativeToTallestObject" x="114" y="1" width="114" height="21" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Test Step}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="629692f5-560f-495b-b01e-d74872ff300e" style="Detail" stretchType="RelativeToTallestObject" x="228" y="1" width="116" height="21" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Input}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="96bbd7dd-a570-4a8f-993a-e5d1fd92d788" style="Detail" stretchType="RelativeToTallestObject" x="344" y="1" width="146" height="21" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Expec. Output}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="fe6c6d7f-4089-4626-85a8-a8e651ce9199" style="Detail" stretchType="RelativeToTallestObject" x="490" y="1" width="169" height="21" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Observ. Output}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="c51738db-5eb6-42c7-b62a-2d6709230be2" style="Detail" stretchType="RelativeToTallestObject" x="659" y="1" width="114" height="21" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Result Status}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch">
+			<line>
+				<reportElement uuid="795438ca-18ae-4e3b-b11e-f065976dac50" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

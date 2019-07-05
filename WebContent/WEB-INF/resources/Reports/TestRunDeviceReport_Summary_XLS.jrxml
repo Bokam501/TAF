@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestRun_Report" pageWidth="842" pageHeight="7200" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="e6121c30-a956-450e-ab61-5dfa51d82b06">
+	<property name="ireport.zoom" value="1.1000000000000003"/>
+	<property name="ireport.x" value="177"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ptestRunNo" class="java.lang.Integer"/>
+	<parameter name="pdeviceId" class="java.lang.String"/>
+	<parameter name="ptestRunConfigurationChildId" class="java.lang.Integer"/>
+	<parameter name="subreportdir" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT rdevlist.testRunNo as testRunNo,rdevlist.testRunListId as testRunListId,rdevlist.productName as productName,rdevlist.productVersionName as productVersionName,rdevlist.deviceId as deviceId,rdevlist.devicePlatformName as devicePlatformName,rdevlist.testRunconfigurationName as testRunconfigurationName,rdevlist.testSuiteId as testSuiteId,rdevlist.testRunStatus as testRunStatus,rdevlist.testRunTriggeredTime as testRunTriggeredTime,rdevlist.testRunFailureMessage as testRunFailureMessage,rdevlist.testCaseName as testCaseName,rdevlist.testStep as testStep,rdevlist.testStepInput as testStepInput,rdevlist.testStepExpectedOutput as testStepExpectedOutput,rdevlist.testStepObservedOutput as testStepObservedOutput,rdevlist.testResultStatus as testResultStatus
+ ,SUM(if(rdevdet.testResultStatus='PASSED',1,0))  AS passedTestecase, COUNT(rdevdet.testResultStatus) AS totalTestCase,if (SUM(if(rdevdet.testResultStatus='PASSED',1,0))=COUNT(rdevdet.testResultStatus),'PASSED', 'FAILED') AS testCaseResult, rdevlist.testRunConfigurationChildId AS testRunConfigurationChildId
+ FROM test_run_reports_device_list_view as rdevlist,test_run_reports_device_details_view as rdevdet
+   where rdevlist.testRunNo=rdevdet.testRunNo and rdevlist.testRunListId=rdevdet.testRunListId and  rdevlist.testRunNo=$P{ptestRunNo} and rdevlist.deviceId=$P{pdeviceId} and rdevlist.testRunConfigurationChildId=   $P{ptestRunConfigurationChildId}]]>
+	</queryString>
+	<field name="testRunNo" class="java.lang.Integer"/>
+	<field name="testRunListId" class="java.lang.Integer"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="productVersionName" class="java.lang.String"/>
+	<field name="testRunTriggeredTime" class="java.lang.String"/>
+	<field name="deviceId" class="java.lang.String"/>
+	<field name="testRunStatus" class="java.lang.String"/>
+	<field name="testRunFailureMessage" class="java.lang.String"/>
+	<field name="testSuiteId" class="java.lang.String"/>
+	<field name="testRunconfigurationName" class="java.lang.String"/>
+	<field name="devicePlatformName" class="java.lang.String"/>
+	<field name="testCaseName" class="java.lang.String"/>
+	<field name="testStep" class="java.lang.String"/>
+	<field name="testStepInput" class="java.lang.String"/>
+	<field name="testStepExpectedOutput" class="java.lang.String"/>
+	<field name="testStepObservedOutput" class="java.lang.String"/>
+	<field name="testResultStatus" class="java.lang.String"/>
+	<field name="passedTestecase" class="java.lang.String"/>
+	<field name="totalTestCase" class="java.lang.String"/>
+	<field name="testCaseResult" class="java.lang.String"/>
+	<field name="testRunConfigurationChildId" class="java.lang.Integer"/>
+	<title>
+		<band height="260">
+			<frame>
+				<reportElement uuid="867730b7-71f0-425f-bc8d-280be9fb8ae0" mode="Opaque" x="0" y="0" width="793" height="55" forecolor="#FFFFFF" backcolor="#000000"/>
+				<staticText>
+					<reportElement uuid="e8885406-0109-4917-bcd8-e57233f88286" stretchType="RelativeToBandHeight" x="0" y="0" width="569" height="55" forecolor="#FFFF33"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="23" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TAF]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="b08305f8-ff9b-4ee3-aeb5-5c8012369c06" x="569" y="0" width="224" height="55" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement uuid="1b10ec20-9645-4bb5-909d-6cdad5a0754b" mode="Opaque" x="0" y="59" width="793" height="26" forecolor="#000000" backcolor="#EED025"/>
+				<staticText>
+					<reportElement uuid="cd373ba4-cf35-46d2-b275-c9e57ef10f3c" x="0" y="0" width="793" height="25"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TEST RUN DEVICE REPORT]]></text>
+				</staticText>
+			</frame>
+			<textField>
+				<reportElement uuid="3b87f516-3366-4e58-ba91-59789c411b7a" x="175" y="87" width="225" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="091aa50a-3863-4f43-a780-a8f4b0e474af" x="0" y="87" width="175" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3a9598ad-6718-4bbb-9efc-efae2dacefec" x="0" y="113" width="175" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Version]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="8b61053d-e7f7-4a34-a124-aafd3c52046b" x="175" y="113" width="225" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productVersionName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c843c835-5cc9-4579-9cd2-fd64017b4b50" x="0" y="165" width="175" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Suite]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2aa44e09-a53f-4786-b822-152beaa13332" x="175" y="139" width="225" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testRunconfigurationName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="093f8883-98fa-41a8-8908-c8f7c95d585a" x="0" y="139" width="175" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Config. Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ab745bc2-37b9-474c-9424-be1c10efedc3" x="175" y="165" width="225" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testSuiteId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="87e65f78-0fdf-44f2-9f88-ebf9b5604964" x="0" y="191" width="175" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Run No]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="77934cf6-5686-49f3-a729-51d6e738b066" x="175" y="191" width="225" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testRunNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9f96cbe6-9545-4c6f-bb76-f0d0520ee7ed" x="400" y="165" width="169" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Device Platform]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="3ce619fd-18e4-4931-8b54-1af6b21260b6" x="569" y="139" width="224" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deviceId}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0eaa2ac7-747d-41a2-9fee-9cd17cc672fc" x="400" y="139" width="169" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Device ID]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="72d787e1-264e-40d3-9374-99e0d03bc7af" x="569" y="165" width="224" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{devicePlatformName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="da7275fe-48c0-49dd-b983-274c9f5e264c" x="0" y="217" width="175" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Triggered Time]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="3877673c-62d9-4d7b-8305-ac1bf066bf1f" x="175" y="217" width="225" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testRunTriggeredTime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2c66eac2-ac7d-448f-9b8c-edcc8fd1ca09" x="400" y="217" width="169" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Device Test Result]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="afce6a74-e131-4f2e-a698-a5155622318b" x="569" y="217" width="224" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testCaseResult}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7ed0380d-7742-451f-9f6c-a7671acd8c2c" x="400" y="191" width="169" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test Case Steps Passed]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="f14770b2-5ec7-48e6-8571-1e1994918ebc" x="569" y="191" width="42" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passedTestecase}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="29ec19cd-7fc7-488a-afeb-c6598f680bbf" x="623" y="191" width="170" height="25" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalTestCase}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="cbc436b5-c22f-4653-986b-efc7c4d13724" x="611" y="191" width="12" height="25"/>
+				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="12" splitType="Stretch">
+			<frame>
+				<reportElement uuid="9105c05f-65ab-430f-a78f-6f39627f03ec" mode="Opaque" x="0" y="4" width="793" height="8" forecolor="#000000" backcolor="#EED025"/>
+			</frame>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="18">
+			<frame>
+				<reportElement uuid="7144eee4-3d98-4870-b6cb-2a474c88e0e2" mode="Opaque" x="0" y="0" width="793" height="10" forecolor="#000000" backcolor="#000000"/>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

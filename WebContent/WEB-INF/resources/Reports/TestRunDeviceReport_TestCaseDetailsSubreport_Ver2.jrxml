@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestRunDeviceReport_TestCasesubreport" pageWidth="1345" pageHeight="700" orientation="Landscape" columnWidth="1345" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a6ea6234-a8a2-4a12-bcc6-01b070fc0f91">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="325"/>
+	<property name="ireport.y" value="11"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<style name="ResultStatus" fontSize="12">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{testCaseResult}.equalsIgnoreCase(new String("PASSED"))]]></conditionExpression>
+			<style forecolor="#00C800"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{testCaseResult}.equalsIgnoreCase(new String("FAILED"))]]></conditionExpression>
+			<style forecolor="#C80000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{Result Status}.equalsIgnoreCase(new String("PASSED"))]]></conditionExpression>
+			<style forecolor="#00C800"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{Result Status}.equalsIgnoreCase(new String("FAILED"))]]></conditionExpression>
+			<style forecolor="#C80000"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="ptestRunNo" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pdeviceId" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ptestRunConfigurationChildId" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     testStepDeviceData.`testStepName` AS `Test Step` ,
+     testStepDeviceData.`testStepInput` AS `Input`,
+     testStepDeviceData.`testStepExpectedOutput` AS `Expec. Output`,
+     testStepDeviceData.`testStepObservedOutput` AS `Observ. Output`,
+     testStepDeviceData.`testStepResult` AS `Result Status`,
+     testStepDeviceData.`failureReason`  AS `failureReason`,
+     testStepDeviceData.`executionRemarks`  AS `executionRemarks`,
+     testStepDeviceData.`testStepStartTime`  AS `testStepStartTime`,
+     testStepDeviceData.`testStepEndTime`  AS `testStepEndTime`,
+     testCaseDeviceData.`testCaseId` AS `testCaseId`,
+     testCaseDeviceData.`testCaseName` AS `testCaseName`,
+     testCaseDeviceData.`testCaseCode` AS `testCaseCode`,
+     testCaseDeviceData.`testCaseDescription` AS `testCaseDescription`,
+     testCaseDeviceData.`testCaseResult` AS `testCaseResult`,
+     testCaseDeviceData.`testCaseStartTime` AS `testCaseStartTime`,
+     testCaseDeviceData.`testCaseEndTime` AS `testCaseEndTime`,
+     testCaseDeviceData.`testcaseexpectedoutput` AS `testCaseExpectedOutput`,
+     testCaseDeviceData.`observedOutput` AS `testCaseObservedOutput`,
+     testCaseDeviceData.`productFeatureId` AS `productFeatureId`,
+     testCaseDeviceData.`productFeatureName` AS `productFeatureName`,
+     testCaseDeviceData.`testRunFailureMessage` AS `testCaseFailureReason`,
+     testCaseDeviceData.`totalTime` AS `totalTestCasesTime`,
+     testStepDeviceData.`totalTime` AS `totalTestStepsTime`,
+     testCase_ProductFeature_group.`feature_names` AS feature_names,
+     testCase_ProductFeature_group.`feature_ids` AS feature_ids
+FROM
+     `testrunreports_testcases_devicedetails_view` testCaseDeviceData JOIN(SELECT testCaseId,
+        GROUP_CONCAT(m.productFeatureId) feature_ids,
+        GROUP_CONCAT(productFeatureName) feature_names
+ FROM product_feature_has_test_case_list m JOIN product_feature d ON (m.productFeatureId = d.productFeatureId)
+ GROUP BY testCaseId) testCase_ProductFeature_group ON testCaseDeviceData.testCaseId = testCase_ProductFeature_group.testCaseId, `testrunreports_teststeps_devicedetails_view` testStepDeviceData
+ WHERE testStepDeviceData.testRunConfigurationChildId = testCaseDeviceData.testRunConfigurationChildId AND
+testStepDeviceData.deviceId = testCaseDeviceData.deviceId  AND
+testStepDeviceData.testRunNo = testCaseDeviceData.testRunNo AND
+testStepDeviceData.testCaseId = testCaseDeviceData.testCaseId
+
+AND testStepDeviceData.deviceId=$P{pdeviceId} AND testStepDeviceData.testRunConfigurationChildId=$P{ptestRunConfigurationChildId}
+AND testStepDeviceData.testRunNo=$P{ptestRunNo}]]>
+	</queryString>
+	<field name="Test Step" class="java.lang.String"/>
+	<field name="Input" class="java.lang.String"/>
+	<field name="Expec. Output" class="java.lang.String"/>
+	<field name="Observ. Output" class="java.lang.String"/>
+	<field name="Result Status" class="java.lang.String"/>
+	<field name="failureReason" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="executionRemarks" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testStepStartTime" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testStepEndTime" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseResult" class="java.lang.String"/>
+	<field name="testCaseStartTime" class="java.sql.Timestamp"/>
+	<field name="testCaseEndTime" class="java.sql.Timestamp"/>
+	<field name="testCaseExpectedOutput" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseObservedOutput" class="java.lang.String"/>
+	<field name="productFeatureId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productFeatureName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseFailureReason" class="java.lang.String"/>
+	<field name="totalTestCasesTime" class="java.sql.Time"/>
+	<field name="totalTestStepsTime" class="java.sql.Time"/>
+	<field name="feature_names" class="java.lang.String"/>
+	<field name="feature_ids" class="java.lang.String"/>
+	<group name="TestCaseGroup">
+		<groupExpression><![CDATA[$F{testCaseId}]]></groupExpression>
+		<groupHeader>
+			<band height="270">
+				<frame>
+					<reportElement uuid="a2a49a16-a300-4384-a94b-250721e3c622" x="0" y="242" width="1300" height="25"/>
+					<staticText>
+						<reportElement uuid="17a64073-962f-402d-96c9-4782a55a02b1" mode="Opaque" x="-845" y="-45" width="103" height="20" forecolor="#FFFFFF"/>
+						<textElement>
+							<font size="14" isBold="true"/>
+						</textElement>
+						<text><![CDATA[TestSteps]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="3da67263-cd5f-4df0-9822-9384486189c0" style="Column header" mode="Opaque" x="133" y="2" width="158" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Input]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="f35d3b38-dba8-4bcd-b59f-521b3689c254" style="Column header" mode="Opaque" x="444" y="2" width="160" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Observ. Output]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="89af985b-ef7d-465d-9e41-7d0f51a7dc7d" style="Column header" mode="Opaque" x="604" y="2" width="75" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Result Status]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="ac00ebb0-e2e7-4513-b854-2a6e82596bf1" style="Column header" mode="Opaque" x="679" y="2" width="132" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[StartTime]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="bb30e577-5a05-44d8-a050-9dfa0604716c" style="Column header" mode="Opaque" x="811" y="2" width="128" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[EndTime]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="aa70ae2f-5a3d-4fdd-ba36-5ce404613139" style="Column header" mode="Opaque" x="1065" y="2" width="115" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Remarks]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="3bd95501-3a91-461a-a814-502a8d955900" style="Column header" mode="Opaque" x="1180" y="2" width="120" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Comments]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="4d5867be-a143-4031-b5e7-e3822a1b9a24" style="Column header" mode="Opaque" x="1" y="2" width="132" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Test Step]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="90ba8de0-e1bb-457c-bf9e-b9e358e24b80" style="Column header" mode="Opaque" x="291" y="2" width="153" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Expec. Output]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="f41f313e-2de8-4f16-80bc-6e035691791a" style="Column header" mode="Opaque" x="937" y="2" width="128" height="15" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+						<textElement>
+							<font size="12"/>
+						</textElement>
+						<text><![CDATA[Total Time]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="b0a9374a-bfe2-4dae-ac68-c46002d851b1" mode="Opaque" x="1" y="213" width="1300" height="25" forecolor="#000000" backcolor="#003CA4"/>
+					<staticText>
+						<reportElement uuid="f4caa415-a9dc-41c8-92ae-c1b292fdca69" x="0" y="3" width="175" height="18" forecolor="#FFFFFF" backcolor="#000000"/>
+						<textElement>
+							<font size="12" isBold="true"/>
+						</textElement>
+						<text><![CDATA[TestSteps]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement uuid="cd72e049-8f7d-43ae-89e1-1e8106e8fe2c" style="Column header" mode="Opaque" x="614" y="66" width="122" height="17" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[TestCaseId / Code]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f8dc669f-8298-42dd-b1d9-ef91b6842405" x="-107" y="9" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="c901a6c3-f972-4f9c-a2bd-31be1f705e47" x="-107" y="-23" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="4a6d8555-1df5-4338-98ea-26a5f7b6ab9a" style="Detail" stretchType="RelativeToTallestObject" x="-688" y="69" width="407" height="22" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseObservedOutput}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="66a5059c-69be-4cc5-a5d3-b7bad714ce32" style="Column header" mode="Opaque" x="1" y="99" width="149" height="16" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Start Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="8d6d0710-85f2-4492-a13e-1831dc679893" mode="Transparent" x="158" y="165" width="12" height="24" forecolor="#000000"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="49fdb43f-9172-45a2-9cd5-7d5fb9908350" x="742" y="66" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="19444ff0-bdc8-492e-a248-961392e3ac4c" style="Column header" mode="Opaque" x="1" y="139" width="149" height="16" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[TestCaseResult]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="0a2270c4-4603-4150-8eca-efbdfe53d1da" x="158" y="133" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+						<paragraph tabStopWidth="25"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="0af6d966-c1a1-4772-9d30-c375d879d406" style="Detail" stretchType="RelativeToTallestObject" x="-687" y="99" width="406" height="22" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseFailureReason}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="3a5ec8f8-b5f1-40eb-bf94-df400ded0830" x="158" y="100" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="3216c51f-2e58-449a-9fa3-925af2b1d2f3" x="742" y="99" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="58427b9f-87ed-4450-aece-a7436c6a6b8f" style="Column header" mode="Opaque" x="614" y="99" width="122" height="17" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[End Time]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="e05710e9-48af-44c7-942b-4b995fb68778" x="183" y="67" width="406" height="22" forecolor="#000000"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseDescription}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="ce87c2df-f2dd-42fd-a3db-1e7c500340b6" style="Column header" mode="Opaque" x="1" y="169" width="150" height="16" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Features Covered]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="37cfcee1-e6e1-422c-b102-52f9e7635ee1" style="ResultStatus" stretchType="RelativeToTallestObject" x="183" y="134" width="406" height="22" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseResult}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="f56ac84c-d841-4d6c-899b-c80dd2759101" style="Column header" mode="Opaque" x="1" y="67" width="150" height="17" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[TestCase Description]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="5a7c8b2b-48be-4e97-8c0d-6bd129bffa8d" x="158" y="67" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="500be5ce-03a9-43c9-afca-52c4477b996d" x="-682" y="74" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="f12b1982-f9a0-4fa0-b230-d070461fc99e" style="Detail" stretchType="RelativeToTallestObject" x="763" y="66" width="149" height="22" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseId}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="yyyy-MM-dd HH:mm:ss" isBlankWhenNull="true">
+					<reportElement uuid="ede64c05-bf1d-4f5e-afa4-e7c0ddf9f080" style="Detail" stretchType="RelativeToTallestObject" x="183" y="99" width="149" height="22" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseStartTime}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="yyyy-MM-dd HH:mm:ss" isBlankWhenNull="true">
+					<reportElement uuid="9abba18e-8d05-4d41-b73a-a4fd8c1d03ae" style="Detail" stretchType="RelativeToTallestObject" x="763" y="100" width="149" height="22" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseEndTime}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement uuid="72c79690-9cc8-467a-a4ed-13e9d94140f3" mode="Opaque" x="0" y="2" width="1300" height="2" forecolor="#000000" backcolor="#003CA4"/>
+				</frame>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="cab39b95-8405-49d4-9ba7-98687a5e206d" style="Detail" stretchType="RelativeToTallestObject" x="182" y="165" width="1117" height="40" isPrintWhenDetailOverflows="true"/>
+					<textElement markup="none">
+						<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feature_names}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement uuid="7bfd7398-03d3-4215-ad32-72527b5b5fff" mode="Opaque" x="1" y="11" width="1300" height="40" forecolor="#000000" backcolor="#003CA4"/>
+				</frame>
+				<staticText>
+					<reportElement uuid="346f9981-f4e8-41a5-8294-3e4286de3521" style="Column header" mode="Transparent" x="1" y="16" width="179" height="17" forecolor="#FFFFFF" backcolor="#000000"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[TestCaseName  : ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="7b8c43ef-f779-409d-b4ac-65d47a06efd2" mode="Opaque" x="198" y="16" width="250" height="17"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{testCaseName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="2583b71a-610b-4333-9c9a-0734b9dff78e" style="Column header" mode="Opaque" x="612" y="135" width="122" height="17" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Total Time	]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="109be88a-2525-4e29-aaf4-7e618a676bed" x="742" y="130" width="12" height="24"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="HH.mm.ss" isBlankWhenNull="true">
+					<reportElement uuid="4277772f-75e3-4abc-94ea-2380a294506c" style="Detail" stretchType="RelativeToTallestObject" mode="Transparent" x="762" y="131" width="149" height="22" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial Unicode MS" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{totalTestCasesTime}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="2"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<frame>
+				<reportElement uuid="1c8cc086-a2a0-4052-8f29-3ff38ba4e56b" mode="Opaque" x="1" y="5" width="1300" height="30" forecolor="#000000" backcolor="#003CA4"/>
+				<staticText>
+					<reportElement uuid="66e5696e-65bc-4240-a2b2-36ad9bfb27d1" x="1" y="3" width="175" height="20" forecolor="#FFFFFF" backcolor="#000000"/>
+					<textElement>
+						<font size="15" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TestCase Details]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="3" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7f3ae76a-5768-41c1-b4b4-98a4c8be0128" style="Detail" stretchType="RelativeToTallestObject" x="291" y="4" width="153" height="23" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Expec. Output}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="744c1e76-4350-4d5e-9780-30675235eed2" style="Detail" stretchType="RelativeToTallestObject" x="0" y="4" width="133" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Test Step}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="caf11b6b-6843-4066-9a82-2a7bbd5b3fb3" style="Detail" stretchType="RelativeToTallestObject" x="133" y="4" width="158" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Input}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2040510b-8fee-4489-a0b0-a69f78fad78a" style="Detail" stretchType="RelativeToTallestObject" x="444" y="4" width="160" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Observ. Output}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e68e6352-0bfa-4549-a132-8a918b16b15b" style="ResultStatus" stretchType="RelativeToTallestObject" x="604" y="4" width="75" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Result Status}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="yyyy-MM-dd HH:mm:ss" isBlankWhenNull="true">
+				<reportElement uuid="b9b8c142-970d-4c98-b101-132872158442" style="Detail" stretchType="RelativeToTallestObject" x="678" y="4" width="128" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testStepStartTime}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="yyyy-MM-dd HH:mm:ss" isBlankWhenNull="true">
+				<reportElement uuid="2c83a9c4-0dc3-4f9c-8d7a-f28a76c010ae" style="Detail" stretchType="RelativeToTallestObject" x="806" y="4" width="133" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testStepEndTime}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d934727e-796a-4d84-ba1d-64f9137ebb77" style="Detail" stretchType="RelativeToTallestObject" x="1065" y="3" width="115" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{executionRemarks}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b236faca-1267-47b6-8236-42f2e5c10f42" style="Detail" stretchType="RelativeToTallestObject" x="1180" y="4" width="120" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{failureReason}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement uuid="003a4a58-09b5-4578-83c3-4d6f454800bb" style="Row" mode="Opaque" x="0" y="2" width="1300" height="1" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+			</frame>
+			<textField isStretchWithOverflow="true" pattern="HH.mm.ss" isBlankWhenNull="true">
+				<reportElement uuid="e4c54c75-c734-4504-b0bd-3b2a2f28823f" style="Detail" stretchType="RelativeToTallestObject" x="939" y="4" width="126" height="22" isPrintWhenDetailOverflows="true"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalTestStepsTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6">
+			<frame>
+				<reportElement uuid="9e15e057-edf7-4ef7-91f6-6caeb8481da0" mode="Opaque" x="0" y="0" width="1300" height="1" forecolor="#FFFFFF" backcolor="#3C6AC6"/>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestRunReport_subreport1" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e34d02a9-fadf-4184-85b8-0d2a84ee663e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="ptestRunListId" class="java.lang.Integer"/>
+	<parameter name="pdeviceId" class="java.lang.String"/>
+	<parameter name="ptestRunConfigurationChildId" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     testrunreports_testcases_devicedetails_view.`testCaseName` AS Test_Case,
+     testrunreports_testcases_devicedetails_view.`testCaseDescription` AS Description,
+     testrunreports_testcases_devicedetails_view.`testCaseResult` AS Result,
+     testrunreports_testcases_devicedetails_view.`testCaseStartTime` AS StartTime,
+     testrunreports_testcases_devicedetails_view.`testCaseEndTime` AS EndTime
+FROM
+     `testrunreports_testcases_devicedetails_view` testrunreports_testcases_devicedetails_view
+where testRunListId=$P{ptestRunListId} and deviceId=$P{pdeviceId}  and testRunConfigurationChildId=$P{ptestRunConfigurationChildId}]]>
+	</queryString>
+	<field name="Test_Case" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Result" class="java.lang.String"/>
+	<field name="StartTime" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EndTime" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="114d4d94-e351-4447-af18-70bb17632099" style="Column header" mode="Opaque" x="0" y="0" width="159" height="18" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Test_Case]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d92b8b0c-dea3-42ea-8745-069038649ecb" style="Column header" mode="Opaque" x="159" y="0" width="159" height="18" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b7669079-0090-4d2c-990a-a939aabf5394" style="Column header" mode="Opaque" x="318" y="0" width="159" height="18" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6e6c7b5-264a-4672-8697-5d94210ca769" style="Column header" mode="Opaque" x="477" y="0" width="159" height="18" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[StartTime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="be177d3f-4d04-4f7d-9793-7c21ef2666ea" style="Column header" mode="Opaque" x="636" y="0" width="146" height="18" forecolor="#000000" backcolor="#999999"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EndTime]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<frame>
+				<reportElement uuid="8f2c960a-def0-416d-b323-858d83d975f1" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="c99dc104-9a5d-4929-bd50-0ca979b7a1cd" style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="159" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Test_Case}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="731e812e-133e-4cc2-9b08-a0d3d7384837" style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="159" y="0" width="159" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="207d43d4-d04e-4a35-9f23-de3f1f77446a" style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="318" y="0" width="159" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Result}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="001c7acb-a85d-4b1e-a1ba-7db26e83f92e" style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="477" y="0" width="159" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{StartTime}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="2bf24537-f76c-435d-af39-40e242405f0c" style="Detail" positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="636" y="0" width="146" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EndTime}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="2" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestRun_Report" pageWidth="1345" pageHeight="7200" orientation="Landscape" columnWidth="1305" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="e6121c30-a956-450e-ab61-5dfa51d82b06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ptestRunNo" class="java.lang.Integer"/>
+	<parameter name="ptestRunConfigurationChildId" class="java.lang.Integer"/>
+	<parameter name="subreportdir" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT rdevlist.testRunNo as testRunNo,rdevlist.testRunListId as testRunListId,rdevlist.productName as productName,rdevlist.productVersionName as productVersionName,rdevlist.deviceId as deviceId,rdevlist.hostId as hostId,rdevlist.hostIpAddress as hostIpAddress,rdevlist.devicePlatformName as devicePlatformName,rdevlist.testRunconfigurationName as testRunconfigurationName,rdevlist.testSuiteName as testSuiteId,rdevlist.testRunStatus as testRunStatus,rdevlist.testRunTriggeredTime as testRunTriggeredTime,rdevlist.testRunFailureMessage as testRunFailureMessage,rdevlist.testCaseName as testCaseName,rdevlist.testStep as testStep,rdevlist.testStepInput as testStepInput,rdevlist.testStepExpectedOutput as testStepExpectedOutput,rdevlist.testStepObservedOutput as testStepObservedOutput,rdevlist.testResultStatus as testResultStatus
+ ,rdevdet.passedTestecase AS passedTestecase,rdevdet.testCaseResult AS testCaseResult,rdevdet.totalTestCase AS totalTestCase, rdevlist.testRunConfigurationChildId AS testRunConfigurationChildId
+ FROM test_run_reports_device_list_view as rdevlist,(select testRunNo testRunNo, SUM(if(testResultStatus='PASSED',1,0))  AS passedTestecase,
+ COUNT(testResultStatus) AS totalTestCase,if (SUM(if(testResultStatus='PASSED',1,0))=COUNT(testResultStatus),'PASSED', 'FAILED') AS testCaseResult from
+ test_run_reports_device_details_view where  testRunNo=   $P{ptestRunNo} and testRunConfigurationChildId=   $P{ptestRunConfigurationChildId}) as rdevdet
+   where rdevlist.testRunNo=rdevdet.testRunNo and  rdevlist.testRunNo=   $P{ptestRunNo} and rdevlist.testRunConfigurationChildId=   $P{ptestRunConfigurationChildId}]]>
+	</queryString>
+	<field name="testRunNo" class="java.lang.Integer"/>
+	<field name="testRunListId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productVersionName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deviceId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hostId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hostIpAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="devicePlatformName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testRunconfigurationName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testSuiteId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testRunStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testRunTriggeredTime" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testRunFailureMessage" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testCaseName" class="java.lang.String"/>
+	<field name="testStep" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testStepInput" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testStepExpectedOutput" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testStepObservedOutput" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="testResultStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="passedTestecase" class="java.math.BigDecimal"/>
+	<field name="testCaseResult" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalTestCase" class="java.lang.Long"/>
+	<field name="testRunConfigurationChildId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="GroupDeviceID" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{deviceId}]]></groupExpression>
+		<groupHeader>
+			<band>
+				<elementGroup>
+					<frame>
+						<reportElement uuid="c85315d7-8cc8-4908-a23f-61622ca018e8" mode="Opaque" x="0" y="-45" width="1271" height="42" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+						<textField pattern="EEEEE dd MMMMM yyyy">
+							<reportElement uuid="3ce619fd-18e4-4931-8b54-1af6b21260b6" x="114" y="5" width="114" height="25" forecolor="#000000"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="12" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{hostIpAddress}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement uuid="0eaa2ac7-747d-41a2-9fee-9cd17cc672fc" x="0" y="5" width="114" height="25"/>
+							<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="12" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Host ]]></text>
+						</staticText>
+						<staticText>
+							<reportElement uuid="9f96cbe6-9545-4c6f-bb76-f0d0520ee7ed" x="228" y="5" width="116" height="25"/>
+							<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="12" isBold="true"/>
+							</textElement>
+							<text><![CDATA[Host Platform]]></text>
+						</staticText>
+						<textField pattern="EEEEE dd MMMMM yyyy">
+							<reportElement uuid="72d787e1-264e-40d3-9374-99e0d03bc7af" x="344" y="5" width="146" height="25" forecolor="#000000"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="12" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{devicePlatformName}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</elementGroup>
+			</band>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="2"/>
+		</groupFooter>
+	</group>
+	<columnHeader>
+		<band height="47" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Immediate">
+			<subreport>
+				<reportElement uuid="9ff1e6c6-5cdc-4522-b884-6a04d152113c" x="0" y="3" width="1271" height="40"/>
+				<subreportParameter name="ptestRunNo">
+					<subreportParameterExpression><![CDATA[$F{testRunNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ptestRunConfigurationChildId">
+					<subreportParameterExpression><![CDATA[$F{testRunConfigurationChildId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="phostId">
+					<subreportParameterExpression><![CDATA[$F{hostId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{subreportdir} + "TestRunReport_TestCasesubreport_Report_web_XLS.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+</jasperReport>

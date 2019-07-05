@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:task="http://www.springframework.org/schema/task"
+    xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:util="http://www.springframework.org/schema/util"	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+						   http://www.springframework.org/schema/data/mongo
+          				   http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+                           http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+    
+
+
+	<!--
+		the application context definition for the springapp DispatcherServlet
+	-->
+	 <!-- <context:property-placeholder location="classpath:TAFServer.properties" /> -->
+	 <context:annotation-config />	
+	 	
+	<context:component-scan base-package="com.hcl.atf.taf, com.hcl.ilcm.workflow,com.hcl.atf.help">
+	 <context:exclude-filter expression="org.springframework.stereotype.Controller"
+        type="annotation" />
+       </context:component-scan>
+	
+	<bean id="propertyConfigurer"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="/WEB-INF/classes/TAFServer.properties" />  
+     </bean>
+	
+
+	<mongo:mongo host="${mongo.server.IP}" port="${mongo.port}"/>
+     
+   		  <util:properties id="ilcmProps" location="classpath:TAFServer.properties"/>
+  
+  	
+  		<mongo:db-factory dbname="${mongo.dbName}" mongo-ref="mongo" id="mongoDbFactory" />
+ 
+		<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		    <constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
+		</bean>
+		
+		<!-- <mongo:mongo host="${mongo.ise.server.IP}" port="${mongo.ise.port}"/>
+  	
+  		<mongo:db-factory dbname="${mongo.ise.dbName}" mongo-ref="mongo" id="mongoISEDbFactory" />
+ 
+		<bean id="mongoIseTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		    <constructor-arg name="mongoISEDbFactory" ref="mongoISEDbFactory" />
+		</bean>
+ -->		
+	<bean id="testFactoryMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestFactoryMongoDAOImpl">
+   		 <!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> --> 
+	</bean>
+	
+	<bean id="clarificationTrackerMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ClarificationTrackerMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="changeRequestMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ChangeRequestMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+		
+	<bean id="productMasterMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ProductMasterMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="productTeamResourceMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ProductTeamResourceMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="activityMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ActivityMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="testCaseScriptMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestCaseScriptMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="mongoDbDAO" class="com.hcl.atf.taf.mongodb.dao.impl.MongoDbDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	
+	<bean id="productVersionMasterMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ProductVersionMasterMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="buildMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.BuildMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	<bean id="activityTaskMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ActivityTaskMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	<bean id="testSuiteListMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestSuiteListMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	<bean id="activityWorkPackageMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ActivityWorkPackageMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="testCasesMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestCasesMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="testCaseDefectsMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestCaseDefectsMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="featuresMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.FeatureMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="productUserRoleMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.ProductUserRoleMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+			
+	<bean id="workflowEventMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.WorkflowEventMongoDAOImpl">
+		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean> 
+	
+	<bean id="workPackageMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.WorkPackageMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="userListMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.UserListMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="testCaseStepsListMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestCaseStepsListMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="trendCollectionMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TrendCollectionMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	
+	<bean id="testCaseExecutionResultMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestCaseExecutionResultMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	<bean id="testBedsMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestBedsMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>	
+	
+	<bean id="dashboardSLADAO" class="com.hcl.atf.taf.dao.impl.DashBoardSLADAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>	
+	<bean id="testRunJobMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.TestRunJobMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>	
+	
+	<bean id="dataSourceExtractorMongoDAO" class="com.hcl.atf.taf.mongodb.dao.impl.DataSourceExtractorMongoDAOImpl">
+   		<!-- <constructor-arg name="mongoOperation" ref="mongoTemplate"/> -->
+	</bean>
+	
+	
+     <bean  id="viewResolvers" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+     <!--  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+-->        <property name="prefix" value="/WEB-INF/jsp/" />
+       	   <property name="suffix" value=".jsp" />
+    </bean>
+   
+     <bean id="messageSource"
+        class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:messages" />
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+   
+     
+      <!-- mapping -->
+      
+      <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <!--  class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->  
+        <property name="driverClassName" value="${database.driver}" />  
+        <property name="url" value="${database.url}" />  
+        <property name="username" value="${database.user}" />  
+        <property name="password" value="${database.password}" />  
+        <!--  <property name="maxIdle" value="1" /> -->
+    </bean>  
+  
+  
+  
+    <bean id="sessionFactory"  
+        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">  
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.hcl.atf.taf.model, com.hcl.ilcm.workflow.model, com.hcl.atf.help.model" />
+         
+        <property name="hibernateProperties">  
+            <props>  
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>  
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop> 
+                <prop key="hibernate.jdbc.batch_size"> 50 </prop> 
+                <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+                <!--  <prop key="hibernate.connection.release_mode">after_statement</prop> -->
+            </props>  
+        </property>  
+    </bean>
+    
+	
+
+	<bean id="MappingJackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="objectMapper" ref="objectMapper"/>
+    </bean>
+	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+	  <property name="mediaTypes">
+	    <map>
+	      <entry key="html" value="text/html"/>
+	      <entry key="json" value="application/json"/>
+	      <entry key="json" value="text/html" />
+	    </map>
+	  	</property>
+	   <property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+				<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+					<property name="viewClass"
+						value="org.springframework.web.servlet.view.JstlView" />
+					<property name="prefix" value="/WEB-INF/jsp/" />
+					<property name="suffix" value=".jsp" />
+				</bean>
+			
+			</list>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<bean
+					class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+					<property name="prefixJson" value="true" />
+					<property name="objectMapper" ref="objectMapper" />
+				</bean>
+			</list>
+		</property>
+  
+	</bean>
+	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+ <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+<property name="messageConverters">
+  <list>
+    <ref bean="jacksonMessageConverter"/>
+  </list>
+</property>
+</bean>
+	
+     <!--  <tx:annotation-driven transaction-manager="hibernateTransactionManager" /> -->
+	  <tx:annotation-driven />
+	  
+
+    <bean id="transactionManager"
+    class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    	<property name="sessionFactory" ref="sessionFactory" />     
+	</bean>
+    
+    
+<!-- Configure the multipart resolver -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- one of the properties available; the maximum file size in bytes -->
+    <property name="maxUploadSize" value="300000000"/>
+</bean>
+
+<!-- Mail service -->
+<!-- <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <property name="host" value="smtp.gmail.com"/>
+    <property name="port" value="587"/>
+    <property name="username" value=""/>
+    <property name="password" value=""/>
+    <property name="javaMailProperties">
+        <props>
+	      	<prop key="mail.transport.protocol">smtp</prop> 
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.starttls.enable">true</prop>
+		    <prop key="mail.smtp.ssl.enable">false</prop>              
+            <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+      		<prop key="mail.debug">true</prop>
+        </props>
+    </property>
+</bean>     -->
+<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+    <property     name="targetObject">
+        <!-- System.getProperties() -->
+        <bean
+            class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+            <property name="targetClass" value="java.lang.System" />
+            <property name="targetMethod" value="getProperties" />
+        </bean>
+    </property>
+    <property   name="targetMethod"   value="putAll" />
+    <property  name="arguments">
+        <!-- The new Properties -->
+        <util:properties>
+            <prop key="java.net.preferIPv4Stack">true</prop>
+       </util:properties>
+    </property>
+</bean>   
+    
+<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+    <property name="host" value="10.150.5.86"/>
+    <property name="port" value="25"/>
+    <property name="username" value="lavanya.k@hcl.com"/>
+<!--     <property name="password" value="Yahoo@456"/> -->
+    <property name="javaMailProperties">
+        <props>
+	      	<prop key="mail.transport.protocol">smtp</prop> 
+            <prop key="mail.smtp.auth">false</prop>
+            <prop key="mail.smtp.starttls.enable">false</prop>
+		    <prop key="mail.smtp.ssl.enable">false</prop>              
+      		<prop key="mail.debug">true</prop>
+      		<prop key="mail.smtp.timeout">10000</prop>
+        </props>
+    </property>
+</bean>
+
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+            </value>
+        </property>
+    </bean>
+    
+<!-- <bean id="adAuthenticationProvider"
+  class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider">
+    <constructor-arg value="mydomain.com" />
+    <constructor-arg value="ldap://adserver.mydomain.com/" />
+</bean> -->
+
+<!-- <bean id="passwordEncoder" class="java.security.MessageDigest"></bean>
+<bean id="saltSource" class="org.springframework.security.authentication.dao.ReflectionSaltSource">
+	<property name="userPropertyToUse" value="userPassword"/>
+</bean> -->
+
+	<bean name="activitiesWeeklyReportJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="Durability" value="true"/>
+		<property name="jobClass" value="com.hcl.atf.taf.scheduler.jobs.ActivityWeekReportJob" />
+		<property name="jobDataAsMap">
+		  <map>
+		  <entry key="weeklyReport_productName" value="${WEEKLY_REPORT_CURRENT_PRODUCT_NAME}" />
+		    </map>
+		</property>
+	</bean>
+
+	<bean name="trendJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="Durability" value="true"/>
+		<property name="jobClass" value="com.hcl.atf.taf.scheduler.jobs.SLATrendJob" />
+		<property name="jobDataAsMap">
+		  <map>
+			<!-- <entry key="runMeTask" value-ref="runMeTask" /> -->
+			<entry key="summaryValue" value="1" />
+			<entry key="metricsURL" value="${METRICS_URL}" />
+		  </map>
+		</property>
+	</bean>
+
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="trendJob" />
+		<property name="cronExpression" value="0 0 22 ? * SUN *" />
+		<property name="startDelay" value="5000" />
+	</bean>
+	
+	<bean id="activityWeeklyCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="activitiesWeeklyReportJob" />
+		<property name="cronExpression" value="0 00 17 ? * TUE *" /> 
+		<property name="startDelay" value="5000" />
+	</bean>
+	
+	
+	
+	
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" >
+		<property name="jobDetails">
+			<list>
+				<ref bean="trendJob" />
+				<ref bean="activitiesWeeklyReportJob" />
+				<ref bean="elasticSerchToMongoDBJob" />
+			</list>
+		</property>
+		<property name="triggers">
+			<list>
+				<ref bean="cronTrigger" />
+				<ref bean="activityWeeklyCronTrigger" />
+				<ref bean="elasticToMongoDBCronTrigger" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="elasticSerchToMongoDBJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="Durability" value="true"/>
+		<property name="jobClass" value="com.hcl.atf.taf.scheduler.jobs.PushElasticSearchToMongoDBJob" />
+		<property name="jobDataAsMap">
+		 	<map>
+			  	<entry key="mongoDBAvailable" value="${MONGODB_AVAILABLE}" />
+			  	<entry key="elasticSearchAvailable" value="${ELASTIC_SEARCH_AVAILABLE}" />
+			    </map>
+		  </property>
+	</bean>
+	
+	<bean id="elasticToMongoDBCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="elasticSerchToMongoDBJob" />
+ 		 <property name="cronExpression" value="0 0/30 * * * ?" />
+		 <property name="startDelay" value="10000" />
+	</bean>
+
+<bean id="customLDAPAuthenticationService" class="com.hcl.atf.taf.service.impl.CustomLDAPAuthenticationService"></bean>
+<bean id="testCaseRefScriptGenerator" class="com.hcl.atf.taf.scriptgeneration.TestCaseRefScriptGenerator"></bean>
+<bean id="testCaseSkeletonScriptGenerator" class="com.hcl.atf.taf.scriptgeneration.TestCaseSkeletonScriptGenerator"></bean>
+<bean id="testCaseService" class="com.hcl.atf.taf.service.impl.TestCaseServiceImpl"></bean>
+<bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
+<bean id = 'ExcelTestDataIntegrator' class="com.hcl.atf.taf.integration.data.excel.ExcelTestDataIntegrator"/>
+<bean id = 'ExcelUserDataIntegrator' class="com.hcl.atf.taf.integration.data.excel.ExcelUserDataIntegrator"/>
+<bean id = 'TAFDataIntegrationFactory' class="com.hcl.atf.taf.integration.data.TAFDataIntegrationFactory"/> 
+<bean id = 'JiraIntegrator' class="com.hcl.atf.taf.integration.defectManagementSystem.jira.JiraIntegrator"/> 
+<bean id = 'TAFDefectManagementSystemIntegrationFactory' class="com.hcl.atf.taf.integration.defectManagementSystem.TAFDefectManagementSystemIntegrationFactory"/>
+<bean id = 'HPQCIntegrator' class="com.hcl.atf.taf.integration.testManagementSystem.hpqc.HPQCIntegrator"/>
+<bean id = 'TAFTestManagementSystemIntegrationFactory' class="com.hcl.atf.taf.integration.testManagementSystem.TAFTestManagementSystemIntegrationFactory"/>
+ <bean id = 'testCaseScriptGenerationService' class="com.hcl.atf.taf.service.impl.TestCaseScriptGenerationServiceImpl"/>
+ <bean id="atlasService" class="com.hcl.atf.taf.service.impl.ATLASNodeServiceImpl"></bean>
+ <task:annotation-driven/>
+</beans>

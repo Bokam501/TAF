@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestRun_Report" pageWidth="1345" pageHeight="7200" orientation="Landscape" columnWidth="1305" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="e6121c30-a956-450e-ab61-5dfa51d82b06">
+	<property name="ireport.zoom" value="1.1000000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="ptestRunNo" class="java.lang.Integer"/>
+	<parameter name="pdeviceId" class="java.lang.String"/>
+	<parameter name="ptestRunConfigurationChildId" class="java.lang.Integer"/>
+	<parameter name="subreportdir" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT rdevlist.testRunNo as testRunNo,rdevlist.testRunListId as testRunListId,rdevlist.productName as productName,rdevlist.productVersionName as productVersionName,rdevlist.deviceId as deviceId,rdevlist.devicePlatformName as devicePlatformName,rdevlist.testRunconfigurationName as testRunconfigurationName,rdevlist.testSuiteId as testSuiteId,rdevlist.testRunStatus as testRunStatus,rdevlist.testRunTriggeredTime as testRunTriggeredTime,rdevlist.testRunFailureMessage as testRunFailureMessage,rdevlist.testCaseName as testCaseName,rdevlist.testStep as testStep,rdevlist.testStepInput as testStepInput,rdevlist.testStepExpectedOutput as testStepExpectedOutput,rdevlist.testStepObservedOutput as testStepObservedOutput,rdevlist.testResultStatus as testResultStatus
+ ,SUM(if(rdevdet.testResultStatus='PASSED',1,0))  AS passedTestecase, COUNT(rdevdet.testResultStatus) AS totalTestCase,if (SUM(if(rdevdet.testResultStatus='PASSED',1,0))=COUNT(rdevdet.testResultStatus),'PASSED', 'FAILED') AS testCaseResult, rdevlist.testRunConfigurationChildId AS testRunConfigurationChildId
+ FROM test_run_reports_device_list_view as rdevlist,test_run_reports_device_details_view as rdevdet
+   where rdevlist.testRunNo=rdevdet.testRunNo and rdevlist.testRunListId=rdevdet.testRunListId and  rdevlist.testRunNo=$P{ptestRunNo} and rdevlist.deviceId=$P{pdeviceId} and rdevlist.testRunConfigurationChildId=   $P{ptestRunConfigurationChildId}]]>
+	</queryString>
+	<field name="testRunNo" class="java.lang.Integer"/>
+	<field name="testRunListId" class="java.lang.Integer"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="productVersionName" class="java.lang.String"/>
+	<field name="testRunTriggeredTime" class="java.lang.String"/>
+	<field name="deviceId" class="java.lang.String"/>
+	<field name="testRunStatus" class="java.lang.String"/>
+	<field name="testRunFailureMessage" class="java.lang.String"/>
+	<field name="testSuiteId" class="java.lang.String"/>
+	<field name="testRunconfigurationName" class="java.lang.String"/>
+	<field name="devicePlatformName" class="java.lang.String"/>
+	<field name="testCaseName" class="java.lang.String"/>
+	<field name="testStep" class="java.lang.String"/>
+	<field name="testStepInput" class="java.lang.String"/>
+	<field name="testStepExpectedOutput" class="java.lang.String"/>
+	<field name="testStepObservedOutput" class="java.lang.String"/>
+	<field name="testResultStatus" class="java.lang.String"/>
+	<field name="passedTestecase" class="java.lang.String"/>
+	<field name="totalTestCase" class="java.lang.String"/>
+	<field name="testCaseResult" class="java.lang.String"/>
+	<field name="testRunConfigurationChildId" class="java.lang.Integer"/>
+	<detail>
+		<band height="64">
+			<frame>
+				<reportElement uuid="e45006ac-bbad-4f83-9ffd-5a175bd6dc5e" stretchType="RelativeToBandHeight" x="8" y="4" width="1276" height="57" isPrintWhenDetailOverflows="true"/>
+				<subreport>
+					<reportElement uuid="00a93d65-5b49-4967-bddb-0379c4396c36" x="0" y="3" width="1276" height="52"/>
+					<subreportParameter name="pdeviceId">
+						<subreportParameterExpression><![CDATA[$F{deviceId}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ptestRunNo">
+						<subreportParameterExpression><![CDATA[$F{testRunNo}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ptestRunConfigurationChildId">
+						<subreportParameterExpression><![CDATA[$F{testRunConfigurationChildId}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{subreportdir} + "TestRunDeviceReport_TestCasesubreport_Report_XLS.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="10"/>
+	</pageFooter>
+</jasperReport>
