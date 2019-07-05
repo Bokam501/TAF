@@ -1,0 +1,176 @@
+<br>
+<br><table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="left" colspan="4"><b>Revision History:</b></td></tr><tr><td align="center"><b>Document Version Number</b></td><td align="center"><b>Document Revision Date</b></td><td align="center"><b>Written By</b></td><td align="center"><b>Change Summary <br></br>(Reference section[s] changed)</b></td></tr><tr><td align="center">1.0</td><td align="center">6/5/2013</td><td align="center">Yelena Kakstova</td><td align="center">Initial Writing</td></tr><tr><td align="center">2.0</td><td align="center">6/29/2013</td><td align="center">Chandra Ramesh/ Yelena Kakstova</td><td align="left">Complete revamp of protocol due to revision of Functional Requirements and protocol consolidation.<br><br>
+The following updates for template revision were performed:<br><br>
+Added Pass/Fail column.<br>
+Added individual checkboxes for Actual Results.<br>
+Removed Screen Prints as verification now happens in step.<br><br>
+</td></tr><tr><td align="center">2.1</td><td align="center">07/11/2013</td><td align="center">Chandra Ramesh</td><td align="left">Modified Step 2.01 Description/Action to start as On Home page, Tap “Dose Titration” button.<br><br>
+The following updates were made to address ZDC-IR01-Display of numerical input:<br><br>
+Added Steps 1.21 – 1.24 to verify input values for Serum Ca, Serum P, Prior Dose and and result value for Ca x P product should display the numerical format to one decimal place, such as 6.0 for integer 6. <br><br>
+Expected and Actual results were modified for Test case 1 Steps to display the numerical format to one decimal place for integers
+</td></tr><tr><td align="center">2.2</td><td align="center">2/20/2014</td><td align="center">Yelena Kakstova</td><td align="left">Updated Document Header:<br>
+Change Number: 12300 to 12590<br>
+System Version Number: 1.0 to 1.1<br>
+Document Version 2.1 to 2.2<br><br>
+
+Updated Input entries to validate rounding rules.<br>
+Updated steps with the keypad navigation throughout the protocol.<br>
+Added Tutorial navigation in the setup table, line 4.
+</td></tr><tr><td align="center">2.3</td><td align="center">2/20/2014</td><td align="center">Yelena Kakstova</td><td align="left">Updated Document Version 2.2 to 2.3.<br><br>
+
+For Test case Objectives for Test Case 1 edit two SRS:<br>
+3.4.3.2.23.1 and  3.4.5.10.1.<br><br>
+
+Step 1.07- edit warning notification for Phosphorus upper limit:<br>
+To Expected Results: Warning message indicating Phosphorus value is outside of the permissible range of 3.7 to 10.3 mg/ dL will display.<br>
+To Actual Results: Warning message indicating Phosphorus value is outside of the permissible range of 3.7 to 10.3 mg/ dL was displayed.<br><br>
+
+Step 1.16 – edit commas to PTH values in Expected Results<br><br>
+.
+Steps 1.17,1.18, 2.13 -  incorrect upper limit statement “36.0 mcg” of dose range in the notification has been updated to “40 mcg” in Expected and Actual Results columns.
+</td></tr></tbody></table>
+<!--<table  border="0" cellpadding="4" cellspacing="1" style="width:100%;"><tbody><tr><td align="left" colspan="6"><b>Protocol Pre-Approval Prior to Execution:</b></td></tr><tr><td align="left" colspan="6">Device Development/Technical Representative:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6"> </td></tr><tr><td align="left" colspan="6">Quality Assurance:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6">* Refer to the change request for associated approvals.</td></tr></tbody></table>-->
+
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<center><b>Validation Protocol</b></center><br>
+<i>Test Description:</i><br>
+The purpose of this protocol is to demonstrate with ZemPro that the Dose Titration Calculator displays warning messages for input values or Ca x P product out of range, prevents results calculations when displaying warning messages caused by User inputs, and accepts and displays values per the required numerical format. The protocol will also demonstrate the ability to view additional information on receiving a warning message and that the user  is directed to the Warnings, Clinical Studies, Dosage and Administration sections within the US Prescribing Information as defined in the associated requirements listed below.
+<br><br>
+
+<i>Acceptance Criteria:</i><br>
+Acceptance criteria are defined as successful completion of the steps identified below with results matching the description of Expected Results. 
+<br>
+<br>
+<i>Test Case Objectives: </i><br>
+#TestCaseObj#
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<i><b>Material(s):</b></i><br>
+<table border="0" cellpadding="4" cellspacing="4" style="width:100%;"><tbody><tr><td align="right" width="40%"><b>Test Environment Configuration:</b></td><td align="left"><u>#TEC#</u></td></tr><tr><td align="right" width="40%"><b>Mobile Device Platform:</b></td><td align="left"><u>#MDP#</u></td></tr><tr><td align="right" width="40%"><b>Model #:</b></td><td align="left"><u>#Model#</u></td></tr><tr><td align="right" width="40%"><b>Serial #:</b></td><td align="left"><u>#Serial#</u></td></tr><tr><td align="right" width="40%"><b>iOS Version:</b></td><td align="left"><u>#IosVersion#</u></td></tr><tr><td align="right" width="40%"><b>Tester Printed Name and Signature:</b></td><td align="left"><u>#TPNS#</u></td></tr><tr><td align="right" width="40%"><b>Start of Test Date:</b></td><td align="left"><u>#SDate#</u></td></tr><tr><td align="right" width="40%"><b>End of Test Date:</b></td><td align="left"><u>#EDate#</u></td></tr><tr><td align="right" width="40%"><b>Additional Equipment used:</b></td><td align="left"><u>#DHFVersion#</u></td></tr><tr><td align="right" width="40%"><b>Workstation/Tester Equip/Serial Number:</b></td><td align="left"><u>#PIFUVersion#</u></td></tr><tr><td align="right" width="40%"><b>Calculator/Serial Number:</b></td><td align="left"><u>#SafetyInfoVersion#</u></td></tr><tr><td align="right" width="40%"><b>Calculator Printer/Serial Number:</b></td><td align="left"><u>#InjectionPIVersion#</u></td></tr></tbody></table><br>
+
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<i>Prerequisites: 	</i><br>
+
+<ul><li>A qualified mobile device is provided to the tester.	
+<li>Tester must have basic experience with iPhone, iPad and iPod Touch operationss</li></ul>
+
+<br>
+<br>
+<i>Notes to Tester:</i><br> 
+
+<ul><li>The “Comments” field should be left blank unless the step requires additional explanation
+	<li>N/A = (not applicable) N/A in each step is used for navigational steps
+	<li>Turn off Internet Service
+		<ul><li>Tap Settings
+			<li>Turn Airplane Mode ON</li></ul>
+	<li>Abbreviations:	SRS = software requirements specification<br>
+	<span style="padding-left:6em;">EULA = End User License Agreement</span><br>
+	<span style="padding-left:6em;">ISI = Important Safety Information</span><br>
+	<span style="padding-left:6em;">PI = Prescribing Information</span><br>
+	<span style="padding-left:6em;">SR = Software requirement</span></li>
+		</ul>
+<br>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<b>Setup:</b>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody><tr><td width="10%" align="center">&nbsp;</td><td><b>Description/Action</b></td><td><b>Comments</b></td></tr><tr><td width="10%" align="center">1.</td><td>Confirm ZemPro application is installed on the mobile device  and the “ZemPro” icon is displayed on the home screen of the mobile device.</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">2.</td><td>Turn off Internet Service.</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">3.</td><td>Tap on “ZemPro” icon to open the application.</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">4.</td><td>Accept EULA agreement and ISI agreement, complete Tutorial, if displayed, to navigate to “Home” page.</td><td><b>&nbsp;</b></td></tr></tbody></table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="center"><b>Step</b></td><td align="center"><b>Description/Action</b></td><td align="center"><b>Expected Results</b></td><td align="center"><b>Actual Results</b></td><td align="center"><b>Comments</b></td><td align="center"><b>Pass/Fail</b></td></tr>
+#TestCaseStepsDefs#
+<br>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<b>Review of Results:</b>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody>
+<tr><td align="center"><b>Step#</b></td><td align="center"><b>Tester Comments</b></td><td align="center"><b>ReviewerComments</b></td><td align="center"><b>Resolution</b></td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+</tbody></table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<i>Overall Conclusion of the Testing:</i>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody>
+<tr><td align="left"><b>Technical Responsible Review Comments/ Signature/ Date:</b></td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left"><b>Quality Assurance Review Comments/ Signature/ Date (for quality-related systems):</b></td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+</tbody></table><br>
+<center><b>End of Document</b></center>
+<br/>
+    <table id='hrdftrtbl' border='1' cellspacing='0' cellpadding='0'>
+    <tr><td>        <div style='mso-element:header' id=h1 >
+        <!-- HEADER-tags -->
+            <p class=MsoHeader >
+				<table border='1' cellpadding='4' cellspacing='0' align='center' width='60%'>
+					<tr><td valign='top'>System Name: ZemPro<br>System Version Number: v1.1</td><td valign='top'>Test Protocol : VTP06-ZemProDoseTitrationWarnings</td></tr>
+					<tr><td valign='top'>Change Number: 12590</td><td valign='top'>Document Version Number: v2.3</td></tr>
+				</table>
+			</p>
+        <!-- end HEADER-tags -->
+        </div>
+		
+    </td>
+    <td>
+    <div style='mso-element:footer' id=f1><span style='position:relative;z-index:-1'> 
+        <!-- FOOTER-tags -->
+              
+           <p class=MsoFooter>
+		   <table border='0' cellpadding='4' cellspacing='0' align='center' width='60%'>
+					<tr><td align='center'><span style='mso-tab-count:2'></span>Page <span style='mso-field-code:PAGE '><span style='mso-no-proof:yes'></span>
+							</span>
+						</td>
+					</tr>
+					<tr><td align='center'>This information is confidential to AbbVie</td></tr>
+			</table>			
+			</p>
+    </div>
+    <div style='mso-element:header' id=fh1>
+        <p class=MsoHeader><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+        </div><br/><br/>
+        <div style='mso-element:footer' id=ff1>
+        <p class=MsoFooter><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+    </div>
+
+    </td></tr>
+    </table>

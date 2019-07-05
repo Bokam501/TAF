@@ -1,0 +1,361 @@
+<br><br><table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="left" colspan="4"><b>Revision History:</b></td></tr><tr><td align="center"><b>Document Version Number</b></td><td align="center"><b>Document Revision Date</b></td><td align="center"><b>Written By</b></td><td align="center"><b>Change Summary <br></br>(Reference section[s] changed)</b></td></tr><tr><td align="center">1.0</td><td align="center">07/11/2013</td><td align="center">Robert Malick</td><td align="center">Initial Writing</td></tr><tr><td align="center">2.0</td><td align="center">08/15/2013</td><td align="center">Michelle Long</td><td align="left">Updated per DHF-011-0029 Issue Resolution Report, 18 July 2013<br>
+<ul><li>Clarified”Notes to Tester” with expectation for text content and format to be verified</li>
+<li>Test case 1, Step 1.10 expected and actual result text changed to instruct that text content match PIFU-0010 and that text format matches DHF-011-0013 Appendix I Section 6.4</li>
+</ul>
+
+</td></tr><tr><td align="center">3.0</td><td align="center">8/30/2013</td><td align="center">Michelle Long</td><td align="left">Protocol version 2.0 preapproved as black and white protocol and color document required.<br><br>
+Updated tables to ensure header rows printed on correct page.
+</td></tr><tr><td align="center">4.0</td><td align="center">2/7/2014</td><td align="center">Julie Fritchley</td><td align="left">Per DHF-011-0029, Test Case 1, Step 1.10 Actual Result text corrected to remove EULA reference and replace with User Guide reference.<br>
+Add additional PR1, PR2, PR3, and PR18 references for coverage.<br>
+Inserted test steps for Tutorial module per DHF-011-0036<br>
+Updated User Instruction  and ISI  steps per DHF-011-0035<br>
+Updated applicable steps to account for iOS 6 and iOS & differences per DHF-011-0037<br>
+Mapped GUI requirements in Actual Results column for traceability
+</td></tr><tr><td align="center">5.0</td><td align="center">3/10/2014</td><td align="center">Julie Fritchley</td><td align="left">Addition of Addendum A to define steps for critical functionality and regression testing for ZemPro V1.1
+</td></tr><tr><td align="center">6.0</td><td align="center">4/2/2014</td><td align="center">Julie Fritchley</td><td align="left">Correction of test script errors and traceability references on the following steps:<br>
+<ul>
+<li>2.06- Actual Results: corrected GUI reference for input summary information from GUI.5.9.2.5.2 to GUI.5.9.2.5.1 in static text actual result section</li>
+<li>2.18- Expected Results: corrected image to show Calculate New Dose Range button in pre-tapped state</li>
+<li>3.08, 3.09,3.10- Actual Results: deleted additional information checkbox and related incorrect reference information</li>
+<li>3.03 and 4.03 – Description/Action: added note for additional warning message</li>
+<li>4.13- Expected Results: corrected notification text in image in expected results</li>
+</ul><br>
+Addition of Addendum B
+</td></tr></tbody></table>
+<!--<table  border="0" cellpadding="4" cellspacing="1" style="width:100%;"><tbody><tr><td align="left" colspan="6"><b>Protocol Pre-Approval Prior to Execution:</b></td></tr><tr><td align="left" colspan="6">Device Development/Technical Representative:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6"> </td></tr><tr><td align="left" colspan="6">Quality Assurance:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6">* Refer to the change request for associated approvals.</td></tr></tbody></table>-->
+<table  border="0" cellpadding="4" cellspacing="1" style="width:100%;"><tbody><tr><td align="left" colspan="6"><b>Protocol Pre-Approval Prior to Execution:</b></td></tr><tr><td align="left" colspan="6">Device Development/Technical Representative:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6"> </td></tr><tr><td align="left" colspan="6">Quality Assurance:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6">Approval may be obtained electronically. </td></tr></tbody></table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+
+<i>Purpose:</i><br>
+
+The purpose of this protocol is to confirm the labeling standards throughout the application meet the product requirements as specified below, per DHF-011-0010 Trace Matrix. <br><br>
+
+<table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="center" width="20%"><b>PR#</b></td><td><b>Product Requirement</b></td></tr><tr><td align="center" width="20%">PR1</td><td>The app shall provide electronic access to the US Prescribing information.</td></tr><tr><td align="center" width="20%">PR2</td><td>The app shall provide electronic access to the Important Safety Information.</td></tr><tr><td align="center" width="20%">PR3</td><td>The app shall provide electronic access to the End User License Agreement.</td></tr><tr><td align="center" width="20%">PR11</td><td>The app user interface shall incorporate signs, symbols, and markings, and Software User Interface guidelines from ANSI/AAMI HE75:2009.</td></tr><tr><td align="center" width="20%">PR12</td><td>The app shall incorporate Zemplar branding and AbbVie brand style guidelines.</td></tr><tr><td align="center" width="20%">PR13</td><td>The app shall be provided in the English language.</td></tr><tr><td align="center" width="20%">PR18</td><td>The app shall display the End User License Agreement and require acceptance of terms and conditions the first time after installation and after each software update.</td></tr><tr><td align="center" width="20%">PR19</td><td>The app shall require confirmation of health care provider status.</td></tr><tr><td align="center" width="20%">PR24</td><td>The app shall provide Instructions for Use.</td></tr></tbody></table><br>
+
+<i>Acceptance Criteria:</i><br>
+Acceptance criteria are defined as successful completion of the steps identified below with results matching the description of Expected Results. Note that text flow or line break differences are not considered failure and need not be noted in results.
+<br>
+<br>
+<i>Test Case Objectives  and Study Design: </i><br>
+#TestCaseObj#
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+
+<i>Method for handling issues: </i><br>
+<span style="padding-left:3em;">Issues encounterd during execution of this protocol will be addressed per Q-11-05-011.</span>
+<br><br>
+<i><b>Material(s):</b></i><br>
+
+<table border="0" cellpadding="4" cellspacing="4" style="width:100%;">
+<tbody>
+<tr><td align="right" width="40%"><b>Test Environment Configuration:</b></td><td align="left"><u>#TEC#</u><br>#PRODNAME# v&nbsp;&nbsp;<u>#PRODVER#</u>&nbsp;&nbsp;Build<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u></td></tr>
+<tr><td align="right" width="40%"><b>Mobile Device Platform:</b></td><td align="left"><u>#MDP#</u></td></tr>
+<tr><td align="right" width="40%"><b>Model #:</b></td><td align="left"><u>#Model#</u></td></tr>
+<tr><td align="right" width="40%"><b>Serial #:</b></td><td align="left"><u>#Serial#</u></td></tr>
+<tr><td align="right" width="40%"><b>iOS Version:</b></td><td align="left"><u>#IosVersion#</u></td></tr>
+<tr><td align="right" width="40%"><b>Tester Printed Name and Signature:</b></td><td align="left"><u>#TPNS#</u></td></tr>
+<tr><td align="right" width="40%"><b>Start of Test Date:</b></td><td align="left"><u>#SDate#</u></td></tr>
+<tr><td align="right" width="40%"><b>End of Test Date:</b></td><td align="left"><u>#EDate#</u></td></tr>
+<tr><td align="right" width="40%"><b>DHF-011-0013 Version:</b></td><td align="left"><u>#DHFVersion#</u></td></tr>
+<tr><td align="right" width="40%"><b>PIFU-0010 Version:</b></td><td align="left"><u>#PIFUVersion#</u></td></tr>
+<tr><td align="right" width="40%"><b>Zemplar Injection Important Safety Information Document Number:</b></td><td align="left"><u>#SafetyInfoVersion#</u></td></tr>
+<tr><td align="right" width="40%"><b>ZEMPLAR (paricalcitol) Injection PI Document Number:</b></td><td align="left"><u>#InjectionPIVersion#</u></td></tr>
+</tbody>
+</table><br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+
+ 
+
+<i>Prerequisites:             </i><br>
+
+ 
+
+<ul><li>A qualified mobile device with a new installation of ZemPro is provided to the tester.
+
+                <li>Approved copies of the following are provided to the tester:
+
+                                <ul><li>DHF-011-0013(GUI)
+
+                                <li>Zemplar Injection Important Safety Information(ISI)</li>
+
+<li>Zemplar (paricalcitol) Injection Prescribing Information(PI)</li>
+
+<li>ZemPro User Guide (PIFU-0010)</li></ul>
+
+<li>Tester must have basic experience with iPhone operations</li></ul>
+
+ 
+
+<br>
+
+<br>
+
+<i>Notes to Tester:</i><br> 
+
+ 
+
+<ul><li>For steps requiring data entry in multiple fields using the keypad, the ‘Next’ button will navigate to the next entry field. ‘Previous’ button will navigate to the previous entry field. The ‘Done’ button will close the keypad.
+
+                <li>UI references in parentheses in the Actual Results column are for traceability and reference to assist the tester in navigating the GUI requirement document as needed.
+				<li>The “Comments” field should be left blank unless the step requires additional explanation 
+				<li>In Pass/Fail column the following nomenclature is acceptable:
+					<ul>
+						<li>“P”= Pass
+						<li>“F”= Fail 
+						<li>N/A = (not applicable). N/A is prepopulated in each step used to describe navigation or steps not performed.<li>
+					</ul>
+                <li>Turn off Internet Service
+
+                                <ul><li>Tap Settings
+
+                                                <li>Turn Airplane Mode ON</li></ul>
+
+                <li>Abbreviations:           PR = Product requirement<br>
+
+                <span style="padding-left:6em;">EULA = End User License Agreement</span><br>
+
+                <span style="padding-left:6em;">ISI = Important Safety Information</span><br>
+
+                <span style="padding-left:6em;">PI = Prescribing Information</span><br>
+				<span style="padding-left:6em;">GUI= Graphical User Interface</span>
+				
+				</li>
+		<li>Screen elements are evaluated for the following:
+		<ul>
+			<li>Artwork – non-text graphic elements, stylized text, and color schemes.
+			<li>Layout - review the general screen arrangement and colors of the following (ignore spacing and status bar found at the top of some images in Expected Results)
+			<ul>
+				<li>Text
+				<li>Artwork including Icons and symbols
+				<li>Buttons
+				<li>Entry Fields</li>
+			</ul>
+			<li>Text –content of text present and of specific text cited in Expected results.
+			<li>Buttons – shape, color and labeling.</li>
+		</ul>
+		<li>Screen shots in Expected Results are for reference purposes of layout only. Refer to approved GUI Requirements document for expected results. Note navigational buttons/text (Home, Clear, Close, Back), keypad and notifications will render differently between iOS versions. Text is to be verified for accuracy, variations is colors is expected as shown in the examples below.</li>
+                </ul>
+
+<br>
+
+<table border="0" cellpadding="10" cellspacing="0" style="width:655px;">
+<tbody>
+	<tr>
+		<td><img src="images/ui/ios6_navigation_bar.png" /><br>iOS6 navigation bar</td>
+		<td><img src="images/ui/ios7_navigation_bar.png" /><br>iOS7 navigation bar</td>
+	</tr>
+</tbody>
+</table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+
+<table border="0" cellpadding="10" cellspacing="0" style="width:655px;">
+<tbody>
+	<tr>
+		<td><img src="images/ui/ios6_keypad.png" /><br>iOS6 keypad</td>
+		<td><img src="images/ui/ios7_keypad.png" /><br>iOS7 keypad</td>
+	</tr>
+</tbody>
+</table><br>
+<table border="0" cellpadding="10" cellspacing="0" style="width:655px;">
+<tbody>
+	<tr>
+		<td><img src="images/ui/ios6_notification.png" /><br>iOS6 notification</td>
+		<td><img src="images/ui/ios7_notification.png" /><br>iOS7 notification</td>
+	</tr>
+</tbody>
+</table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br><br>
+<b>Setup:</b>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody><tr><td width="10%" align="center">&nbsp;</td><td><b>Description/Action</b></td><td><b>Comments</b></td></tr><tr><td width="10%" align="center">1.</td><td>Confirm a new installation of the ZemPro application is on the mobile device and “ZemPro” icon is displayed on the home screen of mobile device</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">2.</td><td>Turn off Internet Service.</td><td><b>&nbsp;</b></td></tr></tbody></table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br><br>
+<table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="center"><b>Step</b></td><td align="center"><b>Description/Action</b></td><td align="center"><b>Expected Results</b></td><td align="center"><b>Actual Results</b></td><td align="center"><b>Comments</b></td><td align="center"><b>Pass/Fail</b></td></tr>
+#TestCaseStepsDefs#
+<br>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br><br>
+<b>Review of Results:</b>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody>
+<tr><td align="center"><b>Step#</b></td><td align="center"><b>Tester Comments</b></td><td align="center"><b>ReviewerComments</b></td><td align="center"><b>Resolution</b></td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+</tbody></table><br>
+<i>[Note: If more space is needed for comments, a blank page may be copied and inserted with sequential numbering, i.e., 6a, 6b, and 6c.]</i>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<i><u>Overall Conclusion of the Testing:</u></i>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody>
+<tr><td align="left"><b>Technical Responsible Review Comments/ Signature/ Date:</b></td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left"><b>Quality Assurance Review Comments/ Signature/ Date (for quality-related systems):</b></td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+</tbody></table><br>
+<center><b>End of Protocol</b></center>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<center><b>Addendum A</b></center>
+<p>Below listed are the Steps identified in DHF-011-0027 V5.0 for execution of Critical Functionality as identified in DHF-011-0045.</p>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;">
+<tbody>
+<tr><td width="50%" align="center"><b>Critical Functionality</b></td><td width="25" align="center"><b>DHF-011-0027 V4.0 Step number</b></td><td width="25%" align="center"><b>GUI Reference #</b></td></tr>
+<tr><td>Dose Initiation enter Patient Values</td><td align="center">2.01</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- Ca</td><td align="center">2.02</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- P</td><td align="center">2.03</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- Weight</td><td align="center">2.04</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Initiation-Recommended dose and Optional Conversion</td><td align="center">2.06</td><td align="center">5.9.2.5.3</td></tr>
+<tr><td>Dose Titration Enter Patient Values</td><td align="center">2.08</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- Ca</td><td align="center">2.09</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry-P</td><td align="center">2.10</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry-Prior PTH</td><td align="center">2.11</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry-current PTH</td><td align="center">2.12</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Prior Dose</td><td align="center">2.15</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad -Prior Dose</td><td align="center">2.16</td><td align="center">5.9.0.1</td></tr>
+<tr><td>New Dose Range</td><td align="center">2.17</td><td align="center">5.9.2.5.10</td></tr>
+<tr><td>Dose Initiation Warning Serum Ca</td><td align="center">3.01</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Initiation Warning Serum P</td><td align="center">3.03</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Initiation Warning Weight</td><td align="center">3.07</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Serum Ca</td><td align="center">4.01</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Serum P</td><td align="center">4.03</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Prior PTH</td><td align="center">4.07</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Current PTH</td><td align="center">4.09</td><td align="center">5.9.0.1</td></tr>
+
+</tbody>
+</table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<p>Below listed are the steps identified in DHF-011-0027 V5.0 for regression testing of Design Changes incorporated into ZemPro V1.1 per DHF-011-0035, DHF-011-0036 and DHF-011-0037.</p>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;">
+<tbody>
+<tr><td align="center"colspan="2"><b>Design Verification Regression for GUI</b></td></tr>
+<tr><td width="75%" align="center"><b>ZemPro V1.1</b></td><td width="25" align="center"><b>DHF-011-0027 V4.0 Step number</b></td></tr>
+<tr><td>Splash Page Logo</td><td align="center">1.02</td></tr>
+<tr><td>ISI module content- PIFU change</td><td align="center">1.04</td></tr>
+<tr><td>Initial Tutorial</td><td align="center">1.05-1.16</td></tr>
+<tr><td>Home Page Logo</td><td align="center">1.17</td></tr>
+<tr><td>More Menu- Tutorial option</td><td align="center">1.20</td></tr>
+<tr><td>More - Tutorial</td><td align="center">1.25-1.36</td></tr>
+<tr><td>More User Guide- PIFU</td><td align="center">1.23</td></tr>
+<tr><td>Dose Initiation Result - ZEMPLAR Brand</td><td align="center">2.06</td></tr>
+<tr><td>Dose Titration Result- ZEMPLAR Brand</td><td align="center">2.14</td></tr>
+<tr><td>Dose Titration Result- ZEMPLAR Brand</td><td align="center">2.18</td></tr>
+<tr><td>Dose Titration Result- ZEMPLAR Brand</td><td align="center">2.19</td></tr>
+<tr><td>Dose Titration Result- ZEMPLAR Brand</td><td align="center">2.20</td></tr>
+<tr><td>Dose Titration Result- ZEMPLAR Brand</td><td align="center">2.21</td></tr>
+<tr><td>Dose Titration Result- ZEMPLAR Brand</td><td align="center">2.22</td></tr>
+<tr><td>Initial Dose Range More Info ZEMPLAR Brand</td><td align="center">3.09</td></tr>
+<tr><td>Optional Conversion More Info ZEMPLAR Brand</td><td align="center">3.10</td></tr>
+<tr><td>Prior Dose Add Info- ZEMPLAR Brand</td><td align="center">4.12</td></tr>
+<tr><td>Prior Dose Warning Notification ZEMPLAR Brand</td><td align="center">4.13</td></tr>
+
+</tbody>
+</table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<center><b>Addendum B</b></center>
+<p>Note to Tester for abbreviated execution: The execution of intermediate steps may be needed and should be used to navigate to steps required for execution; however documentation of this navigation is not necessary. Tester should “N/A” Expected Results, Actual Results and Pass/Fail columns to indicate when test step content has not been verified. When navigating between test cases, it is not required that tester exit the application at the end of a test case if the Home page is the starting step of the following test case and no device setup is required.
+	<br><br>
+	Below listed are the Steps identified in DHF-011-0027 V6.0 for execution of Critical Functionality as identified in DHF-011-0045 per devices identified in DHF-011-0046 V2.0 Appendix II.
+</p>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;">
+<tbody>
+<tr><td width="50%" align="center"><b>Critical Functionality</b></td><td width="25" align="center"><b>DHF-011-0027 V4.0 Step number</b></td><td width="25%" align="center"><b>GUI Reference #</b></td></tr>
+<tr><td>Dose Initiation enter Patient Values</td><td align="center">2.01</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- Ca</td><td align="center">2.02</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- P</td><td align="center">2.03</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- Weight</td><td align="center">2.04</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Initiation-Recommended dose and Optional Conversion</td><td align="center">2.06</td><td align="center">5.9.2.5.3</td></tr>
+<tr><td>Dose Titration Enter Patient Values</td><td align="center">2.08</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry- Ca</td><td align="center">2.09</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry-P</td><td align="center">2.10</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry-Prior PTH</td><td align="center">2.11</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad entry-current PTH</td><td align="center">2.12</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Prior Dose</td><td align="center">2.15</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Keypad -Prior Dose</td><td align="center">2.16</td><td align="center">5.9.0.1</td></tr>
+<tr><td>New Dose Range</td><td align="center">2.17</td><td align="center">5.9.2.5.10</td></tr>
+<tr><td>Dose Initiation Warning Serum Ca</td><td align="center">3.01</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Initiation Warning Serum P</td><td align="center">3.03</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Initiation Warning Weight</td><td align="center">3.07</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Serum Ca</td><td align="center">4.01</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Serum P</td><td align="center">4.03</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Prior PTH</td><td align="center">4.07</td><td align="center">5.9.0.1</td></tr>
+<tr><td>Dose Titration Warning Current PTH</td><td align="center">4.09</td><td align="center">5.9.0.1</td></tr>
+</tbody>
+</table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<p>Below listed are the steps identified in DHF-011-0027 V6.0 for regression testing of software defect fixes in ZemPro V1.1 build 4 Stage as documented in DHF-011-0027-1, DHF-011-0027-2 and DHF-011-0027-8 per devices identified in DHF-011-0046 V2.0 Appendix II.</p>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;">
+<tbody>
+<tr><td align="center"colspan="2"><b>Design Verification Regression for GUI</b></td></tr>
+<tr><td width="75%" align="center"><b>ZemPro V1.1</b></td><td width="25" align="center"><b>DHF-011-0027 V6.0 Step number</b></td></tr>
+<tr><td>Initial Tutorial</td><td align="center">1.05-1.16</td></tr>
+<tr><td>More Tutorial</td><td align="center">1.25-1.36</td></tr>
+<tr><td>Mcg/kg wheel display</td><td align="center">2.07*</td></tr>
+<tr><td>Prior Dose Keypad text “Enter Patient Values”</td><td align="center">2.16*</td></tr>
+</tbody>
+</table>
+<p>
+*These steps are to be included with testing of the application on devices for critical functionality as noted above
+</p>
+<br>
+<center><b>End of Document</b></center>
+<br>
+    <table id='hrdftrtbl' border='1' cellspacing='0' cellpadding='0'>
+    <tr><td>        <div style='mso-element:header' id=h1 >
+        <!-- HEADER-tags -->
+            <p class=MsoHeader >
+				<table border='1' cellpadding='4' cellspacing='0' align='center' width='60%'>
+					<tr><td valign='top'>System Name: ZemPro<br>System Version Number: 1.1</td><td valign='top'>Test Protocol : VTP01-ZemProEULAMore</td></tr>
+					<tr><td valign='top'>Change Number: 12590</td><td valign='top'>Document Version Number: v3.0</td></tr>
+				</table>
+			</p>
+        <!-- end HEADER-tags -->
+        </div>
+		
+    </td>
+    <td>
+    <div style='mso-element:footer' id=f1><span style='position:relative;z-index:-1'> 
+        <!-- FOOTER-tags -->
+              
+           <p class=MsoFooter>
+		   <table border='0' cellpadding='4' cellspacing='0' align='center' width='60%'>
+					<tr><td align='center'><span style='mso-tab-count:2'></span>Page <span style='mso-field-code:PAGE '><span style='mso-no-proof:yes'></span>
+							</span>
+						</td>
+					</tr>
+					<tr><td align='center'>This information is confidential to AbbVie</td></tr>
+			</table>			
+			</p>
+    </div>
+    <div style='mso-element:header' id=fh1>
+        <p class=MsoHeader><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+        </div><br/><br/>
+        <div style='mso-element:footer' id=ff1>
+        <p class=MsoFooter><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+    </div>
+
+    </td></tr>
+    </table>
+	

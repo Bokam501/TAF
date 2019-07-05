@@ -1,0 +1,178 @@
+<br>
+<br><table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="left" colspan="4"><b>Revision History:</b></td></tr><tr><td align="center"><b>Document Version Number</b></td><td align="center"><b>Document Revision Date</b></td><td align="center"><b>Written By</b></td><td align="center"><b>Change Summary <br></br>(Reference section[s] changed)</b></td></tr><tr><td align="center">1.0</td><td align="center">7/7/2013</td><td align="center">Yelena Kakstova</td><td align="center">Initial Writing</td></tr><tr><td align="center">1.1</td><td align="center">2/19/2014</td><td align="center">Yelena Kakstova</td><td align="left">Updated Document Header:<br>
+Change Number: 12300 to 12590<br>
+System Version Number: 1.0 to 1.1<br>
+Document Version 2.1 to 2.2<br><br>
+Step IDs:  2.03, 3.05, 4.05, 4.07, 6.01, 6.03, 8.05, 8.07 - Added one decimal value to whole numbers. <br><br>
+
+Step IDs 4.07 and 8.07: Deleted “mcg” for Prior Dose in results columns as it was not displayed on the applications screen.<br>
+Deleted check box for Prior Dose in the CAtual Result column for Steps: 2.05, 4.07, 6.03, 8.07.<br><br>
+ 
+Step ID 6.01. Updated “Tap the mobile device home button to activate the device screen” to “Tap the ZemPro icon on the mobile device home screen to open the application.<br>
+Updated steps with the keypad navigation throughout the protocol.<br>
+Updated present tense verbs to past tense in Actual Results column.<br>
+Updated present tense verbs to future tense in Expected Results column.<br><br>
+
+Updated auto-lock setting to two minutes to make protocol reusable for testing in iPad/iPod environment.
+
+</td></tr></tbody></table>
+<!--<table  border="0" cellpadding="4" cellspacing="1" style="width:100%;"><tbody><tr><td align="left" colspan="6"><b>Protocol Pre-Approval Prior to Execution:</b></td></tr><tr><td align="left" colspan="6">Device Development/Technical Representative:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6"> </td></tr><tr><td align="left" colspan="6">Quality Assurance:</td></tr><tr><td>Printed Name</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Signature *</td><td><hr style="border-top: dotted 1px; width:200px;" /></td><td>Date</td><td><hr style="border-top: dotted 1px; width:100px;" /></td></tr><tr><td colspan="6">* Refer to the change request for associated approvals.</td></tr></tbody></table>-->
+
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<center><b>Validation Protocol</b></center><br>
+<i>Test Description:</i><br>
+The purpose of this protocol is to demonstrate with ZemPro that the application clears calculator entries and output results from Dose Initiation and Dose Titration Dose modules when the User selects or the mobile device turns into background or sleep state.
+<br><br>
+
+<i>Acceptance Criteria:</i><br>
+Acceptance criteria are defined as successful completion of the steps identified below with results matching the description of Expected Results. 
+<br>
+<br>
+<i>Test Case Objectives: </i><br>
+#TestCaseObj#
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<i><b>Material(s):</b></i><br>
+<table border="0" cellpadding="4" cellspacing="4" style="width:100%;"><tbody><tr><td align="right" width="40%"><b>Test Environment Configuration:</b></td><td align="left"><u>#TEC#</u></td></tr><tr><td align="right" width="40%"><b>Mobile Device Platform:</b></td><td align="left"><u>#MDP#</u></td></tr><tr><td align="right" width="40%"><b>Model #:</b></td><td align="left"><u>#Model#</u></td></tr><tr><td align="right" width="40%"><b>Serial #:</b></td><td align="left"><u>#Serial#</u></td></tr><tr><td align="right" width="40%"><b>iOS Version:</b></td><td align="left"><u>#IosVersion#</u></td></tr><tr><td align="right" width="40%"><b>Tester Printed Name and Signature:</b></td><td align="left"><u>#TPNS#</u></td></tr><tr><td align="right" width="40%"><b>Start of Test Date:</b></td><td align="left"><u>#SDate#</u></td></tr><tr><td align="right" width="40%"><b>End of Test Date:</b></td><td align="left"><u>#EDate#</u></td></tr><tr><td align="right" width="40%"><b>Additional Equipment used:</b></td><td align="left"><u>#DHFVersion#</u></td></tr><tr><td align="right" width="40%"><b>Workstation/Tester Equip/Serial Number:</b></td><td align="left"><u>#PIFUVersion#</u></td></tr><tr><td align="right" width="40%"><b>Calculator/Serial Number:</b></td><td align="left"><u>#SafetyInfoVersion#</u></td></tr><tr><td align="right" width="40%"><b>Calculator Printer/Serial Number:</b></td><td align="left"><u>#InjectionPIVersion#</u></td></tr></tbody></table><br>
+
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<i>Prerequisites: 	</i><br>
+
+<ul><li>A qualified mobile device is provided to the tester.	
+<li>Tester must have basic experience with iPhone, iPad and iPod Touch operationss
+<li>Tester must use the workstation clock and time format hh:mm for timing actions.</li></ul>
+
+<br>
+<br>
+<i>Notes to Tester:</i><br> 
+
+<ul><li>The “Comments” field should be left blank unless the step requires additional explanation	
+	<li>Turn off Internet Service
+		<ul><li>Tap Settings
+			<li>Turn Airplane Mode ON</li></ul>
+	<li>Auto-lock setting for 2 minutes = Device is in sleep mode when left idle for minimum 2 minutes. (The Auto-lock feature on the device allows setting the amount of time that elapses before the iPhone automatically locks or turns off the display.)
+	<li>To set auto-lock option
+		<ul><li>tap the settings icon on the device screen
+			<li>tap on  General
+			<li>tap on the Auto-lock option
+			<li>tap on 2 Minutes
+			</li></ul>
+	<li>Application is in background state = the device clock timer pop up window is presented.
+	<li>Close the application from background state = One click on the device home button to close the task bar.
+	<li>Exit application = Press the mobile device home button.
+	<li>To set Timer option
+		<ul><li>tap the Clock  icon on the device screen
+			<li>tap on  Timer
+			<li>tap on on 1 min and then Start
+			</li></ul>
+	<li>Abbreviations:	SRS = software requirements specification<br>
+	<span style="padding-left:6em;">EULA = End User License Agreement</span><br>
+	<span style="padding-left:6em;">ISI = Important Safety Information</span><br>
+	<span style="padding-left:6em;">PI = Prescribing Information</span><br>
+	<span style="padding-left:6em;">SR = Software requirement</span></li>
+		</ul>
+<br>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<b>Setup:</b>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody><tr><td width="10%" align="center">&nbsp;</td><td><b>Description/Action</b></td><td><b>Comments</b></td></tr><tr><td width="10%" align="center">1.</td><td>Confirm ZemPro application is installed on the mobile device  and the “ZemPro” icon is displayed on the home screen of the mobile device.</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">2.</td><td>Turn off Internet Service.</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">3.</td><td>Tap on “ZemPro” icon to open the application.</td><td><b>&nbsp;</b></td></tr><tr><td width="10%" align="center">4.</td><td>Accept EULA agreement and ISI agreement, complete Tutorial, if displayed, to navigate to “Home” page.</td><td><b>&nbsp;</b></td></tr></tbody></table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<table border="1" cellpadding="1" cellspacing="0" style="width:100%;"><tbody><tr><td align="center"><b>Step</b></td><td align="center"><b>Description/Action</b></td><td align="center"><b>Expected Results</b></td><td align="center"><b>Actual Results</b></td><td align="center"><b>Comments</b></td><td align="center"><b>Pass/Fail</b></td></tr>
+#TestCaseStepsDefs#
+<br>
+<br>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<br>
+<br>
+<b>Review of Results:</b>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody>
+<tr><td align="center"><b>Step#</b></td><td align="center"><b>Tester Comments</b></td><td align="center"><b>ReviewerComments</b></td><td align="center"><b>Resolution</b></td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td><td align="left">&nbsp;</td></tr>
+</tbody></table>
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+<i>Overall Conclusion of the Testing:</i>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" style="width:100%;"><tbody>
+<tr><td align="left"><b>Technical Responsible Review Comments/ Signature/ Date:</b></td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left"><b>Quality Assurance Review Comments/ Signature/ Date (for quality-related systems):</b></td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+<tr><td align="left">&nbsp;</td></tr>
+</tbody></table><br>
+<center><b>End of Document</b></center>
+<br/>
+    <table id='hrdftrtbl' border='1' cellspacing='0' cellpadding='0'>
+    <tr><td>        <div style='mso-element:header' id=h1 >
+        <!-- HEADER-tags -->
+            <p class=MsoHeader >
+				<table border='1' cellpadding='4' cellspacing='0' align='center' width='60%'>
+					<tr><td valign='top'>System Name: ZemPro<br>System Version Number: v1.1</td><td valign='top'>Test Protocol : VTP08-ZemProClearData</td></tr>
+					<tr><td valign='top'>Change Number: 12590</td><td valign='top'>Document Version Number: v1.1</td></tr>
+				</table>
+			</p>
+        <!-- end HEADER-tags -->
+        </div>
+		
+    </td>
+    <td>
+    <div style='mso-element:footer' id=f1><span style='position:relative;z-index:-1'> 
+        <!-- FOOTER-tags -->
+              
+           <p class=MsoFooter>
+		   <table border='0' cellpadding='4' cellspacing='0' align='center' width='60%'>
+					<tr><td align='center'><span style='mso-tab-count:2'></span>Page <span style='mso-field-code:PAGE '><span style='mso-no-proof:yes'></span>
+							</span>
+						</td>
+					</tr>
+					<tr><td align='center'>This information is confidential to AbbVie</td></tr>
+			</table>			
+			</p>
+    </div>
+    <div style='mso-element:header' id=fh1>
+        <p class=MsoHeader><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+        </div><br/><br/>
+        <div style='mso-element:footer' id=ff1>
+        <p class=MsoFooter><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+    </div>
+
+    </td></tr>
+    </table>
