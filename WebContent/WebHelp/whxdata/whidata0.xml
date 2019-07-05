@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<indexdata>
+<key name="Attandance" >
+  <topic name="Register attandance check-in for a resource" url="register_attendance_check-in_for_a_resource.htm" />
+</key>
+<key name="check-in" >
+  <topic name="Register attandance check-in for a resource" url="register_attendance_check-in_for_a_resource.htm" />
+</key>
+<key name="End time" >
+  <topic name="Set up actual work shift" url="set_up_actual_work_shift.htm" />
+</key>
+<key name="shift check-in" >
+  <topic name="Set up test factory work shifts" url="set_up_test_factory_work_shifts.htm" />
+</key>
+<key name="shift check-out" >
+  <topic name="Set up test factory work shifts" url="set_up_test_factory_work_shifts.htm" />
+</key>
+<key name="Start time" >
+  <topic name="Set up actual work shift" url="set_up_actual_work_shift.htm" />
+</key>
+<key name="Test factory manager" >
+  <topic name="Set up test factory work shifts" url="set_up_test_factory_work_shifts.htm" />
+</key>
+<key name="Test Manager" >
+  <topic name="Set up actual work shift" url="set_up_actual_work_shift.htm" />
+  <topic name="Register attandance check-in for a resource" url="register_attendance_check-in_for_a_resource.htm" />
+</key>
+<key name="Work shift" >
+  <topic name="Set up actual work shift" url="set_up_actual_work_shift.htm" />
+</key>
+<key name="work shift timings" >
+  <topic name="Set up actual work shift" url="set_up_actual_work_shift.htm" />
+  <topic name="Set up test factory work shifts" url="set_up_test_factory_work_shifts.htm" />
+</key>
+<key name="work shifts" >
+  <topic name="Set up test factory work shifts" url="set_up_test_factory_work_shifts.htm" />
+</key>
+
+</indexdata>

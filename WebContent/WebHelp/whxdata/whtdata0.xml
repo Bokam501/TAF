@@ -1,0 +1,127 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<tocdata>
+<item name="Overview" url="overview.htm" />
+<book name="Screen Level" >
+  <book name="Administration" >
+    <item name="Manage Test Centers" url="administration_testfactorylabs.htm" />
+    <item name="Customer Accounts" url="customer_management_plan.htm" />
+    <item name="Vendor Accounts" url="administration_vendor.htm" />
+    <item name="Dimension Management" url="dimension_management_plan.htm" />
+    <item name="Competency Management" url="competency_management_plan.htm" />
+    <item name="Status Management" url="status_management_plan.htm" />
+    <item name="Test Factory Setup" url="testfactory_testfactories.htm" />
+    <item name="Product Team Users" url="administration_product_team_users.htm" />
+    <item name="Flex Users" url="administration_user.htm" />
+    <item name="Schedule actual shift" url="shift_entries_manage.htm" />
+  </book>
+  <book name="Product Management" >
+    <item name="Product Management" url="product_management_plan.htm" />
+    <item name="Product Version Test Case Mapping" url="product_version_testcase_plan.htm" />
+    <item name="Environment Group" url="administration_environmentgroup.htm" />
+  </book>
+  <book name="Activity Management" >
+    <item name="Activity Type" url="administration_activitytype.htm" />
+    <item name="Activity Work Package" url="process_activityworkpackage.htm" />
+    <item name="Activity" url="process_activity.htm" />
+    <item name="Activity Task" url="process_activitytask.htm" />
+  </book>
+  <book name="Test Management" >
+    <item name="New Work Package" url="administration_workpackage.htm" />
+    <item name="Configure Work Package" url="administration_workpackage_plan.htm" />
+    <item name="Test Case Execution" url="workpackage_testcase_execution_view.htm" />
+    <item name="Review Test Cases Executions" url="workpackage_testcase_plan_reviewtestleadtestcases.htm" />
+    <item name="Monitor Work Package" url="workpackage_status_summary_view.htm" />
+    <item name="Work Package Test Case Results" url="report_workpackage_testcase_plan_results_eod.htm" />
+    <item name="Work Package Statistics" url="report_workpackage_statistics_eod.htm" />
+  </book>
+  <book name="Defects Management" >
+    <item name="Analyze Defects" url="workpackage_analyse_defects.htm" />
+  </book>
+  <book name="Resource Management" >
+    <item name="Resource Availability" url="resource_availability_report.htm" />
+    <item name="View Resources Experience" url="view_resources_experience.htm" />
+    <item name="Work Package - Demand Projection" url="workpackage_demand_projection.htm" />
+    <item name="Approve Resource Performance" url="resource_dailyperformance_approve.htm" />
+    <item name="Resource Fulfilment" url="resource_management_plan.htm" />
+    <item name="Resource Demand/Availability" url="workpackage_resource_availability.htm" />
+    <item name="Reserve Resources" url="workpackage_resource_reservation.htm" />
+    <item name="Approve Timesheets" url="timesheet_entries_approve.htm" />
+    <item name="Resource Reliability" url="resource_reliablity_report.htm" />
+    <item name="Resource Planning" url="workpackage_resource_planning.htm" />
+    <item name="Timesheet Statistics Report" url="report_timesheet_statistics.htm" />
+    <item name="Approve Skills" url="administration_userskills_approve.htm" />
+    <item name="Resource Attendance" url="resource_attendance_availability_user.htm" />
+    <item name="Fill Resource Attendance" url="resource_attendance_availability.htm" />
+    <item name="User Time Management" url="user_time_management.htm" />
+    <item name="Resource Tracking" url="resource_tracking_plan.htm" />
+    <item name="Manage Resource Pool" url="resource_pool_management.htm" />
+    <item name="Shift Approvals" url="myapprovals_view.htm" />
+  </book>
+  <book name="Dashboard" >
+    <item name="Dashboard Tab Setup" url="adding_tabs_dasboard.htm" />
+    <item name="Source Data Extractor" url="data_source_extractor.htm" />
+  </book>
+</book>
+<book name="Configure Supporting Tools" >
+  <item name="Tool Integration" url="tool_integration.htm" />
+  <item name="Test Automation Framework Configuration" url="test_automation_framework_configuration.htm" />
+  <item name="Test Automation Framework" url="test_automation_framework.htm" />
+</book>
+<book name="Process Flow" >
+  <book name="Setup Activities" >
+    <book name="Engagement Setup" >
+      <item name="Create a vendor account" url="create_or_manage_vendors.htm" />
+      <item name="Create a customer account" url="create_a_customer_account.htm" />
+      <item name="Create a test factory" url="create_a_test_factory.htm" />
+      <item name="Create a test engagement" url="create_a_test_engagement.htm" />
+      <item name="Set up test factory work shifts" url="set_up_test_factory_work_shifts.htm" />
+      <item name="Manage Dimensions" url="manage_dimensions.htm" />
+      <item name="Create a resource profile" url="create_a_resource_profile.htm" />
+      <item name="Create or manage a resource pool" url="create_or_manage_a_resource_pool.htm" />
+    </book>
+    <book name="Product Management" url="products.htm" >
+      <item name="Create a product" url="create_a_product.htm" />
+      <item name="Assign user and user roles for a product" url="assign_user_and_user_roles_for_a_product.htm" />
+      <item name="Manage product attributes" url="manage_product_attributes.htm" />
+      <item name="Create a test run plan" url="create_a_test_run_plan.htm" />
+    </book>
+    <book name="Test Operations" >
+      <book name="Resource Management" >
+        <book name="Time Management" >
+          <item name="Set up actual work shift" url="set_up_actual_work_shift.htm" />
+          <item name="Mark user availability" url="mark_user_availability.htm" />
+          <item name="Register attendance check-in for a resource" url="register_attendance_check-in_for_a_resource.htm" />
+          <item name="Register shift check-in and check-out" url="register_shift_check-in_and_check-out.htm" />
+          <item name="Fill Timesheet" url="fill_timesheet.htm" />
+          <item name="Register attendance check-out" url="register_attendance_check-out.htm" />
+        </book>
+        <book name="Demand Fulfillment" >
+          <item name="Raise resource demand" url="raise_resource_demand.htm" />
+          <item name="Book available users for a shift" url="book_user_availability.htm" />
+          <item name="Reserve resources for the shift" url="reserve_resources_for_the_shift.htm" />
+        </book>
+      </book>
+      <book name="Work Package Management" >
+        <item name="Create a work package" url="create_a_new_work_package.htm" />
+        <item name="Define parameters of the work package" url="define_the_work_package.htm" />
+        <item name="Execute test cases" url="execute_test_cases.htm" />
+      </book>
+      <book name="Reports" >
+        <item name="Approve resource attendance and timesheets" url="approve_resource_attendance_and_timesheets.htm" />
+        <item name="Generate timesheet statistics" url="generate_timesheet_statistics.htm" />
+      </book>
+    </book>
+  </book>
+  <item name="Process Flow of Activity Management" url="process_flow_of_activity.htm" />
+  <item name="Process Flow of a Sample Test Run Plan" url="process_flow_of_test_run_plan.htm" />
+  <item name="Process Flow for Executing Test Cases from HPQC" url="process_flow_for_executing_test_cases_from_hpqc.htm" />
+  <item name="New Test Factory and Product Setup" url="process_workflow_diagrams/new_test_factory_and_product_setup.htm" />
+  <item name="User Creation" url="process_workflow_diagrams/user_creation.htm" />
+  <item name="Work Package Setup and Resource Planning" url="process_workflow_diagrams/work_package_setup_and_resource_planning.htm" />
+  <item name="Work Package Allocation &amp; Execution" url="process_workflow_diagrams/work_package_allocation_execution.htm" />
+  <item name="Operating Work Shift" url="process_workflow_diagrams/operating_work_shift.htm" />
+  <item name="Resource Timesheet and Attendance" url="process_workflow_diagrams/resource_timesheet_and_attendance.htm" />
+</book>
+<item name="FAQs" url="faq.htm" />
+
+</tocdata>
