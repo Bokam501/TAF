@@ -1,0 +1,181 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+    <body>
+    
+    <table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Clarification Title</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${clarificationTitle}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Engagement</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${engagementName}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Product</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${product}</a>
+                </p>
+            </td>
+        </tr>
+        
+    <tbody>
+    </table>
+    <p>
+    	<b> Clarification Description:</b>
+    </p>
+	<table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Clarification Tracker Number</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${clarificationTrackerNumber}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Clarification Type</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${clarificationType}</a>
+                </p>
+            </td>
+        </tr>
+        
+          <tr>
+            <td>
+                <p align="center">
+                    <strong>Clarification Scope</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${clarificationScope}</a>
+                </p>
+            </td>
+        </tr>
+        
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Priority</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${priority}</a>
+                </p>
+            </td>
+        </tr>
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Raised By</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${raisedBy}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Raised Date</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${raisedDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Expacted End</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${expactedEndDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Status</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                     ${status}
+                </p>
+            </td>
+        </tr>
+       
+       
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Owner</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a>
+                       ${owner}
+                    </a>
+                </p>
+            </td>
+        </tr>
+    
+    </tbody>
+</table>
+
+<div align="center">
+    <hr size="2" width="100%" noshade="" align="center"/>
+</div>
+</body>
+</html>

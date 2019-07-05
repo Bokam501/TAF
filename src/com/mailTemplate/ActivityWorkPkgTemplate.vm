@@ -1,0 +1,200 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+    <body>
+    
+    <table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+               
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity WorkPackage Name</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${activityWorkpkgName}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Product</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${product}</a>
+                </p>
+            </td>
+        </tr>
+        
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Product Build Name</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${buildName}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Version</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${version}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Planned Start Date</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${plannedStartDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Planned End Date</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${plannedEndDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+    <tbody>
+    </table>
+    <p>
+    	<b> Activity WorkPackage Description:</b>
+    </p>
+	<table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Priority</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${priority}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Actual StartDate</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${actualStartDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Actual EndDate</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${actualEndDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Status</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                     ${status}
+                </p>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Owner</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a
+                       
+                    >
+                         ${owner}
+                    </a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Reporter</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a
+                      
+                    >
+                       ${fromMailId}
+                    </a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>CC</strong>
+                </p>
+            </td>
+            <td>
+   				   <a>${productMangerMailIds}</a>,${owner}</a>
+                    
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div align="center">
+    <hr size="2" width="100%" noshade="" align="center"/>
+</div>
+</body>
+</html>

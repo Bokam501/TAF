@@ -1,0 +1,329 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+    <body>
+    <br/>
+    <div>
+    <tr>
+    <td>
+    	${message}
+	</td>
+	
+    <tr>
+    </div>
+    <br/>
+    <div>
+    <table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+    
+    <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity ID</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${activityID}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity Name</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${activityName}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity WorkPackage Name</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${activityWorkpkgName}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Product</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${product}</a>
+                </p>
+            </td>
+        </tr>
+        
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Product Build Name</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${buildName}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Version</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${version}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Planned Start Date</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${plannedStartDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Planned End Date</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${plannedEndDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+    <tbody>
+    </table>
+    <p>
+    	<b> Activity Description:</b>
+    </p>
+	<table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+    
+    <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity ID</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${activityID}</a>
+                </p>
+            </td>
+        </tr>
+    
+    
+     <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity CreationDate</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${activityCreationDate}</a>
+                </p>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Activity Tracker Number</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${ActivityTrackerNumber}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Category</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${category}</a>
+                </p>
+            </td>
+        </tr>
+        
+               
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Priority</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${priority}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Summary</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    ${summary}
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Actual StartDate</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${actualStartDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Actual EndDate</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a target="_blank">${actualEndDate}</a>
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Status</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                     ${status}
+                </p>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Assignee</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a
+                       
+                    >
+                         ${assignee}
+                    </a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>Reviewer</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a
+                      
+                    >
+                       ${reviewer}
+                    </a>
+                </p>
+            </td>
+        </tr>
+        
+         <tr>
+            <td>
+                <p align="center">
+                    <strong>Reporter</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <a
+                      
+                    >
+                       ${fromMailId}
+                    </a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong>CC</strong>
+                </p>
+            </td>
+            <td>
+   				 //  <a>${productMangerMailIds}</a>,${reviewer}</a>
+   				 	<a> ${reviewer}</a>
+   				 
+                    
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div align="center">
+    <hr size="2" width="100%" noshade="" align="center"/>
+</div>
+
+
+			 <p>  Regards,</p>
+		      <p>  Admin.</p>
+		        
+		      <p>  Do-Not-Reply@Admin: Activity Notification</p>
+
+</body>
+</html>

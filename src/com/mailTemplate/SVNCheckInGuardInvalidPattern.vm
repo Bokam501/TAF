@@ -1,0 +1,63 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+  <body>    
+    <h3>Dear ${author},</h3>
+ 	
+ 
+    <table border="1" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong><u>Message:</u></strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <strong>${bodyMessage}</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="2">&nbsp;</td>
+        </tr>
+         <tr>
+            <td>
+                <p align="center">
+                    <strong><u>Your Check-In Comments</u></strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <a target="_blank">${comments}</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <p align="center">
+                    <strong><u>Please follow the below patterns</u></strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    <a target="_blank">${patterns}</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="2">&nbsp;</td>
+        </tr>
+    </tbody>
+  </table> 
+</body>
+</html>
