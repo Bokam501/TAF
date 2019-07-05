@@ -1,0 +1,1 @@
+actualShiftMaxAllowableHours=24

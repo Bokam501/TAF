@@ -1,0 +1,5 @@
+ProjectName=iLCM
+VersionNumber=4.4
+BuildNumber=#434
+DBVersion=4.0.15
+Date=Tue 04/07/2019 - 05:00:28.22
